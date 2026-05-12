@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TKR_PROFESIONALES_ASIGNADOS" directorySegmentName="seg_0" id="0B1141E9-EAB8-082D-FE34-5F31C57DC2DF">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9DE067A2-68CB-5C85-15DA-85C166C305FF</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FECHA_FINAL" id="314A16AF-2804-276B-B37F-06B75790801D">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHA_INICIO" id="47773536-C1C2-FB8A-0B9B-8B60575F02D3">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PROFESIONAL" id="49DA8961-856B-F893-1455-E42F0CBA550A">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ESTADO" id="71716A2C-DC4D-0A9B-AE6D-46D4FBE682DF">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<defaultValue>&apos;I&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="FECHA_CREACION" id="76F4BEE3-9246-491A-C3E4-1F40B6FB3F13">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="ID" id="AC3D4A68-3828-3E9C-EC70-C7FD4B8E148E">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ID_ENTIDAD" id="F687A378-563E-A1A9-5F27-FE3DE7B377DF">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TKR_PROFESIONALES_ASIGNADOS_PK" id="52BC011B-B3B4-3CA0-F79F-C173789D07C6">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:36 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TKR_PROF_ASIGNADOS_ENT_FK" id="5427740D-8139-72B8-BEC1-63AAEBA49A83">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TKR_PROF_ASIG_USU_FK" id="C5973855-3074-2A22-4AAB-6712B2A4B709">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TKR_PROFESIONALES_ASIGNADOS_PK" id="C9B391C9-9A9F-19FD-CB30-60C38F633D4F">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<existingIndex>52BC011B-B3B4-3CA0-F79F-C173789D07C6</existingIndex>
+<indexSegment>CF45F2D8-939E-593B-8558-902B99580A12</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TKR_LECTURAS_VIVALINK" directorySegmentName="seg_2" id="888C02C5-894C-63E8-9D07-FBC0E17B6638">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9DE067A2-68CB-5C85-15DA-85C166C305FF</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FECHA_LECTURA" id="10EC1F0B-D527-AF1A-CB1F-917DA8D04870">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VITALS" id="1AB54F7F-295B-6352-2781-87814DACE078">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="5CEE68EE-DDDA-3123-EFD0-A1A75D5B896B">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="FECHA_CREACION" id="73D4A3E1-1239-6F3F-3348-9FEB5285FD9C">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="RECORDTIME" id="C4C2F33B-4FA3-D9F8-ACCC-F52FE8350715">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DISPOSITIVO" id="C89E225F-05D3-8BB2-72B9-0E2B43F4D122">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LECTURA_JSON" id="DADF8E2E-0FDC-14E2-2091-F7FF7099B312">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TKR_LECTURAS_VIVALINK_IDX" id="03E4CCC2-EEFB-8484-FA36-AD255C3D64FC">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:30 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TKR_LECTURAS_VIVALINK_PK" id="76D9C69C-3C1C-B233-B25D-89F7E1E56F29">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:30 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+</IndexProxy>
+</indexProxies>
+<lobStorages>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000116184C00005$$" id="605B2B5C-2D35-8C75-6E10-6FD258146423">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:12:01 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>LECTURA_JSON</column>
+<compression>NO</compression>
+<duplication>KEEP_DUPLICATES</duplication>
+<logging>YES</logging>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<lobStorageType>SECUREFILE</lobStorageType>
+</LobStorage>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000116184C00006$$" id="E146FBB6-1A48-FD93-A135-4E9725441974">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:12:01 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>VITALS</column>
+<compression>NO</compression>
+<duplication>KEEP_DUPLICATES</duplication>
+<logging>YES</logging>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<lobStorageType>SECUREFILE</lobStorageType>
+</LobStorage>
+</lobStorages>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TKR_LECTURAS_VIVALINK_PK" id="09AA9EBE-7B14-E45D-1642-D97F9F4CE344">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<existingIndex>76D9C69C-3C1C-B233-B25D-89F7E1E56F29</existingIndex>
+<indexSegment>CF45F2D8-939E-593B-8558-902B99580A12</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

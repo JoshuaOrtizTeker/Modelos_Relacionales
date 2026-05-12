@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_BI_TKR_ARCHIVOS" directorySegmentName="seg_0" id="204B1608-50CA-596B-8570-FF1138D225DE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_BI_TKR_ARCHIVOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+    vva_extension   VARCHAR2 (10);
+BEGIN
+    IF :new.id IS NULL
+    THEN
+        :new.id := tkr_archivos_seq.NEXTVAL;
+    END IF;
+
+    IF (INSTR (:new.nombre_archivo, '.', -1) = 0)
+    THEN
+        vva_extension := NULL;
+    ELSE
+        vva_extension :=
+            SUBSTR (
+                :new.nombre_archivo,
+                INSTR (:new.nombre_archivo, '.', -1) + 1,
+                  LENGTH (:new.nombre_archivo)
+                - INSTR (:new.nombre_archivo, '.', -1));
+    END IF;
+
+    IF vva_extension IS NOT NULL
+    THEN
+        :new.nombre_archivo_almacenado :=
+               'Id_'
+            || :new.id
+            || '_'
+            || DBMS_CRYPTO.hash (
+                   UTL_I18N.string_to_raw (LOWER (:new.nombre_archivo),
+                                           'AL32UTF8'),
+                   3)
+            || '.'
+            || vva_extension;
+    ELSE
+        :new.nombre_archivo_almacenado :=
+               'Id_'
+            || :new.id
+            || '_'
+            || DBMS_CRYPTO.hash (
+                   UTL_I18N.string_to_raw (LOWER (:new.nombre_archivo),
+                                           'AL32UTF8'),
+                   3);
+    END IF;
+END;
+
+
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>305DDBFD-5F3F-90E0-CC82-35036BA7B178</table>
+</TriggerOraclev10g>

@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="AAF18FDF-B6C9-0561-4A19-8BEDA49AA8A9" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TIPOS_ENTIDADES">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TIPOS_ENTIDADES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C4813D06-AC89-D8BF-F8D3-CDACE7D5AFC8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TIPOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_tipos_entidades_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_TIPOS_ENTIDADES</autoIncrementTriggerName>
+</Column>
+<Column name="TIPO_ENTIDAD" id="3FA4E4F4-38FB-3D74-DF70-3B47FA0D4B8A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TIPOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>TIPO_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripciòn del tipo de entidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="627E1A9E-FBBA-BC40-60BC-73CCD84FA1E9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TIPOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BFA9D77E-5883-A25C-D3D7-125D90A11D5C" name="TKR_TIPOS_ENTIDADES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TIPOS_ENTIDADES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4813D06-AC89-D8BF-F8D3-CDACE7D5AFC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="652AA654-5F89-6972-5E0B-D8F780CA40C9" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TIPOS_ENTIDADES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TIPOS_ENTIDADES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:43 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4813D06-AC89-D8BF-F8D3-CDACE7D5AFC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TKR_TEMPORAL" directorySegmentName="seg_0" id="1E87EFE0-A4FC-234D-4B49-472107D40981">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9DE067A2-68CB-5C85-15DA-85C166C305FF</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_NEW" id="69B0C588-7BDF-794E-F90C-FDA54944F3BD">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOMBRE_MEDICAMENTO" id="D532C3D4-D253-0C4B-BD22-905D18199113">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_TEKER" id="FCA8FB35-0AE6-2C5E-9FA0-908DA8924187">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev20c>

@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="4BEACC4E-C4D3-D2D8-C560-F0BB9CDB5821" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ROLES_USUARIO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ROLES_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="EEA8D051-1D9B-E558-C5B7-AAA8F4C0DF76">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROLES_USUARIO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_roles_usuario_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ROLES_USUARIO</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO" id="918E9078-903E-E646-1CD5-C281714FABBB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROLES_USUARIO</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario correspondiente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE2FD7D9-6AA9-A938-DA51-18C416B240E7" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ID_ROL" id="1748BA11-8292-9FD6-653E-69DB596652CB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROLES_USUARIO</sourceObjSchema>
+<sourceObjName>ID_ROL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del rol asignado al usuario]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9D7FFA4E-AE2B-B522-D596-5955405495B5" referredColumn="E31BC400-9EC6-651C-7C53-4B3A5E9B19B0"/>
+</associations>
+</Column>
+<Column name="FECHA_CREACION" id="A8FA5F79-96BE-34F1-692A-0E9826A57194">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROLES_USUARIO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7AEBA26C-4B2C-CB2A-398D-E3FE8B077306" name="TKR_ROLES_USUARIO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ROLES_USUARIO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEA8D051-1D9B-E558-C5B7-AAA8F4C0DF76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB048F8F-EF5C-895C-8F41-6D5AB2892021" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ROLES_USUARIO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ROLES_USUARIO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEA8D051-1D9B-E558-C5B7-AAA8F4C0DF76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7D7E7C54-5E0D-6038-2056-C698C5582433" name="TKR_ROLES_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="918E9078-903E-E646-1CD5-C281714FABBB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="450A69EE-4F23-F472-8AF8-4960BBAB4C6D" name="TKR_ROLES_USUARIO_ROLES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1748BA11-8292-9FD6-653E-69DB596652CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

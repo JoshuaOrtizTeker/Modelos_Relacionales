@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_BI_TKR_ERRORES" directorySegmentName="seg_0" id="6C00828B-D7F0-A4C7-E74B-933CC227D1D0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_BI_TKR_ERRORES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    IF :new.id IS NULL
+    THEN
+        :new.id := TKR_errores_seq.NEXTVAL;
+    END IF;
+
+    :new.fecha_creacion := f_fecha_actual;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>B867F1BF-E66C-5088-99C7-B8ADF6D5E97B</table>
+</TriggerOraclev10g>

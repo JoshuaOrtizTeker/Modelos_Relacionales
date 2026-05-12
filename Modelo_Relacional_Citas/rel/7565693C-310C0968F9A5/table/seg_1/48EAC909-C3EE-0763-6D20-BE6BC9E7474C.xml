@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="48EAC909-C3EE-0763-6D20-BE6BC9E7474C" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FESTIVOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FESTIVOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="BDA9E13D-912A-28F0-4D45-0A2EF42A27B7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FESTIVOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_festivos_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_FESTIVOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_PAIS" id="1EE942E2-F510-B801-858F-EFB2C645B06D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FESTIVOS</sourceObjSchema>
+<sourceObjName>ID_PAIS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del pais al cual pertenece el festivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB4158AA-A693-C7E0-6CC8-D81FC3900755" referredColumn="05FE30CF-7AA7-EA39-7CDB-4F0685E330FD"/>
+</associations>
+</Column>
+<Column name="FECHA_FESTIVO" id="6259AF7D-5877-7243-486D-895C35142337">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FESTIVOS</sourceObjSchema>
+<sourceObjName>FECHA_FESTIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha el cual es dia festivo para el pais]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_FESTIVO" id="CC784AD9-79D4-4CE0-A3D2-F090B3F5C9E4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FESTIVOS</sourceObjSchema>
+<sourceObjName>NOMBRE_FESTIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre del festivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="28074237-C185-8883-8670-5CFA3D4608CD" name="TKR_FESTIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FESTIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDA9E13D-912A-28F0-4D45-0A2EF42A27B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75AAEB95-C9CC-E37F-256D-E4582EAAA304" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FESTIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FESTIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:27 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDA9E13D-912A-28F0-4D45-0A2EF42A27B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31EA3C5C-2C4A-A064-E84B-B783201BBEEB" name="TKR_FESTIVOS_PAISES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EE942E2-F510-B801-858F-EFB2C645B06D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

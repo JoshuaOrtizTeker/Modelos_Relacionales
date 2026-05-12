@@ -1,0 +1,231 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="3113C393-88F1-26FB-3986-C1C1FB30D4AD" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_VL_DISPOSITIVOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_VL_DISPOSITIVOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[En esta tabla se registran los dispositivos que se tienen para ser usados, el campo status indica 1 que el dispositivo esta en buen estado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="F381F5D0-767A-5677-3FC6-C0DF2A0870C5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_vl_dispositivos_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_VL_DISPOSITIVOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_DISPOSITIVO_VL" id="39E405DC-6F55-F83C-EE03-E69476E389F5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_DISPOSITIVO_VL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_DISPOSITIVO" id="972781FE-24D8-2C25-259E-278F9492541D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_TIPO_DISPOSITIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3AF71C78-06A6-0B86-D933-752109C9C754" referredColumn="7A2AB5D4-5EF9-200F-D32C-26D61561D20A"/>
+</associations>
+</Column>
+<Column name="ID_ESTADO_DISPOSITIVO" id="65BAC77D-3343-D826-3261-E5FA6FDA037B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_ESTADO_DISPOSITIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del estado del dispositivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E590BF3B-26D6-BE2A-0E41-F7DC71EAC34B" referredColumn="1F06C623-9C5D-3B8D-2429-488E70DD0940"/>
+</associations>
+</Column>
+<Column name="SERIAL" id="E21F8CC8-C592-79F4-50B9-243B4E95456F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>SERIAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Serial del dispositivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MODELO" id="62D7F041-56E3-B370-554F-922C4506A93D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>MODELO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Modelo del dispositivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_COMPRA" id="DFD993F1-FA2E-3662-03B3-0033185FD459">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>FECHA_COMPRA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de compra]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_RECIBIDO" id="65ACAB4F-4ADD-DC23-87AB-BB4EC3A8BEDE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>FECHA_RECIBIDO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de Recibido]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO_RECIBE" id="97CB9068-0D13-D75F-CF70-F8DFDB7DB7D6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_USUARIO_RECIBE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que recibe el dispositivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7B6662D6-4EBD-6FB6-45C5-DFD93BA09873" name="TKR_VL_DISPOSITIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_VL_DISPOSITIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F381F5D0-767A-5677-3FC6-C0DF2A0870C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3754FE54-2890-D6DB-FCE0-15BF5EB97700" name="UQ_ID_DISPOSITIVO_VL">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>UQ_ID_DISPOSITIVO_VL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39E405DC-6F55-F83C-EE03-E69476E389F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD152DA7-4B5B-883B-AAF2-944D474115B1" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_VL_DISPOSITIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_VL_DISPOSITIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:45 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F381F5D0-767A-5677-3FC6-C0DF2A0870C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4FF5C7D-B414-8700-4C2F-2A773B4A62FF" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="UQ_ID_DISPOSITIVO_VL">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>UQ_ID_DISPOSITIVO_VL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:45 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39E405DC-6F55-F83C-EE03-E69476E389F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9793CE46-9628-403F-8F6C-C185B58C184D" name="FK_VL_TIPO_DESPOSITIVO">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="972781FE-24D8-2C25-259E-278F9492541D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09B2F331-F0A9-CEC0-61CA-9C21A11907C7" name="TKR_VL_DISPOS_EST_DISPOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65BAC77D-3343-D826-3261-E5FA6FDA037B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TKR_MENSAJES" directorySegmentName="seg_1" id="529B3504-2B51-8480-B1F3-34564F741672">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9DE067A2-68CB-5C85-15DA-85C166C305FF</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MENSAJE" id="2F7C5B44-986B-D6E6-5871-2A2A7C1C5C3A">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CORREO_ELECTRONICO" id="4CEC229F-26CB-8936-0690-E95E30F05848">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHA_SEGUIMIENTO" id="697479D4-CF03-D7B9-CABC-E43FAE172E77">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_USUARIO_REGISTRO" id="777B9684-9CA0-B542-25EE-863E206B80D4">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TELEFONO" id="859FE99B-6E01-E24A-8BEB-14BDAE6CAF58">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_USUARIO_SEGUIMIENTO" id="88BAC686-F65B-D6C1-A800-150D1409784D">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_GENERO" id="C2EC69D6-954A-8800-33F2-962BBEBFD00B">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOMBRE" id="DAC0431F-AE54-D6E7-013C-B74155A8C0E1">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="EDD5E3F2-BBE5-E279-2110-943F86401D96">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="FECHA_CREACION" id="F18F6107-B6DA-9F76-29D3-CB5F4492576D">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="FECHA_REGISTRO" id="FE5032BD-3E72-093E-2530-DB8841305956">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TKR_MENSAJES_PK" id="C0DFC0A4-2F48-08B3-421E-E798934D9B2F">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:32 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TKR_MENSAJES_PK" id="12638F46-1780-B314-903F-47540B7C4CB5">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<existingIndex>C0DFC0A4-2F48-08B3-421E-E798934D9B2F</existingIndex>
+<indexSegment>CF45F2D8-939E-593B-8558-902B99580A12</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

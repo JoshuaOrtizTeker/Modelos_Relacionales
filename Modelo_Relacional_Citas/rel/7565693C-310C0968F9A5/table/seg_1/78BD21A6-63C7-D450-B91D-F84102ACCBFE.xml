@@ -1,0 +1,274 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="78BD21A6-63C7-D450-B91D-F84102ACCBFE" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DESEMBOLSOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DESEMBOLSOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="61A5A3D9-8000-CAB6-CF45-371B0607B803">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO" id="CAA5190A-16F9-F925-E613-4F096033DBDF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario al cual se le realiza el desembolso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D24C9206-B393-7397-A683-64FC4E787166" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ID_MOTIVO_DESEMBOLSO" id="308F99E5-EC66-43D3-A613-DF82D7C65196">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_MOTIVO_DESEMBOLSO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del motivo del desembolso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB0608B9-BE29-FD75-5947-22B3EC5D9AF8" referredColumn="8A297ACF-6679-758C-E40D-D9CDB01EFCAE"/>
+</associations>
+</Column>
+<Column name="FECHA_DESEMBOLSO" id="C4817366-D37C-8038-2092-E08E11E6568E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>FECHA_DESEMBOLSO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que se realiza el desembolsos]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_DESEMBOLSO" id="1CE5B0D2-F988-682F-CB8E-49C0E10FE244">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>VALOR_DESEMBOLSO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor del desembolso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FORMA_PAGO" id="FF6D36AF-1FF6-5A98-5F49-E991176DDFF1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_FORMA_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la forma de pago por la cual se hace el desembolso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="628FA402-4C27-D84E-C7C4-82FE6704AAA6" referredColumn="968BBE58-C90D-3CBD-9D80-B6058989EAC5"/>
+</associations>
+</Column>
+<Column name="ID_LIQUIDACION" id="4A8D72E2-BD08-958F-29E9-2D33C29B8DFE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_LIQUIDACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de las liquidaciones a la cual pertenece el desembolso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRA" id="515E4948-0B52-D2A3-DE99-FE3F17187759">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>FECHA_REGISTRA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO_REGISTRA" id="D670D604-C396-E51E-EB93-8A956B16A8EB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_USUARIO_REGISTRA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que registra el desembolso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_BANCO" id="9DF31E07-2A62-292C-B522-590174F6AE2C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_BANCO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del banco que realiza la transacción]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2C6A9A67-A422-C978-594C-C2BE9F0404F8" referredColumn="3D137F07-B2B6-EB59-BBB7-6F0DE708DE6C"/>
+</associations>
+</Column>
+<Column name="ID_TRANSACCION" id="4388A191-93F3-4544-AB3A-AAC9FA13EDBC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>ID_TRANSACCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la transacción otorgada por el banco]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="B0F1F840-B77A-52E9-DFF7-E122A5BD9832">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESEMBOLSOS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFACA3C6-A467-806A-3197-2F8BA1941930" name="TKR_DESEMBOLSOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DESEMBOLSOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61A5A3D9-8000-CAB6-CF45-371B0607B803"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43E1A559-D400-8845-F748-799F20F12C73" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DESEMBOLSOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DESEMBOLSOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:22 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61A5A3D9-8000-CAB6-CF45-371B0607B803"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A784F83-3ED8-CC9F-100E-FA7A7C0A055B" name="TKR_DESEMBOLSOS_BANCOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DF31E07-2A62-292C-B522-590174F6AE2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9C1B2F0-12F7-0EC3-7EB2-78FF654C301B" name="TKR_DESEMBOLSOS_FORMAS_PAGO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF6D36AF-1FF6-5A98-5F49-E991176DDFF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5131BD82-3E00-B696-9F07-74998A626753" name="TKR_DESEMBOLSOS_MOT_DESEMBOLSO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="308F99E5-EC66-43D3-A613-DF82D7C65196"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="082C7C65-6C27-16A4-923E-3F85E14D9121" name="TKR_DESEMBOLSOS_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAA5190A-16F9-F925-E613-4F096033DBDF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

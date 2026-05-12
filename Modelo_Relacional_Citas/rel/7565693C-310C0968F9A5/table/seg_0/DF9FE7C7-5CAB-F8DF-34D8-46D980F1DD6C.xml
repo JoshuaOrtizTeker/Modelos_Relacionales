@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DF9FE7C7-5CAB-F8DF-34D8-46D980F1DD6C" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CUENTAS_BANCARIAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CUENTAS_BANCARIAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla para almacenar las cuentas bancarias de los usuarios del sistema]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="3730CE7B-1CDD-C036-CB95-F11A81980EEC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_cuentas_bancarias_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_CUENTAS_BANCARIAS_SEQ</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO" id="EF1AD972-6ABA-CAA5-988A-66589EF97577">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario al que pertenece la cuenta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D004D999-E5E3-E497-13E3-15F4A004FFD7" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ID_ENTIDAD" id="4807C664-6304-1BC1-B90A-96060F73BF3E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad al que pertence la cuenta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="163402FC-C510-4504-DE7E-7FE2E31D4479" referredColumn="80A3768C-44CA-C05D-A40F-BB8A626D121D"/>
+</associations>
+</Column>
+<Column name="ID_BANCO" id="8182B957-95A8-3B86-2D0C-8BE79D744126">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>ID_BANCO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del banco de la empresa]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6018FB75-B7C1-72D0-DB84-E09C5D9EA1CF" referredColumn="3D137F07-B2B6-EB59-BBB7-6F0DE708DE6C"/>
+</associations>
+</Column>
+<Column name="NUMERO_CUENTA" id="F2BF940A-A61D-EC9C-EF3F-9F018AA106E9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>NUMERO_CUENTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Numero de la cuenta bancaria]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_CUENTA" id="73423614-9E7A-6ECE-5692-73958735C39B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>TIPO_CUENTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de Cuenta (A)horros (C)orriente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<constraintName>SYS_C0022202</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;A&apos;" description=""/>
+<valueDef value="&apos;C&apos;" description=""/>
+<valueDef value="&apos;D&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="15FDFCA2-6E31-5AD4-659B-DCDF13CACE06">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVA" id="E600BB29-7DDC-104B-6E82-8F4E39AB2E1F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_BANCARIAS</sourceObjSchema>
+<sourceObjName>ACTIVA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cuenta Activa (S)i (N)o]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<constraintName>SYS_C0021528</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;S&apos;" description=""/>
+</listOfValues>
+<defaultValue>&apos;S&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="45EE8EE0-9365-F995-211C-71A41CC096DE" name="TKR_CUENTAS_BANCARIAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CUENTAS_BANCARIAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3730CE7B-1CDD-C036-CB95-F11A81980EEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF662C64-F7AC-9620-8F66-B240C12AC852" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CUENTAS_BANCARIAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CUENTAS_BANCARIAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:21 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3730CE7B-1CDD-C036-CB95-F11A81980EEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFB521D1-2F0C-BD2F-3AD5-9D5728C65846" name="TKR_CUENTAS_BANCARIASUSUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF1AD972-6ABA-CAA5-988A-66589EF97577"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54B34109-B25D-DBE8-05E3-5E6DE3EAA635" name="TKR_CUENTAS_BANCARIAS_ENTIDADES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4807C664-6304-1BC1-B90A-96060F73BF3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="012C7C3D-BB97-6073-4B39-1C662447952B" name="TKR_CUENTAS_BANC_BANCOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8182B957-95A8-3B86-2D0C-8BE79D744126"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

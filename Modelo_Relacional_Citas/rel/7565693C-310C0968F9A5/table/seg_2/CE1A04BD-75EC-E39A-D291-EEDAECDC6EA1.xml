@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="CE1A04BD-75EC-E39A-D291-EEDAECDC6EA1" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDIOS_COMUNICACION">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDIOS_COMUNICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4EFEBB31-DFA1-3309-B60F-46B99DC8EAF6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDIOS_COMUNICACION</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_medios_comunicacion_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_MEDIOS_COMUNICACION</autoIncrementTriggerName>
+</Column>
+<Column name="MEDIO_COMUNICACION" id="F15B8C00-EF79-43D9-DCD0-DF049F09E34A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDIOS_COMUNICACION</sourceObjSchema>
+<sourceObjName>MEDIO_COMUNICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre del medio de comunicación]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ARCHIVO_LOGO" id="867B0769-0A31-E37A-C81C-B4EC6BA6B7C3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDIOS_COMUNICACION</sourceObjSchema>
+<sourceObjName>ID_ARCHIVO_LOGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del archivo con el logo del medio de comunicación]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ARCHIVO_FONDO_LOGO" id="73525A80-2C11-8560-A81C-62AE7A53DAAC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDIOS_COMUNICACION</sourceObjSchema>
+<sourceObjName>ID_ARCHIVO_FONDO_LOGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del archivo con la imagen de fondo del logo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="263F6559-887A-BC46-4307-2523DAFBC0B8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDIOS_COMUNICACION</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D03BAB6-3C89-64F3-D43B-1E41AC30B03B" name="TKR_MEDIOS_COMUNICACION_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDIOS_COMUNICACION_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EFEBB31-DFA1-3309-B60F-46B99DC8EAF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B848726C-C3F1-1347-5F02-3F2A5D394238" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDIOS_COMUNICACION_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDIOS_COMUNICACION_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:31 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EFEBB31-DFA1-3309-B60F-46B99DC8EAF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

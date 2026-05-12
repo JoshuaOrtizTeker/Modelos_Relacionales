@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TKR_INTEGRANTES_GRUPO" directorySegmentName="seg_2" id="9211CB54-94E9-E51F-7515-A69B5259774F">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9DE067A2-68CB-5C85-15DA-85C166C305FF</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID" id="03C28A34-67C7-2250-131A-DF852A5AAD41">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ID_USUARIO" id="0EB9C3B0-6566-5174-19DA-BB37FD786276">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PARENTESCO" id="387EE252-F2AA-6F85-524C-2D6E95BF9B8A">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_GRUPO_PERTENECE" id="88A892F7-8C4B-167A-AFE8-4C42510AB046">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FECHA_CREACION" id="A3598E83-F752-FE15-DF47-D8595E197CF4">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TKR_GRUPO_FAMILIAR_PK" id="FC9C670C-83BA-D86B-762A-BA6CC501A336">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:29 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<schemaObject>3B9DDBE7-7168-00F7-4034-389205A3D5CD</schemaObject>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TKR_GRUPO_FAMILIAR_USUARIO_FK" id="092D90C2-E38E-3252-FD2D-EBB97CF26CAD">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TKR_INT_GRPO_GRUPOS_FAMILIAR_FK" id="207B74E9-E21D-F7D7-20F7-585113B4FECE">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TKR_GRUPO_FAMILIAR_PARENTESCO_FK" id="75FAF208-D69E-1C8A-690B-1E0025D9D914">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TKR_GRUPO_FAMILIAR_PK" id="0CE6A1EA-3D79-EC63-B328-FA939D882545">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<segment>CF45F2D8-939E-593B-8558-902B99580A12</segment>
+<tableSpace>7A5456DE-D8F5-7538-4B76-1DA0E8A341CD</tableSpace>
+<existingIndex>FC9C670C-83BA-D86B-762A-BA6CC501A336</existingIndex>
+<indexSegment>CF45F2D8-939E-593B-8558-902B99580A12</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

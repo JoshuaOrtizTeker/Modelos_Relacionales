@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="6D1CD7AB-65B5-DA05-6AE1-BDCCA56D959F" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TRANSPORTADORAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TRANSPORTADORAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="680F7E66-B5E1-8645-F9F0-2B2A9ADCC153">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TRANSPORTADORAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_transportadoras_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_TRANSPORTADORAS</autoIncrementTriggerName>
+</Column>
+<Column name="NOMBRE_TRANSPORTADORA" id="716D1E17-8A26-2DDF-CE7F-FE26628EF297">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TRANSPORTADORAS</sourceObjSchema>
+<sourceObjName>NOMBRE_TRANSPORTADORA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la transportadora]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A7909F4-C425-28C8-3A25-2F1353A9E896" name="TKR_TRANSPORTADORAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TRANSPORTADORAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="680F7E66-B5E1-8645-F9F0-2B2A9ADCC153"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D150F76D-F8B9-79A5-3DE6-563CA9B63937" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TRANSPORTADORAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TRANSPORTADORAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:43 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="680F7E66-B5E1-8645-F9F0-2B2A9ADCC153"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

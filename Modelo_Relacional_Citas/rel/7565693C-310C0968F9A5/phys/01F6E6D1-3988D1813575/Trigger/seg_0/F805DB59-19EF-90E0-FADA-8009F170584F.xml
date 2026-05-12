@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_COHORTES" directorySegmentName="seg_0" id="F805DB59-19EF-90E0-FADA-8009F170584F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_COHORTES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_COHORTES WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_COHORTES WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_COHORTES (
+            ENVIO_BQ,
+            ID, 
+            FECHA_CARGUE, 
+            ID_ARCHIVO, 
+            REGISTROS_ARCHIVO, 
+            REGISTROS_CARGADOS
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID, 
+            :NEW.FECHA_CARGUE, 
+            :NEW.ID_ARCHIVO, 
+            :NEW.REGISTROS_ARCHIVO, 
+            :NEW.REGISTROS_CARGADOS
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_COHORTES WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_COHORTES (
+                ENVIO_BQ,
+                ID, 
+                FECHA_CARGUE, 
+                ID_ARCHIVO, 
+                REGISTROS_ARCHIVO, 
+                REGISTROS_CARGADOS
+            )
+            VALUES (
+                2, -- ENVIO_BQ por defecto
+                :NEW.ID, 
+                :NEW.FECHA_CARGUE, 
+                :NEW.ID_ARCHIVO, 
+                :NEW.REGISTROS_ARCHIVO, 
+                :NEW.REGISTROS_CARGADOS
+            );
+
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;
+
+            UPDATE TKRBQ_COHORTES
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID, 
+                FECHA_CARGUE = :NEW.FECHA_CARGUE, 
+                ID_ARCHIVO = :NEW.ID_ARCHIVO, 
+                REGISTROS_ARCHIVO = :NEW.REGISTROS_ARCHIVO, 
+                REGISTROS_CARGADOS = :NEW.REGISTROS_CARGADOS
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_COHORTES WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_COHORTES WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_COHORTES (
+            ENVIO_BQ,
+            ID, 
+            FECHA_CARGUE, 
+            ID_ARCHIVO, 
+            REGISTROS_ARCHIVO, 
+            REGISTROS_CARGADOS
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID, 
+            :OLD.FECHA_CARGUE, 
+            :OLD.ID_ARCHIVO, 
+            :OLD.REGISTROS_ARCHIVO, 
+            :OLD.REGISTROS_CARGADOS
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_COHORTES';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>7894DE9C-1290-510F-1A7D-21C2969EA4B7</table>
+</TriggerOraclev10g>

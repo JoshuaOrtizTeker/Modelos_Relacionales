@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="42985778-0E0A-B891-9234-3D2B5736B9FD" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ENTIDADES_REMISORAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENTIDADES_REMISORAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="B0360A9C-EF26-5501-96B9-7268E8E0B04D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_entidades_remisoras_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ENTIDADES_REMISORAS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ENTIDAD" id="B50986B6-C9B3-5C21-FAE7-244FB08FA416">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad a la cual pertenece]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B001B35-0EC2-DCB0-805A-9B31573513C2" referredColumn="80A3768C-44CA-C05D-A40F-BB8A626D121D"/>
+</associations>
+</Column>
+<Column name="NOMBRE_ENTIDAD_REMISORA" id="1FBAF42D-8DB0-BB5B-590A-27E8E507E671">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>NOMBRE_ENTIDAD_REMISORA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la entidad remisora]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO_ELECTRONICO" id="2464FFE7-B878-8452-A060-22EFC0ACDC44">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>CORREO_ELECTRONICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Correo electronico de la entidad remisora]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONO" id="FC4D7EAC-0A8A-352B-7A48-D57F0C8B89BA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>TELEFONO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Telefono de la entidad remisora]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_IDENTIFICACION" id="94D9B982-09F7-73C1-52B1-CD1BE178F991">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>ID_TIPO_IDENTIFICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del tipo de identificacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E121426-853A-82CD-1991-32505B974C21" referredColumn="4D8E5D24-CE6E-4992-9610-4DC390E918F2"/>
+</associations>
+</Column>
+<Column name="IDENTIFICACION" id="230A79E8-05DA-8FF1-F1CF-B943A97BF58C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENTIDADES_REMISORAS</sourceObjSchema>
+<sourceObjName>IDENTIFICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9644E7EB-2382-5485-52C5-8FE2A25AB6F1" name="TKR_ENTIDADES_REMISORAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENTIDADES_REMISORAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0360A9C-EF26-5501-96B9-7268E8E0B04D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C873420-860D-DFFE-28D6-0A0055D26338" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ENTIDADES_REMISORAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENTIDADES_REMISORAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:24 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0360A9C-EF26-5501-96B9-7268E8E0B04D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="28FC0C54-3C62-342D-6B80-3BCB3AA5F760" name="TKR_ENT_REMISORAS_ENTIDAD_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B50986B6-C9B3-5C21-FAE7-244FB08FA416"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29422EB8-DE07-F64D-A35A-BED3A2B87D8E" name="TKR_ENT_REM_TIPO_IDENTIFICACION_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94D9B982-09F7-73C1-52B1-CD1BE178F991"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

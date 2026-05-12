@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_BI_TKR_CAUSAS" directorySegmentName="seg_0" id="D7B7BDFA-CA05-9397-B334-1F173EA4B286">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_BI_TKR_CAUSAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    IF :new.id IS NULL
+    THEN
+        :new.id := tkr_causas_seq.NEXTVAL;
+    END IF;
+
+    :new.fecha_creacion := f_fecha_actual;
+END;
+
+-- PACIENTE]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>243D73E9-A018-32A7-019C-1E29F7F32D41</table>
+</TriggerOraclev10g>

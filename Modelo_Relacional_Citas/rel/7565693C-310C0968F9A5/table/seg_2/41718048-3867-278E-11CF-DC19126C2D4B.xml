@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="41718048-3867-278E-11CF-DC19126C2D4B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OPCIONES_PREGUNTAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OPCIONES_PREGUNTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="98F02DF2-877C-81E4-619D-FF5DD925A62D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OPCIONES_PREGUNTAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_opciones_preguntas_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_OPCIONES_PREGUNTAS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_PREGUNTA" id="592725CF-A866-7DA8-C662-4D1D7B867B50">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OPCIONES_PREGUNTAS</sourceObjSchema>
+<sourceObjName>ID_PREGUNTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la pregunta correspondiente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="442C4DB6-D4BF-542E-1252-A7F48D8B795B" referredColumn="8D542D14-180A-F4AA-4936-F618C8579EF8"/>
+</associations>
+</Column>
+<Column name="TEXTO_OPCION" id="55D40341-CC8E-072A-4A71-1E58876D3325">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OPCIONES_PREGUNTAS</sourceObjSchema>
+<sourceObjName>TEXTO_OPCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Texto  de la opción de la pregunta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000 BYTE</dataTypeSize>
+<ownDataTypeParameters>2000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDEN" id="20D88B22-D58D-B96B-3023-D3866F60E000">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OPCIONES_PREGUNTAS</sourceObjSchema>
+<sourceObjName>ORDEN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Orden de presentación de la opción]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="E07BF292-B738-C189-05A4-37622CCBED73">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OPCIONES_PREGUNTAS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F70CAA7D-2510-F1BD-3A56-92EE71389B54" name="TKR_OPCIONES_PREGUNTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OPCIONES_PREGUNTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98F02DF2-877C-81E4-619D-FF5DD925A62D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF678497-8C4E-296B-5568-535FA6002FA1" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OPCIONES_PREGUNTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OPCIONES_PREGUNTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:33 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98F02DF2-877C-81E4-619D-FF5DD925A62D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34590F7D-B97E-892F-9070-E42A719AF1E7" name="TKR_OPCIONES_PREG_PREGUNTAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="592725CF-A866-7DA8-C662-4D1D7B867B50"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

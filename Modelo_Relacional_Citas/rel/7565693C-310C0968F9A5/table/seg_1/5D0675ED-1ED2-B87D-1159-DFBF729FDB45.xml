@@ -1,0 +1,199 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="5D0675ED-1ED2-B87D-1159-DFBF729FDB45" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_HISTORIA_PACIENTE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HISTORIA_PACIENTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CF7275D0-E07E-5C9C-D5BF-8D0DC733145C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_historia_paciente_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_HISTORIA_PACIENTE</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO" id="4F41E500-24EA-00CA-BA1F-433F2414A856">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario al que pertenece la información]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C5208856-3509-BBBF-0446-1B42BD559696" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ANTECEDENTES_FAMILIARES" id="229D3301-52B4-7F0C-06C9-195E849F5A27">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ANTECEDENTES_FAMILIARES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Antecedentes Familiares]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANTECEDENTES_PATOLOGICOS" id="41A0ED45-F1ED-76C0-5D8C-401F0418C012">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ANTECEDENTES_PATOLOGICOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Antecedentes Patologicos del paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANTECEDENTES_PERSONALES" id="49DCEB9D-DE70-9E63-C785-EF01D83A8AAA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ANTECEDENTES_PERSONALES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Antecedentes personales]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANTECEDENTES_QUIRURGICOS" id="B576F312-00C0-D568-14A9-BFA733A354C3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ANTECEDENTES_QUIRURGICOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Antecedentes Quirurgicos del Paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANTECEDENTES_TRAUMATICOS" id="614F9AC6-13C6-0CF7-393A-C37E8759034C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ANTECEDENTES_TRAUMATICOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Antecedentes Traumaticos del paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIAGNOSTICO_PRINCIPAL" id="48FD5EC0-6B36-D169-2DC9-C666449D1098">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>DIAGNOSTICO_PRINCIPAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Dignosticos del Paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANTECEDENTES_FARMACOLOGICOS" id="C137AF9B-B3C4-E957-787A-3026D4BC57AA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HISTORIA_PACIENTE</sourceObjSchema>
+<sourceObjName>ANTECEDENTES_FARMACOLOGICOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Antecedentes Farmacologicos del Paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C4E0D1D2-1839-B27B-7286-4FD17999A855" name="TKR_HISTORIA_PACIENTE_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HISTORIA_PACIENTE_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF7275D0-E07E-5C9C-D5BF-8D0DC733145C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E31CBB9-4E42-E139-3826-D06064BD6B4A" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_HISTORIA_PACIENTE_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HISTORIA_PACIENTE_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:28 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF7275D0-E07E-5C9C-D5BF-8D0DC733145C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53CFAB1D-A6AD-FE33-6BEF-4AA6A5CE59FE" name="TKR_HIST_PTE_USU_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F41E500-24EA-00CA-BA1F-433F2414A856"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_BI_TKR_RESTRICIONES_MENU" directorySegmentName="seg_0" id="6FAEC0D2-1922-8FA4-FC8D-1CD2E51AC5C9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_BI_TKR_RESTRICIONES_MENU</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    :new.id := tkr_restriciones_menu_seq.nextval;
+    :new.fecha_creacion := f_fecha_actual;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<condition><![CDATA[ new.id IS NULL ]]></condition>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>A9B53966-76C3-4715-F9A5-4E99DF88306E</table>
+</TriggerOraclev10g>

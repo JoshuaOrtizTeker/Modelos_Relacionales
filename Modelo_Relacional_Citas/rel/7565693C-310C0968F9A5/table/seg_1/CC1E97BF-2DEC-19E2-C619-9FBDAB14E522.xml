@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="CC1E97BF-2DEC-19E2-C619-9FBDAB14E522" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DESCUENTOS_USUARIOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DESCUENTOS_USUARIOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C3A2E2B6-5DCE-D738-741C-35C2CACA6D52">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESCUENTOS_USUARIOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_descuentos_usuarios_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_DESCUENTOS_USUARIOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CODIGO_DESCUENTO" id="ED000C82-103F-B3B6-9D8C-26C4C362E0C3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESCUENTOS_USUARIOS</sourceObjSchema>
+<sourceObjName>ID_CODIGO_DESCUENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del codigo descuento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8CF9260F-33FD-7AD2-355D-E35306431A30" referredColumn="3B8093E8-B542-DD1B-B27E-9693417A1481"/>
+</associations>
+</Column>
+<Column name="ID_USUARIO" id="65E8AA0E-04FF-EB64-713F-90AB08461A25">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESCUENTOS_USUARIOS</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que aplica el descuento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO_ELECTRONICO" id="C46A6A44-243B-5841-B0C3-B09E3B982CEB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESCUENTOS_USUARIOS</sourceObjSchema>
+<sourceObjName>CORREO_ELECTRONICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Correo Electrónico de la persona que es referenciada]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="365557B9-89D6-8B61-686C-0352C7E22DE3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DESCUENTOS_USUARIOS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5D582161-13C9-036D-6A38-F6160025B3EF" name="TKR_DESCUENTOS_PROF_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DESCUENTOS_PROF_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3A2E2B6-5DCE-D738-741C-35C2CACA6D52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A9431E9-63BB-E10D-14B7-BB7C7C7578D2" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DESCUENTOS_PROF_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DESCUENTOS_PROF_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:22 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3A2E2B6-5DCE-D738-741C-35C2CACA6D52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="067C405B-27BE-2FCE-CC6E-BFA135FFF585" name="TKR_DCTOS_USU_TKR_COD_DECTOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED000C82-103F-B3B6-9D8C-26C4C362E0C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

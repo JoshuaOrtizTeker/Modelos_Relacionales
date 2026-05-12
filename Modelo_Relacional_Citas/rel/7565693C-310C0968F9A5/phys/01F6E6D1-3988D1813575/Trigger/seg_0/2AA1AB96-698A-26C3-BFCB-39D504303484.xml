@@ -1,0 +1,281 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TKR_CITAS_AUDIT_UPDATE" directorySegmentName="seg_0" id="2AA1AB96-698A-26C3-BFCB-39D504303484">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CITAS_AUDIT_UPDATE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[DECLARE
+    v_user          VARCHAR2 (100);
+    v_module        VARCHAR2 (100);
+    v_os_user       VARCHAR2 (100);
+    v_host          VARCHAR2 (100);
+    v_job_name      VARCHAR2 (100);
+    v_ip_addres     VARCHAR2 (50);
+    v_sessionid     NUMBER;
+    v_clob          CLOB;
+    vro_auditoria   tkr_auditoria_citas_temp%ROWTYPE;
+    v_actualizo     BOOLEAN := FALSE;
+BEGIN
+    -- Obtener información de contexto válida
+    v_user := USER;
+    v_module := SYS_CONTEXT ('USERENV', 'MODULE');
+    v_os_user := SYS_CONTEXT ('USERENV', 'OS_USER');
+    v_host := SYS_CONTEXT ('USERENV', 'HOST');
+    v_ip_addres := SYS_CONTEXT ('USERENV', 'IP_ADDRESS');
+    v_sessionid := SYS_CONTEXT ('USERENV', 'SESSIONID');
+
+    /*
+    SELECT JSON_OBJECT(
+        -- Información básica de sesión
+        'session_info' VALUE JSON_OBJECT(
+            'sid' VALUE s.sid,
+            'serial#' VALUE s.serial#,
+            'audsid' VALUE s.audsid,
+            'username' VALUE s.username,
+            'osuser' VALUE s.osuser,
+            'machine' VALUE s.machine,
+            'terminal' VALUE s.terminal,
+            'program' VALUE s.program,
+            'module' VALUE s.module,
+            'action' VALUE s.action,
+            'client_info' VALUE s.client_info,
+            'client_identifier' VALUE s.client_identifier,
+            'logon_time' VALUE TO_CHAR(s.logon_time, 'DD/MM/YYYY HH24:MI:SS'),
+            'status' VALUE s.status,
+            'schemaname' VALUE s.schemaname,
+            'process' VALUE s.process,
+            'port' VALUE s.port,
+            'server' VALUE s.server
+        ),
+        -- SQL actual
+        'current_sql' VALUE (
+            SELECT JSON_OBJECT(
+                'sql_id' VALUE q.sql_id,
+                'sql_text' VALUE q.sql_text,
+                'sql_fulltext' VALUE (
+                    SELECT LISTAGG(sql_text, '') WITHIN GROUP (ORDER BY piece)
+                    FROM v$sqltext t
+                    WHERE t.sql_id = q.sql_id
+                ),
+                'executions' VALUE q.executions,
+                'first_load_time' VALUE q.first_load_time,
+                'last_load_time' VALUE q.last_load_time,
+                'elapsed_time' VALUE q.elapsed_time,
+                'cpu_time' VALUE q.cpu_time,
+                'buffer_gets' VALUE q.buffer_gets,
+                'disk_reads' VALUE q.disk_reads,
+                'rows_processed' VALUE q.rows_processed,
+                'sql_exec_start' VALUE TO_CHAR(s.sql_exec_start, 'DD/MM/YYYY HH24:MI:SS'),
+                'sql_exec_id' VALUE s.sql_exec_id
+            )
+            FROM v$sql q
+            WHERE q.sql_id = s.sql_id
+            AND ROWNUM = 1
+        ),
+        -- SQL anterior
+        'previous_sql' VALUE (
+            SELECT JSON_OBJECT(
+                'sql_id' VALUE q.sql_id,
+                'sql_text' VALUE q.sql_text,
+                'prev_exec_start' VALUE TO_CHAR(s.prev_exec_start, 'DD/MM/YYYY HH24:MI:SS'),
+                'prev_exec_id' VALUE s.prev_exec_id
+            )
+            FROM v$sql q
+            WHERE q.sql_id = s.prev_sql_id
+            AND ROWNUM = 1
+        ),
+        -- Bloqueos y locks
+        'locks' VALUE (
+            SELECT JSON_ARRAYAGG(
+                JSON_OBJECT(
+                    'object_owner' VALUE o.owner,
+                    'object_name' VALUE o.object_name,
+                    'object_type' VALUE o.object_type,
+                    'lock_type' VALUE l.type,
+                    'lock_mode' VALUE l.lmode,
+                    'lock_request' VALUE l.request,
+                    'is_blocking' VALUE CASE WHEN l.block > 0 THEN 'YES' ELSE 'NO' END,
+                    'blocking_session' VALUE l.block
+                )
+            )
+            FROM v$lock l
+            LEFT JOIN dba_objects o ON l.id1 = o.object_id
+            WHERE l.sid = s.sid
+            AND l.type IN ('TM', 'TX')
+        ),
+        -- Eventos de espera
+        'wait_events' VALUE (
+            SELECT JSON_OBJECT(
+                'current_event' VALUE s.event,
+                'wait_class' VALUE s.wait_class,
+                'wait_time' VALUE s.wait_time,
+                'seconds_in_wait' VALUE s.seconds_in_wait,
+                'state' VALUE s.state
+            )
+        ),
+        -- Información de scheduler job (si aplica)
+        'scheduler_job' VALUE (
+            SELECT JSON_OBJECT(
+                'job_name' VALUE rj.job_name,
+                'running_instance' VALUE rj.running_instance,
+                'elapsed_time' VALUE rj.elapsed_time,
+                'cpu_used' VALUE rj.cpu_used,
+                'job_action' VALUE j.job_action,
+                'repeat_interval' VALUE j.repeat_interval,
+                'last_start_date' VALUE TO_CHAR(j.last_start_date, 'DD/MM/YYYY HH24:MI:SS'),
+                'next_run_date' VALUE TO_CHAR(j.next_run_date, 'DD/MM/YYYY HH24:MI:SS')
+            )
+            FROM dba_scheduler_running_jobs rj
+            JOIN dba_scheduler_jobs j ON rj.job_name = j.job_name
+            WHERE rj.session_id = s.sid
+            AND ROWNUM = 1
+        ),
+        -- Transacción actual
+        'transaction' VALUE (
+            SELECT JSON_OBJECT(
+                'xid' VALUE t.xid,
+                'start_time' VALUE TO_CHAR(t.start_time, 'DD/MM/YYYY HH24:MI:SS'),
+                'status' VALUE t.status,
+                'used_ublk' VALUE t.used_ublk,
+                'used_urec' VALUE t.used_urec
+            )
+            FROM v$transaction t
+            WHERE t.ses_addr = s.saddr
+            AND ROWNUM = 1
+        ),
+        -- Métricas de sesión
+        'session_metrics' VALUE JSON_OBJECT(
+            'logical_reads' VALUE sstat1.value,
+            'physical_reads' VALUE sstat2.value,
+            'physical_writes' VALUE sstat3.value,
+            'user_commits' VALUE sstat4.value,
+            'user_rollbacks' VALUE sstat5.value
+        ),
+        -- Historial reciente (última hora)
+        'recent_activity' VALUE (
+            SELECT JSON_ARRAYAGG(
+                JSON_OBJECT(
+                    'sample_time' VALUE TO_CHAR(ash.sample_time, 'DD/MM/YYYY HH24:MI:SS'),
+                    'sql_id' VALUE ash.sql_id,
+                    'event' VALUE ash.event,
+                    'time_waited' VALUE ash.time_waited,
+                    'session_state' VALUE ash.session_state
+                ) ORDER BY ash.sample_time DESC
+            )
+            FROM v$active_session_history ash
+            WHERE ash.session_id = s.sid
+            AND ash.session_serial# = s.serial#
+            AND ash.sample_time > SYSDATE - 1/24
+            AND ROWNUM <= 10  -- Limitar a 10 muestras recientes
+        )
+    ) AS session_json INTO v_clob
+    FROM v$session s
+    LEFT JOIN v$sesstat sstat1 ON s.sid = sstat1.sid
+        AND sstat1.statistic# = (SELECT statistic# FROM v$statname WHERE name = 'session logical reads')
+    LEFT JOIN v$sesstat sstat2 ON s.sid = sstat2.sid
+        AND sstat2.statistic# = (SELECT statistic# FROM v$statname WHERE name = 'physical reads')
+    LEFT JOIN v$sesstat sstat3 ON s.sid = sstat3.sid
+        AND sstat3.statistic# = (SELECT statistic# FROM v$statname WHERE name = 'physical writes')
+    LEFT JOIN v$sesstat sstat4 ON s.sid = sstat4.sid
+        AND sstat4.statistic# = (SELECT statistic# FROM v$statname WHERE name = 'user commits')
+    LEFT JOIN v$sesstat sstat5 ON s.sid = sstat5.sid
+        AND sstat5.statistic# = (SELECT statistic# FROM v$statname WHERE name = 'user rollbacks')
+    WHERE s.sid = v_sessionid  -- Aquí pasas el session_id
+      AND ROWNUM = 1; */
+    BEGIN
+        SELECT rj.job_name
+          INTO v_job_name
+          FROM user_scheduler_running_jobs rj
+         WHERE rj.session_id = v_sessionid;
+    EXCEPTION
+        WHEN NO_DATA_FOUND
+        THEN
+            v_job_name := 'NO_JOB';
+    END;
+
+    IF :old.id = 3481
+    THEN
+        v_actualizo := FALSE;
+
+        IF     :OLD.fecha_inicio_cita <> :NEW.fecha_inicio_cita
+           AND :OLD.fecha_inicio_cita IS NOT NULL
+           AND :NEW.fecha_inicio_cita IS NOT NULL
+        THEN
+            vro_auditoria.campo := 'fecha_inicio_cita';
+            vro_auditoria.old_fecha_inicio_cita := :old.fecha_inicio_cita;
+            vro_auditoria.new_fecha_inicio_cita := :new.fecha_inicio_cita;
+            vro_auditoria.valor_nuevo := 'Cita: ' || :new.id || ' Job: ' || v_job_name;
+            v_actualizo := TRUE;
+            SELECT JSON_ARRAYAGG(JSON_OBJECT(
+    'session_id' VALUE s.sid,
+    'serial' VALUE s.serial#,
+    'user' VALUE s.username,
+    'program' VALUE s.program,
+    'module' VALUE s.module,
+    'sql_id' VALUE s.sql_id,
+    'sql_text' VALUE q.sql_text,
+    'scheduler_job' VALUE (
+        SELECT rj.job_name
+        FROM dba_scheduler_running_jobs rj
+        WHERE rj.session_id = s.sid
+        AND ROWNUM = 1
+    ),
+    'job_action' VALUE (
+        SELECT SUBSTR(j.job_action, 1, 500)
+        FROM dba_scheduler_running_jobs rj
+        JOIN dba_scheduler_jobs j ON rj.job_name = j.job_name
+        WHERE rj.session_id = s.sid
+        AND ROWNUM = 1
+    ),
+    'tables_affected' VALUE JSON_ARRAY('TKR_CITAS'),
+    'columns_modified' VALUE (
+        SELECT JSON_ARRAYAGG(
+            CASE 
+                WHEN UPPER(q.sql_text) LIKE '%FECHA_INICIO_CITA%' THEN 'FECHA_INICIO_CITA'
+                WHEN UPPER(q.sql_text) LIKE '%ID_ESTADO_CITA%' THEN 'ID_ESTADO_CITA'
+            END
+        )
+        FROM DUAL
+        WHERE UPPER(q.sql_text) LIKE '%FECHA_INICIO_CITA%'
+           OR UPPER(q.sql_text) LIKE '%ID_ESTADO_CITA%'
+    )
+ RETURNING CLOB) RETURNING CLOB)
+ INTO v_clob
+FROM v$session s
+LEFT JOIN v$sql q ON s.sql_id = q.sql_id
+WHERE s.module = 'DBMS_SCHEDULER';
+
+        ELSIF     :OLD.id_estado_cita <> :NEW.id_estado_cita
+              AND :OLD.id_estado_cita IS NOT NULL
+              AND :NEW.id_estado_cita IS NOT NULL
+        THEN
+            vro_auditoria.campo := 'id_estado_cita';
+            vro_auditoria.valor_anterior := :old.id_estado_cita;
+            vro_auditoria.valor_nuevo := :new.id_estado_cita || ' Job: ' || v_job_name;
+            v_actualizo := TRUE;
+        END IF;
+
+        IF v_actualizo = TRUE
+        THEN
+            vro_auditoria.id := tkr_citas_audit_update_seq.NEXTVAL;
+            vro_auditoria.fecha := f_fecha_actual;
+            vro_auditoria.usuario := v_user;
+            vro_auditoria.module := v_module;
+            vro_auditoria.os_user := v_os_user;
+            vro_auditoria.hosts := v_host;
+            vro_auditoria.ip_addres := v_ip_addres;
+            vro_auditoria.SESSIONID := v_sessionid;
+            vro_auditoria.JSON_SESSIONID := v_clob;
+        END IF;
+
+        INSERT INTO tkr_auditoria_citas_temp
+             VALUES vro_auditoria;
+    END IF;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>C0F72B72-6568-0338-6F31-77AF8F5A8E51</table>
+</TriggerOraclev10g>

@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AFC29DF7-B153-2EC7-BC57-4767A374F1E5" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ARCHIVOS_PQR">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ARCHIVOS_PQR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="D47364E4-5C75-BDE9-7A74-B66559D02A5D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ARCHIVOS_PQR</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PQR" id="6551ED88-BA45-C724-773E-5CFCD68E755A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ARCHIVOS_PQR</sourceObjSchema>
+<sourceObjName>ID_PQR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del PQR]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B385580-807D-69B8-65CE-A884CAB5E64C" referredColumn="8555A37C-4780-526E-CE0A-218C5009BE3F"/>
+</associations>
+</Column>
+<Column name="ID_ARCHIVO" id="46754FB3-E859-150C-6324-96E521A45572">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ARCHIVOS_PQR</sourceObjSchema>
+<sourceObjName>ID_ARCHIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del archivo asociado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="39F79127-A566-1174-5CD8-6A7C63FF0D49">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ARCHIVOS_PQR</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORIGEN_ARCHIVO" id="F151F65C-2E3F-9343-7D7A-0B7081F81EF8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ARCHIVOS_PQR</sourceObjSchema>
+<sourceObjName>ORIGEN_ARCHIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Origen del archivo (E)nviado Usuario (R)espuesta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<constraintName>SYS_C0023711</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;E&apos;" description=""/>
+<valueDef value="&apos;R&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="671CBB22-EE98-ADAD-ACFD-7A13438307C8" name="TKR_ARCHIVOS_PQR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ARCHIVOS_PQR_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D47364E4-5C75-BDE9-7A74-B66559D02A5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4930A5DC-E841-6D8C-C058-7458EED3B62C" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ARCHIVOS_PQR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ARCHIVOS_PQR_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:15 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D47364E4-5C75-BDE9-7A74-B66559D02A5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9666B0D4-891E-5817-F1D5-93EDCA13728F" name="TKR_ARCHIVOS_PQR_PQRS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6551ED88-BA45-C724-773E-5CFCD68E755A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

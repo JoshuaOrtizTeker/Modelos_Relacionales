@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_3" id="5A9E24D4-3B24-C093-D74F-A3E029B8AA2D" containerWithKeyObject="DB192598-3BBC-FD88-6353-898CE86C5AC7" localFKIndex="3C5015FD-BA8B-FC4F-4135-3A5786778C5D" name="TKR_PERFILES_DOCTOR_FREC_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PERFILES_DOCTOR_FREC_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_PERFILES_DOCTOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2121A2E4-6E7D-F410-59FE-D7ABF0EF8CE9</referredTableID>
+<keyObject>1FF04262-C3D6-C483-2501-609C3075CFB2</keyObject>
+<referredKeyID>1FF04262-C3D6-C483-2501-609C3075CFB2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

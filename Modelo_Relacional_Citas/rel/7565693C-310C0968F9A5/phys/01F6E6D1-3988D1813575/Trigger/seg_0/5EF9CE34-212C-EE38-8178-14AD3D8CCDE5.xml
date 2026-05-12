@@ -1,0 +1,354 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_CITAS" directorySegmentName="seg_0" id="5EF9CE34-212C-EE38-8178-14AD3D8CCDE5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_CITAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_CITAS WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_CITAS WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_CITAS (
+            ENVIO_BQ,
+            ID,
+            ID_HEXADECIMAL,
+            ID_USUARIO,
+            ID_ESTADO_CITA,
+            FECHA_INICIO_CITA,
+            FECHA_FINAL_CITA,
+            DESCRIPCION,
+            ID_CLASE_CITA,
+            ID_USUARIO_ELABORA,
+            MOTIVO_CANCELACION,
+            ID_USUARIO_CANCELA,
+            FECHA_CANCELACION,
+            ID_USUARIO_SOLICITA_CANCELA,
+            ESTADO_ENCUESTA,
+            FECHA_ELABORACION,
+            ENVIOS_RECORDATORIO,
+            ORIGEN,
+            INGRESO_PAGAR,
+            ID_SOLICITUD_ATENCION,
+            ID_USO_SUSCRIPCION,
+            MONTO_REFERIDOS,
+            ID_SERVICIO_CLASE,
+            ID_CITA_ORIGEN,
+            ID_ACCESO_CREACION,
+            ID_ENTIDAD,
+            ID_CONVENIO,
+            ID_SERVICIO_SOLICITADO,
+            FECHA_CREACION,
+            ID_ESPECIALIDAD,
+            TIPO_CITA,
+            ID_SERVICIO,
+            TIEMPO_CITA_ZOOM,
+            ID_DET_LIQUIDACION,
+            TRANSCRIPCION,
+            TIPO_AFILIADO,
+            COMENTARIOS,
+            COMENTARIOS_FACTURACION,
+            ID_ACTA_MEDICA
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID,
+            :NEW.ID_HEXADECIMAL,
+            :NEW.ID_USUARIO,
+            :NEW.ID_ESTADO_CITA,
+            :NEW.FECHA_INICIO_CITA,
+            :NEW.FECHA_FINAL_CITA,
+            :NEW.DESCRIPCION,
+            :NEW.ID_CLASE_CITA,
+            :NEW.ID_USUARIO_ELABORA,
+            :NEW.MOTIVO_CANCELACION,
+            :NEW.ID_USUARIO_CANCELA,
+            :NEW.FECHA_CANCELACION,
+            :NEW.ID_USUARIO_SOLICITA_CANCELA,
+            :NEW.ESTADO_ENCUESTA,
+            :NEW.FECHA_ELABORACION,
+            :NEW.ENVIOS_RECORDATORIO,
+            :NEW.ORIGEN,
+            :NEW.INGRESO_PAGAR,
+            :NEW.ID_SOLICITUD_ATENCION,
+            :NEW.ID_USO_SUSCRIPCION,
+            :NEW.MONTO_REFERIDOS,
+            :NEW.ID_SERVICIO_CLASE,
+            :NEW.ID_CITA_ORIGEN,
+            :NEW.ID_ACCESO_CREACION,
+            :NEW.ID_ENTIDAD,
+            :NEW.ID_CONVENIO,
+            :NEW.ID_SERVICIO_SOLICITADO,
+            :NEW.FECHA_CREACION,
+            :NEW.ID_ESPECIALIDAD,
+            :NEW.TIPO_CITA,
+            :NEW.ID_SERVICIO,
+            :NEW.TIEMPO_CITA_ZOOM,
+            :NEW.ID_DET_LIQUIDACION,
+            :NEW.TRANSCRIPCION,
+            :NEW.TIPO_AFILIADO,
+            :NEW.COMENTARIOS,
+            :NEW.COMENTARIOS_FACTURACION,
+            :NEW.ID_ACTA_MEDICA
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_CITAS WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_CITAS (
+                ENVIO_BQ,
+                ID,
+                ID_HEXADECIMAL,
+                ID_USUARIO,
+                ID_ESTADO_CITA,
+                FECHA_INICIO_CITA,
+                FECHA_FINAL_CITA,
+                DESCRIPCION,
+                ID_CLASE_CITA,
+                ID_USUARIO_ELABORA,
+                MOTIVO_CANCELACION,
+                ID_USUARIO_CANCELA,
+                FECHA_CANCELACION,
+                ID_USUARIO_SOLICITA_CANCELA,
+                ESTADO_ENCUESTA,
+                FECHA_ELABORACION,
+                ENVIOS_RECORDATORIO,
+                ORIGEN,
+                INGRESO_PAGAR,
+                ID_SOLICITUD_ATENCION,
+                ID_USO_SUSCRIPCION,
+                MONTO_REFERIDOS,
+                ID_SERVICIO_CLASE,
+                ID_CITA_ORIGEN,
+                ID_ACCESO_CREACION,
+                ID_ENTIDAD,
+                ID_CONVENIO,
+                ID_SERVICIO_SOLICITADO,
+                FECHA_CREACION,
+                ID_ESPECIALIDAD,
+                TIPO_CITA,
+                ID_SERVICIO,
+                TIEMPO_CITA_ZOOM,
+                ID_DET_LIQUIDACION,
+                TRANSCRIPCION,
+                TIPO_AFILIADO,
+                COMENTARIOS,
+                COMENTARIOS_FACTURACION,
+                ID_ACTA_MEDICA                
+            )
+            VALUES (
+                2, -- ENVIO_BQ por defecto
+                :NEW.ID,
+                :NEW.ID_HEXADECIMAL,
+                :NEW.ID_USUARIO,
+                :NEW.ID_ESTADO_CITA,
+                :NEW.FECHA_INICIO_CITA,
+                :NEW.FECHA_FINAL_CITA,
+                :NEW.DESCRIPCION,
+                :NEW.ID_CLASE_CITA,
+                :NEW.ID_USUARIO_ELABORA,
+                :NEW.MOTIVO_CANCELACION,
+                :NEW.ID_USUARIO_CANCELA,
+                :NEW.FECHA_CANCELACION,
+                :NEW.ID_USUARIO_SOLICITA_CANCELA,
+                :NEW.ESTADO_ENCUESTA,
+                :NEW.FECHA_ELABORACION,
+                :NEW.ENVIOS_RECORDATORIO,
+                :NEW.ORIGEN,
+                :NEW.INGRESO_PAGAR,
+                :NEW.ID_SOLICITUD_ATENCION,
+                :NEW.ID_USO_SUSCRIPCION,
+                :NEW.MONTO_REFERIDOS,
+                :NEW.ID_SERVICIO_CLASE,
+                :NEW.ID_CITA_ORIGEN,
+                :NEW.ID_ACCESO_CREACION,
+                :NEW.ID_ENTIDAD,
+                :NEW.ID_CONVENIO,
+                :NEW.ID_SERVICIO_SOLICITADO,
+                :NEW.FECHA_CREACION,
+                :NEW.ID_ESPECIALIDAD,
+                :NEW.TIPO_CITA,
+                :NEW.ID_SERVICIO,
+                :NEW.TIEMPO_CITA_ZOOM,
+                :NEW.ID_DET_LIQUIDACION,
+                :NEW.TRANSCRIPCION,
+                :NEW.TIPO_AFILIADO,
+                :NEW.COMENTARIOS,
+                :NEW.COMENTARIOS_FACTURACION,
+                :NEW.ID_ACTA_MEDICA
+            );
+
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;
+
+            UPDATE TKRBQ_CITAS
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                ID_HEXADECIMAL = :NEW.ID_HEXADECIMAL,
+                ID_USUARIO = :NEW.ID_USUARIO,
+                ID_ESTADO_CITA = :NEW.ID_ESTADO_CITA,
+                FECHA_INICIO_CITA = :NEW.FECHA_INICIO_CITA,
+                FECHA_FINAL_CITA = :NEW.FECHA_FINAL_CITA,
+                DESCRIPCION = :NEW.DESCRIPCION,
+                ID_CLASE_CITA = :NEW.ID_CLASE_CITA,
+                ID_USUARIO_ELABORA = :NEW.ID_USUARIO_ELABORA,
+                MOTIVO_CANCELACION = :NEW.MOTIVO_CANCELACION,
+                ID_USUARIO_CANCELA = :NEW.ID_USUARIO_CANCELA,
+                FECHA_CANCELACION = :NEW.FECHA_CANCELACION,
+                ID_USUARIO_SOLICITA_CANCELA = :NEW.ID_USUARIO_SOLICITA_CANCELA,
+                ESTADO_ENCUESTA = :NEW.ESTADO_ENCUESTA,
+                FECHA_ELABORACION = :NEW.FECHA_ELABORACION,
+                ENVIOS_RECORDATORIO = :NEW.ENVIOS_RECORDATORIO,
+                ORIGEN = :NEW.ORIGEN,
+                INGRESO_PAGAR = :NEW.INGRESO_PAGAR,
+                ID_SOLICITUD_ATENCION = :NEW.ID_SOLICITUD_ATENCION,
+                ID_USO_SUSCRIPCION = :NEW.ID_USO_SUSCRIPCION,
+                MONTO_REFERIDOS = :NEW.MONTO_REFERIDOS,
+                ID_SERVICIO_CLASE = :NEW.ID_SERVICIO_CLASE,
+                ID_CITA_ORIGEN = :NEW.ID_CITA_ORIGEN,
+                ID_ACCESO_CREACION = :NEW.ID_ACCESO_CREACION,
+                ID_ENTIDAD = :NEW.ID_ENTIDAD,
+                ID_CONVENIO = :NEW.ID_CONVENIO,
+                ID_SERVICIO_SOLICITADO = :NEW.ID_SERVICIO_SOLICITADO,
+                FECHA_CREACION = :NEW.FECHA_CREACION,
+                ID_ESPECIALIDAD = :NEW.ID_ESPECIALIDAD,
+                TIPO_CITA = :NEW.TIPO_CITA,
+                ID_SERVICIO = :NEW.ID_SERVICIO,
+                TIEMPO_CITA_ZOOM = :NEW.TIEMPO_CITA_ZOOM,
+                ID_DET_LIQUIDACION = :NEW.ID_DET_LIQUIDACION,
+                TRANSCRIPCION = :NEW.TRANSCRIPCION,
+                TIPO_AFILIADO = :NEW.TIPO_AFILIADO,
+                COMENTARIOS = :NEW.COMENTARIOS,
+                COMENTARIOS_FACTURACION = :NEW.COMENTARIOS_FACTURACION,
+                ID_ACTA_MEDICA = :NEW.ID_ACTA_MEDICA
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_CITAS WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_CITAS WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_CITAS (
+            ENVIO_BQ,
+            ID,
+            ID_HEXADECIMAL,
+            ID_USUARIO,
+            ID_ESTADO_CITA,
+            FECHA_INICIO_CITA,
+            FECHA_FINAL_CITA,
+            DESCRIPCION,
+            ID_CLASE_CITA,
+            ID_USUARIO_ELABORA,
+            MOTIVO_CANCELACION,
+            ID_USUARIO_CANCELA,
+            FECHA_CANCELACION,
+            ID_USUARIO_SOLICITA_CANCELA,
+            ESTADO_ENCUESTA,
+            FECHA_ELABORACION,
+            ENVIOS_RECORDATORIO,
+            ORIGEN,
+            INGRESO_PAGAR,
+            ID_SOLICITUD_ATENCION,
+            ID_USO_SUSCRIPCION,
+            MONTO_REFERIDOS,
+            ID_SERVICIO_CLASE,
+            ID_CITA_ORIGEN,
+            ID_ACCESO_CREACION,
+            ID_ENTIDAD,
+            ID_CONVENIO,
+            ID_SERVICIO_SOLICITADO,
+            FECHA_CREACION,
+            ID_ESPECIALIDAD,
+            TIPO_CITA,
+            ID_SERVICIO,
+            TIEMPO_CITA_ZOOM,
+            ID_DET_LIQUIDACION,
+            TRANSCRIPCION,
+            TIPO_AFILIADO,
+            COMENTARIOS,
+            COMENTARIOS_FACTURACION,
+            ID_ACTA_MEDICA
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID,
+            :OLD.ID_HEXADECIMAL,
+            :OLD.ID_USUARIO,
+            :OLD.ID_ESTADO_CITA,
+            :OLD.FECHA_INICIO_CITA,
+            :OLD.FECHA_FINAL_CITA,
+            :OLD.DESCRIPCION,
+            :OLD.ID_CLASE_CITA,
+            :OLD.ID_USUARIO_ELABORA,
+            :OLD.MOTIVO_CANCELACION,
+            :OLD.ID_USUARIO_CANCELA,
+            :OLD.FECHA_CANCELACION,
+            :OLD.ID_USUARIO_SOLICITA_CANCELA,
+            :OLD.ESTADO_ENCUESTA,
+            :OLD.FECHA_ELABORACION,
+            :OLD.ENVIOS_RECORDATORIO,
+            :OLD.ORIGEN,
+            :OLD.INGRESO_PAGAR,
+            :OLD.ID_SOLICITUD_ATENCION,
+            :OLD.ID_USO_SUSCRIPCION,
+            :OLD.MONTO_REFERIDOS,
+            :OLD.ID_SERVICIO_CLASE,
+            :OLD.ID_CITA_ORIGEN,
+            :OLD.ID_ACCESO_CREACION,
+            :OLD.ID_ENTIDAD,
+            :OLD.ID_CONVENIO,
+            :OLD.ID_SERVICIO_SOLICITADO,
+            :OLD.FECHA_CREACION,
+            :OLD.ID_ESPECIALIDAD,
+            :OLD.TIPO_CITA,
+            :OLD.ID_SERVICIO,
+            :OLD.TIEMPO_CITA_ZOOM,
+            :OLD.ID_DET_LIQUIDACION,
+            :OLD.TRANSCRIPCION,
+            :OLD.TIPO_AFILIADO,
+            :OLD.COMENTARIOS,
+            :OLD.COMENTARIOS_FACTURACION,
+            :OLD.ID_ACTA_MEDICA            
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_CITAS';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>C0F72B72-6568-0338-6F31-77AF8F5A8E51</table>
+</TriggerOraclev10g>

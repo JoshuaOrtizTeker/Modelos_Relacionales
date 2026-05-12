@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_BITACORA_COHORTES" directorySegmentName="seg_0" id="0909A16C-5D47-8495-73BD-0CB2C35F5C38">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_BITACORA_COHORTES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_BITACORA_COHORTES WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_BITACORA_COHORTES WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_BITACORA_COHORTES (
+            ENVIO_BQ, 
+            ID,
+            ID_USUARIO_COHORTE,
+            ID_FLUJO_COHORTE,
+            ID_USUARIO_ACCION,
+            FECHA_REGISTRO,
+            OBSERVACION
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID,
+            :NEW.ID_USUARIO_COHORTE,
+            :NEW.ID_FLUJO_COHORTE,
+            :NEW.ID_USUARIO_ACCION,
+            :NEW.FECHA_REGISTRO,
+            :NEW.OBSERVACION
+
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_BITACORA_COHORTES WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_BITACORA_COHORTES (
+                ENVIO_BQ,
+                ID,
+                ID_USUARIO_COHORTE,
+                ID_FLUJO_COHORTE,
+                ID_USUARIO_ACCION,
+                FECHA_REGISTRO,
+                OBSERVACION
+            )
+            VALUES (
+                2, -- ENVIO_BQ por defecto
+                :NEW.ID,
+                :NEW.ID_USUARIO_COHORTE,
+                :NEW.ID_FLUJO_COHORTE,
+                :NEW.ID_USUARIO_ACCION,
+                :NEW.FECHA_REGISTRO,
+                :NEW.OBSERVACION
+            );
+
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;
+
+            UPDATE TKRBQ_BITACORA_COHORTES
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                ID_USUARIO_COHORTE = :NEW.ID_USUARIO_COHORTE,
+                ID_FLUJO_COHORTE = :NEW.ID_FLUJO_COHORTE,
+                ID_USUARIO_ACCION = :NEW.ID_USUARIO_ACCION,
+                FECHA_REGISTRO = :NEW.FECHA_REGISTRO,
+                OBSERVACION = :NEW.OBSERVACION
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_BITACORA_COHORTES WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_BITACORA_COHORTES WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_BITACORA_COHORTES (
+            ENVIO_BQ,
+            ID,
+            ID_USUARIO_COHORTE,
+            ID_FLUJO_COHORTE,
+            ID_USUARIO_ACCION,
+            FECHA_REGISTRO,
+            OBSERVACION
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID,
+            :OLD.ID_USUARIO_COHORTE,
+            :OLD.ID_FLUJO_COHORTE,
+            :OLD.ID_USUARIO_ACCION,
+            :OLD.FECHA_REGISTRO,
+            :OLD.OBSERVACION
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_BITACORA_COHORTES';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>6E8B3141-7DB7-91AF-8CF6-41639AA82103</table>
+</TriggerOraclev10g>

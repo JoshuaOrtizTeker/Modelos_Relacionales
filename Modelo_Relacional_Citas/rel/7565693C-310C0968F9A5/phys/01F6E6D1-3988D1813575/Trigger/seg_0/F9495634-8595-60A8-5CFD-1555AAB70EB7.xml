@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_AI_TKR_DEVOLUCIONES" directorySegmentName="seg_0" id="F9495634-8595-60A8-5CFD-1555AAB70EB7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_AI_TKR_DEVOLUCIONES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+    vro_pago    tkr_pagos%ROWTYPE;
+BEGIN
+    IF     :new.id IS NOT NULL
+       AND pkgtkr_pagos_dao.f_existe (:new.id_pago, vro_pago) = TRUE
+    THEN
+        vro_pago.id_devolucion := :new.id;
+        vro_pago.valor_devuelto := :new.valor_devuelto;
+        pkgtkr_pagos_dao.p_actualizar (vro_pago);
+    END IF;
+END;
+
+
+]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>1B2A35F5-BFE5-C639-B449-42B8D027392D</table>
+</TriggerOraclev10g>

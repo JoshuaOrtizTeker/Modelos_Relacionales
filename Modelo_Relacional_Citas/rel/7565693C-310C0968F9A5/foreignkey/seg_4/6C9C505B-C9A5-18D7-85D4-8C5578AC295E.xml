@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_4" id="6C9C505B-C9A5-18D7-85D4-8C5578AC295E" containerWithKeyObject="3B649445-643A-C187-4A71-29F8C2E87D08" localFKIndex="0D111096-1F62-E3BB-02F7-11B1E285737C" name="TKR_TARI_DOC_COD_TARI_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TARI_DOC_COD_TARI_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_CODIGO_TARIFA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0B458687-AF7E-DCA0-28E0-22C516728B49</referredTableID>
+<keyObject>E9F868F6-5150-701D-022A-0B8DA157F98E</keyObject>
+<referredKeyID>E9F868F6-5150-701D-022A-0B8DA157F98E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

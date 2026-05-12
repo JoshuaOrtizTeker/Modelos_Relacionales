@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="317F89E9-EC9C-F61B-581A-C28E33AD28CF" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_USUARIOS_GRUPO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_USUARIOS_GRUPO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que asocia usuarios de una entidad con grupos de riesgo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="51266E62-EE5B-BDBD-F545-A3229DC52555">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_USUARIOS_GRUPO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único de la relación usuario-grupo de riesgo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_usuarios_grupo_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_USUARIOS_GRUPO</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO_ENTIDAD" id="6938A585-8440-95E5-AE92-63E5AAE168C6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_USUARIOS_GRUPO</sourceObjSchema>
+<sourceObjName>ID_USUARIO_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario de una entidad asociado al grupo de riesgo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DB049FCD-E84F-73CE-9F68-900E21A83836" referredColumn="9F8A94DC-66D4-3713-E381-E1D0C89A77FB"/>
+</associations>
+</Column>
+<Column name="ID_GRUPO_RIESGO" id="886FE86B-5DC0-3180-D459-F89B29CFB385">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_USUARIOS_GRUPO</sourceObjSchema>
+<sourceObjName>ID_GRUPO_RIESGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del grupo de riesgo asociado al usuario]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A030453D-1153-1412-D4E9-1577DCA5C56A" referredColumn="5655B2A4-A8A3-9553-71BB-CDD506A57247"/>
+</associations>
+</Column>
+<Column name="CALIFICACION_RIESGO" id="D3597A82-816A-BFD8-3B27-ED28EC1A58AA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_USUARIOS_GRUPO</sourceObjSchema>
+<sourceObjName>CALIFICACION_RIESGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Calificación del riesgo del usuario en el grupo de riesgo (1=Bajo, 2=Medio, 3=Alto)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="53D04B09-24B7-60E3-B4B1-37668B872EF8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_USUARIOS_GRUPO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>CAST(systimestamp AT TIME ZONE &apos;America/Bogota&apos; AS DATE)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9D8512E9-B4F8-2E82-8333-CA537D972D0E" name="TKR_USUARIOS_GRUPO_PKV1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_USUARIOS_GRUPO_PKV1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51266E62-EE5B-BDBD-F545-A3229DC52555"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CDF2DE83-FB16-3F1D-973F-D390D9E563CF" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_USUARIOS_GRUPO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_USUARIOS_GRUPO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:44 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51266E62-EE5B-BDBD-F545-A3229DC52555"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D79ACCAA-7D4E-DB35-314A-1693AD8CE8E7" name="TKR_USUARIOS_ENTIDAD_GRUPOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6938A585-8440-95E5-AE92-63E5AAE168C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="685CDBFE-6110-3078-D3D0-C6D077321309" name="TKR_USUARIOS_GRUPO_RIESGO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="886FE86B-5DC0-3180-D459-F89B29CFB385"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_3" id="EFC55767-B3F4-8CDA-BDF0-0018C648E159" containerWithKeyObject="7CD473C1-B2CA-C13A-A2CB-295AEAF6F740" localFKIndex="F3967310-E46D-A2C5-1A4D-22A864BFF51B" name="TKR_ORDENES_MONITOREOS_MONIT_PTES_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ORDENES_MONITOREOS_MONIT_PTES_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_MONITOREO_PACIENTES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E52189C7-B99C-B3FC-DA94-1B88F5F452DD</referredTableID>
+<keyObject>366B1171-7072-7F93-653D-2C936F611C84</keyObject>
+<referredKeyID>366B1171-7072-7F93-653D-2C936F611C84</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

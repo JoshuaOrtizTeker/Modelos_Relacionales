@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_SERVICIOS" directorySegmentName="seg_1" id="63B89FF4-151B-192A-0D38-B3432F217FC2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_SERVICIOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- Caso INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_SERVICIOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_SERVICIOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_SERVICIOS (
+            ENVIO_BQ, ID, NOMBRE_SERVICIO, FECHA_CREACION, ID_CLASE_CITA
+        )
+        VALUES (
+            0, -- ENVIO_BQ para INSERT
+            :NEW.ID, :NEW.NOMBRE_SERVICIO, :NEW.FECHA_CREACION, :NEW.ID_CLASE_CITA
+        );
+    END IF;
+
+    -- Caso UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_SERVICIOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_SERVICIOS (
+                ENVIO_BQ, ID, NOMBRE_SERVICIO, FECHA_CREACION, ID_CLASE_CITA
+            )
+            VALUES (
+                2, -- ENVIO_BQ para INSERT
+                :NEW.ID, :NEW.NOMBRE_SERVICIO, :NEW.FECHA_CREACION, :NEW.ID_CLASE_CITA
+            );       
+       
+       ELSE
+
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;    
+
+            UPDATE TKRBQ_SERVICIOS
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                NOMBRE_SERVICIO = :NEW.NOMBRE_SERVICIO,
+                FECHA_CREACION = :NEW.FECHA_CREACION,
+                ID_CLASE_CITA = :NEW.ID_CLASE_CITA
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+    -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_SERVICIOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_SERVICIOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_SERVICIOS (
+            ENVIO_BQ, ID, NOMBRE_SERVICIO, FECHA_CREACION, ID_CLASE_CITA
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID, :OLD.NOMBRE_SERVICIO, :OLD.FECHA_CREACION, :OLD.ID_CLASE_CITA
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_SERVICIOS';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>2889FC35-E215-E111-5909-F7795E30A0C6</table>
+</TriggerOraclev10g>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="D45CE111-4745-C167-5A97-FFBAD91A0BD9" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_VL_TIPO_DISPOSITIVO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_VL_TIPO_DISPOSITIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="7A2AB5D4-5EF9-200F-D32C-26D61561D20A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_TIPO_DISPOSITIVO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_vl_tipo_dispositivo_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_VL_TIPO_DISPOSITIVO</autoIncrementTriggerName>
+</Column>
+<Column name="TIPO_DISPOSITIVO" id="6778CE34-D742-7097-F322-9C940EE79300">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_TIPO_DISPOSITIVO</sourceObjSchema>
+<sourceObjName>TIPO_DISPOSITIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ABREVIATURA" id="27B551B4-F02A-BA3B-BC78-E5D361BD03B7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_VL_TIPO_DISPOSITIVO</sourceObjSchema>
+<sourceObjName>ABREVIATURA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A00F6CBC-4FCA-C8D7-8E46-B9B0BDB6CE13" name="TKR_VL_TIPO_DISPOSITIVO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_VL_TIPO_DISPOSITIVO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A2AB5D4-5EF9-200F-D32C-26D61561D20A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2D15352-C704-0E3D-6FE7-7EE902CC4B1E" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_VL_TIPO_DISPOSITIVO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_VL_TIPO_DISPOSITIVO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:45 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A2AB5D4-5EF9-200F-D32C-26D61561D20A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_3" id="AD3F9C64-4D1D-34F1-886F-AD3D716BCA1C" containerWithKeyObject="2625EB1B-F67E-AC70-5D95-659F6EF16D68" localFKIndex="10B4CB67-6CE1-303D-2FD8-3E0D9A81E28A" name="TKR_RESP_ESCALA_HISTORIA_PREGUNTAS_ESCALA_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_RESP_ESCALA_HISTORIA_PREGUNTAS_ESCALA_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_PREGUNTAS_ESCALA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A920C989-8B1E-1F41-2ED1-C69B655515ED</referredTableID>
+<keyObject>E5EF3BEA-2C6C-7E88-AAA9-88D3A2D79D6E</keyObject>
+<referredKeyID>E5EF3BEA-2C6C-7E88-AAA9-88D3A2D79D6E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

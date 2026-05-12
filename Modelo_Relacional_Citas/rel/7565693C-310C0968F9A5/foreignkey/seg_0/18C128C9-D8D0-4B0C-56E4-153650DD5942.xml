@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="18C128C9-D8D0-4B0C-56E4-153650DD5942" containerWithKeyObject="6E8B3141-7DB7-91AF-8CF6-41639AA82103" localFKIndex="BE0D5834-763D-EC9B-6DED-BBDA2B6F1759" name="TKR_BITACORA_COHORTES_FLUJOS_COHORTES_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITACORA_COHORTES_FLUJOS_COHORTES_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_FLUJOS_COHORTES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7C2BCD9C-583E-6873-E938-98B7F4A1F39E</referredTableID>
+<keyObject>617C78FA-B255-6694-5769-E0CC9E174230</keyObject>
+<referredKeyID>617C78FA-B255-6694-5769-E0CC9E174230</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

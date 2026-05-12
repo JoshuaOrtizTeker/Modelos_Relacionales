@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="A65A0D2D-BC21-4E8A-6E04-EEDBC20402B0" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OCUPACIONES_NIVEL_2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OCUPACIONES_NIVEL_2</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="B5252EB4-2A52-0DC2-0159-20D49D6B3189">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OCUPACIONES_NIVEL_2</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_ocupaciones_nivel_2_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRH_BI_TKR_OCUPACIONES_NIVEL_2</autoIncrementTriggerName>
+</Column>
+<Column name="DESCRIPCION" id="8B4CBE19-F36E-D069-38AD-7EC14A2D2481">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OCUPACIONES_NIVEL_2</sourceObjSchema>
+<sourceObjName>DESCRIPCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion del nivel 2 de ocupación]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62E69837-C674-393C-486A-F286C5E47F80" name="TKR_OCUPACIONES_NIVEL_2_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OCUPACIONES_NIVEL_2_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5252EB4-2A52-0DC2-0159-20D49D6B3189"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDD7EE8B-1C8C-F150-C756-31E91619EB18" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OCUPACIONES_NIVEL_2_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OCUPACIONES_NIVEL_2_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:33 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5252EB4-2A52-0DC2-0159-20D49D6B3189"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

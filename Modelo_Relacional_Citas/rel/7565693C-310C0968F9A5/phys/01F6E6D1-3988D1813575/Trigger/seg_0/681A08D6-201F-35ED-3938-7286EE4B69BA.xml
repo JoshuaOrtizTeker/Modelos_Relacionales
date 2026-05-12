@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="BIU_XX_ZOOM_MEETINGS" directorySegmentName="seg_0" id="681A08D6-201F-35ED-3938-7286EE4B69BA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>BIU_XX_ZOOM_MEETINGS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN 
+   IF inserting THEN
+        if :NEW.ID_PK is null then  
+        select "XX_ZOOM_MEETINGS_SEQ".nextval into :NEW.ID_PK from sys.dual;  
+        end if;
+      :new.created_by := NVL (v ('APP_USER'), USER);
+      :new.creation_date := SYSDATE;
+   END IF;
+   if updating then
+    :new.last_updated_by := NVL (v ('APP_USER'), USER);
+    :new.last_update_date := SYSDATE;
+   END IF;
+END;
+
+
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>4517CABE-73CD-1B3A-F752-8C8ED3DB1B72</table>
+</TriggerOraclev10g>

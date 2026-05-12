@@ -1,0 +1,290 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="3DC03261-5C84-6A52-7ED3-52971F2ADEEA" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_HORARIOS_DOCTOR">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HORARIOS_DOCTOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C198FC4E-CC9A-054B-A0C7-E6BA62C21E27">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO" id="B15EC53E-F66F-4E75-5553-0E460FBD1793">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del doctor]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="099A292E-40C2-CD3C-2E59-80192314A810" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="DIA_SEMANA" id="FDFDA2CD-A674-25C0-EAC9-FF19278C2E28">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>DIA_SEMANA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Las dos primerar iniciales del día de la semana.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA_INICIO_MANANA" id="E527FFD2-1770-8090-F41F-D2480B66F512">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>HORA_INICIO_MANANA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hora de inicio en la mañana]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA_FIN_MANANA" id="D9905A06-2DCC-DF05-9C54-9C3A86EBB447">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>HORA_FIN_MANANA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hora fin de la mañana]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA_INICIO_TARDE" id="B1B3A3B8-741D-3279-3197-5C299FB2AC45">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>HORA_INICIO_TARDE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hora de inicio en la tarde]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA_FIN_TARDE" id="3C0794AA-2DB0-A0B8-9A66-E3F12F92F48E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>HORA_FIN_TARDE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hora fin en la tarde]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ENTIDAD" id="2A894752-558E-D846-D76D-E3B68249ECCE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad al que esta asignado si es nulo es TEKER]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_ATENCION" id="C4BEFB5E-5FBF-33AE-0850-EEAB18D12B9A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>TIPO_ATENCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de atencion (P)rogramada (I)nmediata (A)mbas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDEN" id="55135670-DC5E-E0D5-4181-8B8F62EA5612">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>ORDEN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Orden para la asignacion de citas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="FCF428E7-12FD-DDD7-B3BC-88BCD5039324">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INICIO" id="10C8A23C-9779-FD3B-67CC-757269C7821E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>FECHA_INICIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de Inicio del horario]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_FINAL" id="5A0FB95E-9526-D22E-3C9A-558908192B2B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_HORARIOS_DOCTOR</sourceObjSchema>
+<sourceObjName>FECHA_FINAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha final del horario si esta null es el horario base]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43947405-31A2-77C6-7F44-D6FBF2D8D235" name="TKR_HORARIOS_DOCTOR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HORARIOS_DOCTOR_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C198FC4E-CC9A-054B-A0C7-E6BA62C21E27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6872082E-CE68-2080-D253-3BF05A26AF81" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="IX_HD_USUARIO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>IX_HD_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:29 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B15EC53E-F66F-4E75-5553-0E460FBD1793"/>
+<colUsage columnID="10C8A23C-9779-FD3B-67CC-757269C7821E"/>
+<colUsage columnID="5A0FB95E-9526-D22E-3C9A-558908192B2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="919C30F5-AF41-ECC7-D0FA-F6B21446472E" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_HORARIOS_DOCTOR_IDX_1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HORARIOS_DOCTOR_IDX_1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:29 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B15EC53E-F66F-4E75-5553-0E460FBD1793"/>
+<colUsage columnID="FDFDA2CD-A674-25C0-EAC9-FF19278C2E28"/>
+<colUsage columnID="E527FFD2-1770-8090-F41F-D2480B66F512"/>
+<colUsage columnID="B1B3A3B8-741D-3279-3197-5C299FB2AC45"/>
+<colUsage columnID="10C8A23C-9779-FD3B-67CC-757269C7821E"/>
+<colUsage columnID="5A0FB95E-9526-D22E-3C9A-558908192B2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F32B29AA-F1EA-49B8-E274-531E39DADFD3" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_HORARIOS_DOCTOR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_HORARIOS_DOCTOR_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:29 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C198FC4E-CC9A-054B-A0C7-E6BA62C21E27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC7F4321-355B-620E-7363-444B93434611" name="TKR_HORARIOS_DOCTOR_USUARIO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B15EC53E-F66F-4E75-5553-0E460FBD1793"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

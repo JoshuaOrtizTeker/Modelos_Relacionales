@@ -1,0 +1,514 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="7B4D8C13-576F-DDF8-BEBA-C9CCBB21C0B3" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SEGUIMIENTO_EMSANAR">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SEGUIMIENTO_EMSANAR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4130CE42-C529-9137-D340-B809EB85AB04">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NÚMERO_DE_AUTORIZACIÓN" id="22E68FD9-2FB8-D68F-05AE-FC16EA278BEF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>NÚMERO_DE_AUTORIZACIÓN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_AUTORIZACIÓN" id="C1CFE9FF-72D0-9C2C-67DD-CB4D827D54B1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>FECHA_AUTORIZACIÓN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRES_AFILIADO" id="0AA9A360-E955-7B3A-2051-9DAB499FD351">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>NOMBRES_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="APELLIDOS_AFILIADO" id="F973818D-3482-2F18-541D-3B5DB2F7CEC4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>APELLIDOS_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GÉNERO_AFILIADO" id="FE696B3F-6378-5C60-3C33-F79EABA84E05">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>GÉNERO_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_IDENTIFICACION" id="C1A81A9D-0B3E-7034-73EE-02F56DC00C86">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>TIPO_IDENTIFICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO_IDENTIFICACION" id="0C8C8881-BFC5-AC11-CB80-6B6518863AC3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>NUMERO_IDENTIFICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CÓD__AFILIADO" id="5C2C119B-7907-B098-F031-520D2347B3A8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>CÓD__AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIRECCIÓN_AFILIADO" id="A6F31905-0F44-5D06-1998-E60AE23E0537">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>DIRECCIÓN_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONO_AFILIADO" id="15D0DF55-A55F-13E9-49F7-001CB5A7A564">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>TELEFONO_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPARTAMENTO_AFILIADO" id="0500B9A7-3C8A-B255-C57A-7FC5ABA96C91">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>DEPARTAMENTO_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUNICIPIO_AFILIADO" id="2F3C34EA-E3D0-8B00-B7A0-A97B800AE872">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>MUNICIPIO_AFILIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO_ELECTRÓNICO" id="124239FE-7B3B-2F03-3BBB-8680290E6794">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>CORREO_ELECTRÓNICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CÓD__DIAGNÓSTICO" id="B140D000-631B-2E49-69D7-2FE112472C89">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>CÓD__DIAGNÓSTICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIAGNÓSTICO" id="C1E2C0D4-09D4-C068-7B5D-6FD317D49AFC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>DIAGNÓSTICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_DIAGNÓSTICO" id="C16E7877-AE68-5742-B08F-4E2535DAC097">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>TIPO_DIAGNÓSTICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CÓDIGO_TECNOLOGÍA" id="7D93CC40-CC99-33A6-3AE3-CA22ED1E4652">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>CÓDIGO_TECNOLOGÍA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_TECNOLOGIA_EN_SALUD" id="0F9BE439-78B4-FB86-72C2-AFA9725D2046">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>DESCRIPCION_TECNOLOGIA_EN_SALUD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANTIDAD" id="64D9F7B3-2E55-78C0-FE5F-AC177556F9E5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>CANTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NÚMERO_SOLICITUD" id="8F35AD31-8AC5-5E45-BC55-3FC535BC75CD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>NÚMERO_SOLICITUD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_SOLICITUD" id="BF9848A7-495F-C0CA-ED90-E3ABE43995FD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>FECHA_SOLICITUD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_COPAGO" id="793E28D7-0991-EE86-5094-994DD7F2CD10">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>VALOR_COPAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_AUTORIZADOR" id="B0FECE88-09B3-CD99-D0FF-204C587D5C4F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>NOMBRE_AUTORIZADOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JUSTIFICACIÓN_CLÍNICA" id="A9C1525A-8222-F6CF-B011-1D290AB57186">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>JUSTIFICACIÓN_CLÍNICA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSRVACION" id="F53EB0F5-9FA7-4D87-43CC-04779833D383">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>OBSRVACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEDE_AUTORIZADA" id="730B4D90-A653-AB43-325E-065E9BA73148">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>SEDE_AUTORIZADA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_PRESTACIÓN" id="DA1155A0-6675-4FBC-8E52-8A163B5C0618">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>FECHA_PRESTACIÓN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMBITO" id="691B1762-1CD4-31E7-88CC-44913C5547F0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>AMBITO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACION" id="E1D72692-5E9B-5988-7A56-FDA3367525F1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>OBSERVACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_DE_CITA" id="6A3BD6C4-7303-A429-9D00-8753D872697B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>ESTADO_DE_CITA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COL031" id="6468448E-A0C6-A62B-6CE1-56C3177EDFB9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SEGUIMIENTO_EMSANAR</sourceObjSchema>
+<sourceObjName>COL031</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A8A17F54-3458-2508-0894-6C84647C8996" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SEGUIMIENTO_EMSANAR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>SYS_C0035590</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4130CE42-C529-9137-D340-B809EB85AB04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

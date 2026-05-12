@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C09E67AD-9120-ABEF-F88C-C246E74B1DAF" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CURSOS_USUARIO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CURSOS_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Registro de los cursos tomados por los usuarios]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="24AFB2DA-2756-0254-00DD-4E9213CA132D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_cursos_usuario_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_CURSOS_USUARIO</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CURSO" id="D0136406-BEB4-4652-8E60-4723CD16906E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>ID_CURSO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID del curso (FK a TKR_CURSOS)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0A876FF-128C-386C-507C-C74DC7289474" referredColumn="6761B178-4D8E-2C1A-9A5E-F98804312BFE"/>
+</associations>
+</Column>
+<Column name="ID_USUARIO" id="88CE2C9F-3165-AE07-A88C-8E342E6E96E2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID del usuario (FK a TKR_USUARIOS)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD02DF5F-0F62-BF35-FB8D-F13178E40321" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="FECHA_CURSO" id="2E947D32-8ECD-4711-0BFD-A82EEDCCEF8A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>FECHA_CURSO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que el usuario tomó el curso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALIDO_HASTA" id="20CA0D4C-9436-4262-8CF1-0A8CF5A080DB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>VALIDO_HASTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha hasta la cual es válido el curso (opcional)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSTITUCION" id="517B84B0-9833-5ED8-9921-75040C5C69A4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>INSTITUCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la institución que impartió el curso]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150 BYTE</dataTypeSize>
+<ownDataTypeParameters>150 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="B5F19F84-1975-0412-4C22-E12E1AB2EBCC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CURSOS_USUARIO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4EE3C0A2-37CD-27C4-6409-8B5DDA37C0CF" name="TKR_CURSOS_USUARIO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CURSOS_USUARIO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24AFB2DA-2756-0254-00DD-4E9213CA132D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE5DE5FD-2E0D-0EA8-D541-8EA313BBD826" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CURSOS_USUARIO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CURSOS_USUARIO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:21 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24AFB2DA-2756-0254-00DD-4E9213CA132D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8BBAE4F-CB10-CC76-D3B4-4055E1721701" name="TKR_CURSOS_USUARIO_CURSOS">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0136406-BEB4-4652-8E60-4723CD16906E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C737CE49-CBD8-AE0C-0545-8164591962C2" name="TKR_CURSOS_USUARIO_USUARIOS">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88CE2C9F-3165-AE07-A88C-8E342E6E96E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

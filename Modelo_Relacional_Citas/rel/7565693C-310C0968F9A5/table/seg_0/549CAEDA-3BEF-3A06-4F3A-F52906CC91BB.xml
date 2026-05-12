@@ -1,0 +1,236 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="549CAEDA-3BEF-3A06-4F3A-F52906CC91BB" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BONOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BONOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="975FCFB4-96E6-5F4A-B9BD-C84600215CB7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>TKR_BONOS_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_BONOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ESTADO_BONO" id="D55D3A91-0237-0D2B-17C9-71C4A2C5627B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>ID_ESTADO_BONO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del codigo de estado del bono]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7B3A061-DCFE-8C01-5B31-D079340A7C6A" referredColumn="662E25A3-1C5A-48ED-2B37-0909BD7C7A28"/>
+</associations>
+</Column>
+<Column name="ID_CODIGO_DESCUENTO" id="F12CE78A-3281-E94A-1B6D-92507E5FB128">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>ID_CODIGO_DESCUENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del codigo del descuento que se creo para el bono]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="619D0C89-FCF9-3802-87CA-0B580E61857A" referredColumn="3B8093E8-B542-DD1B-B27E-9693417A1481"/>
+</associations>
+</Column>
+<Column name="ID_DATO_FACTURACION" id="268A4DEC-E72E-440C-F28C-CE7C29AAF732">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>ID_DATO_FACTURACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la persona que compra el bono.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_COMPRA" id="77780EF5-414B-D20A-CA40-740184C6DE22">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>FECHA_COMPRA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de compra del bono.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REFERENCIA_PAGO" id="4CAD7FF7-341D-C5D4-88B1-52B6F2D16B2D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>REFERENCIA_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Referencia de pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PAGO_BANCO" id="FFF3BFF8-E005-4DD2-123D-BAA69B63D05A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>ID_PAGO_BANCO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificacion con que realiza el pago en el banco]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR" id="61C85AD5-7758-5206-5BFD-229401036EE5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>VALOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor de compra del bono]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALDO" id="67DDB95B-0780-E731-A834-2E077C9B9E4F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>SALDO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Saldo despues de comprar o usar el bono]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_VENCIMIENTO" id="F7E0EC17-FF34-2143-90B4-A3D1E014D4B6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>FECHA_VENCIMIENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de Vencimiento del bono]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="98CFEC2C-B1EF-3B3D-AADD-7F907A5706F9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BONOS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="84800E69-BF34-8FB7-A9F4-F57E025E3B67" name="TKR_BONOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BONOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="975FCFB4-96E6-5F4A-B9BD-C84600215CB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1D25F20-ECA1-1908-6758-B7A24095D000" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BONOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BONOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:16 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="975FCFB4-96E6-5F4A-B9BD-C84600215CB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="634706C4-0277-1497-116B-4F4AA4F11EEC" name="TKR_BONOS_COD_DESCUENTOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F12CE78A-3281-E94A-1B6D-92507E5FB128"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="532CB388-BB6F-5E94-6A07-1C8A500FFB39" name="TKR_BONOS_EST_BONOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D55D3A91-0237-0D2B-17C9-71C4A2C5627B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

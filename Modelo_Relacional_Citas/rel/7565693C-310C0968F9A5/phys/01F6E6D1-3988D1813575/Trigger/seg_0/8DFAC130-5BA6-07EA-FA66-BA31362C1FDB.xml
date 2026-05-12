@@ -1,0 +1,399 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_PAGOS" directorySegmentName="seg_0" id="8DFAC130-5BA6-07EA-FA66-BA31362C1FDB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_PAGOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_PAGOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_PAGOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_PAGOS (
+            ENVIO_BQ,
+            ID,
+            FECHA_PAGO,
+            ID_USUARIO,
+            ID_ESTADO_PAGO,
+            ID_FORMA_PAGO,
+            ID_CONCEPTO_PAGO,
+            ID_BANCO,
+            REFERENCIA_PAGO,
+            VALOR_PAGO,
+            ID_CITA,
+            ID_ARCHIVO,
+            FECHA_GENERACION,
+            CODIGO_TARIFA,
+            CODIGO_DESCUENTO,
+            VALOR_DESCUENTO,
+            VALOR_CONSULTA,
+            ID_PAGO_BANCO,
+            VALOR_PROFESIONAL,
+            TIPO_TARIFA,
+            CADENA_CONCATENADA,
+            ID_LIQUIDACION,
+            ID_DEVOLUCION,
+            VALOR_DEVUELTO,
+            ID_USUARIO_REGISTRA_PAGO,
+            FECHA_REGISTRA_PAGO,
+            COMENTARIO_PAGO,
+            ID_DET_LIQUIDACION,
+            ID_ESTADO_PAGO_PROFESIONAL,
+            ID_DESEMBOLSO,
+            ID_TARIFA_TEKER,
+            IMPUESTOS,
+            CONSECUTIVO_CONTABLE_PROF,
+            CONSECUTIVO_CONTABLE_FM,
+            NO_ENVIO_CONTABLE_FM,
+            NO_ENVIO_CONTABLE_PROF,
+            METODO_PAGO,
+            NO_FACTURA_ELECTRONICA,
+            FACTURA_ENVIADA,
+            FECHA_CREACION,
+            CONSECUTIVO_COPAGO,
+            VALOR_COPAGO,
+            PLATAFORMA_PAGO,
+            RECIBO_CAJA,
+            ID_ORDEN_MONITOREO
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID,
+            :NEW.FECHA_PAGO,
+            :NEW.ID_USUARIO,
+            :NEW.ID_ESTADO_PAGO,
+            :NEW.ID_FORMA_PAGO,
+            :NEW.ID_CONCEPTO_PAGO,
+            :NEW.ID_BANCO,
+            :NEW.REFERENCIA_PAGO,
+            :NEW.VALOR_PAGO,
+            :NEW.ID_CITA,
+            :NEW.ID_ARCHIVO,
+            :NEW.FECHA_GENERACION,
+            :NEW.CODIGO_TARIFA,
+            :NEW.CODIGO_DESCUENTO,
+            :NEW.VALOR_DESCUENTO,
+            :NEW.VALOR_CONSULTA,
+            :NEW.ID_PAGO_BANCO,
+            :NEW.VALOR_PROFESIONAL,
+            :NEW.TIPO_TARIFA,
+            :NEW.CADENA_CONCATENADA,
+            :NEW.ID_LIQUIDACION,
+            :NEW.ID_DEVOLUCION,
+            :NEW.VALOR_DEVUELTO,
+            :NEW.ID_USUARIO_REGISTRA_PAGO,
+            :NEW.FECHA_REGISTRA_PAGO,
+            :NEW.COMENTARIO_PAGO,
+            :NEW.ID_DET_LIQUIDACION,
+            :NEW.ID_ESTADO_PAGO_PROFESIONAL,
+            :NEW.ID_DESEMBOLSO,
+            :NEW.ID_TARIFA_TEKER,
+            :NEW.IMPUESTOS,
+            :NEW.CONSECUTIVO_CONTABLE_PROF,
+            :NEW.CONSECUTIVO_CONTABLE_FM,
+            :NEW.NO_ENVIO_CONTABLE_FM,
+            :NEW.NO_ENVIO_CONTABLE_PROF,
+            :NEW.METODO_PAGO,
+            :NEW.NO_FACTURA_ELECTRONICA,
+            :NEW.FACTURA_ENVIADA,
+            :NEW.FECHA_CREACION,
+            :NEW.CONSECUTIVO_COPAGO,
+            :NEW.VALOR_COPAGO,
+            :NEW.PLATAFORMA_PAGO,
+            :NEW.RECIBO_CAJA,
+            :NEW.ID_ORDEN_MONITOREO
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_PAGOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        IF :NEW.FECHA_PAGO != :OLD.FECHA_PAGO OR :NEW.ID_USUARIO != :OLD.ID_USUARIO OR :NEW.ID_ESTADO_PAGO != :OLD.ID_ESTADO_PAGO OR :NEW.ID_FORMA_PAGO != :OLD.ID_FORMA_PAGO OR :NEW.ID_CONCEPTO_PAGO != :OLD.ID_CONCEPTO_PAGO OR :NEW.ID_BANCO != :OLD.ID_BANCO OR :NEW.REFERENCIA_PAGO != :OLD.REFERENCIA_PAGO OR :NEW.VALOR_PAGO != :OLD.VALOR_PAGO OR :NEW.ID_CITA != :OLD.ID_CITA OR :NEW.ID_ARCHIVO != :OLD.ID_ARCHIVO OR :NEW.FECHA_GENERACION != :OLD.FECHA_GENERACION OR :NEW.CODIGO_TARIFA != :OLD.CODIGO_TARIFA OR :NEW.CODIGO_DESCUENTO != :OLD.CODIGO_DESCUENTO OR :NEW.VALOR_DESCUENTO != :OLD.VALOR_DESCUENTO OR :NEW.VALOR_CONSULTA != :OLD.VALOR_CONSULTA OR :NEW.ID_PAGO_BANCO != :OLD.ID_PAGO_BANCO OR :NEW.VALOR_PROFESIONAL != :OLD.VALOR_PROFESIONAL OR :NEW.TIPO_TARIFA != :OLD.TIPO_TARIFA OR :NEW.CADENA_CONCATENADA != :OLD.CADENA_CONCATENADA OR :NEW.ID_LIQUIDACION != :OLD.ID_LIQUIDACION OR :NEW.ID_DEVOLUCION != :OLD.ID_DEVOLUCION OR :NEW.VALOR_DEVUELTO != :OLD.VALOR_DEVUELTO OR :NEW.ID_USUARIO_REGISTRA_PAGO != :OLD.ID_USUARIO_REGISTRA_PAGO OR :NEW.FECHA_REGISTRA_PAGO != :OLD.FECHA_REGISTRA_PAGO OR :NEW.COMENTARIO_PAGO != :OLD.COMENTARIO_PAGO OR :NEW.ID_DET_LIQUIDACION != :OLD.ID_DET_LIQUIDACION OR :NEW.ID_ESTADO_PAGO_PROFESIONAL != :OLD.ID_ESTADO_PAGO_PROFESIONAL OR :NEW.ID_DESEMBOLSO != :OLD.ID_DESEMBOLSO OR :NEW.ID_TARIFA_TEKER != :OLD.ID_TARIFA_TEKER OR :NEW.IMPUESTOS != :OLD.IMPUESTOS OR :NEW.CONSECUTIVO_CONTABLE_PROF != :OLD.CONSECUTIVO_CONTABLE_PROF OR :NEW.CONSECUTIVO_CONTABLE_FM != :OLD.CONSECUTIVO_CONTABLE_FM OR :NEW.NO_ENVIO_CONTABLE_FM != :OLD.NO_ENVIO_CONTABLE_FM OR :NEW.NO_ENVIO_CONTABLE_PROF != :OLD.NO_ENVIO_CONTABLE_PROF OR :NEW.METODO_PAGO != :OLD.METODO_PAGO OR :NEW.NO_FACTURA_ELECTRONICA != :OLD.NO_FACTURA_ELECTRONICA OR :NEW.FACTURA_ENVIADA != :OLD.FACTURA_ENVIADA OR :NEW.FECHA_CREACION != :OLD.FECHA_CREACION OR :NEW.CONSECUTIVO_COPAGO != :OLD.CONSECUTIVO_COPAGO OR :NEW.VALOR_COPAGO != :OLD.VALOR_COPAGO OR :NEW.PLATAFORMA_PAGO != :OLD.PLATAFORMA_PAGO OR :NEW.RECIBO_CAJA != :OLD.RECIBO_CAJA OR :NEW.ID_ORDEN_MONITOREO != :OLD.ID_ORDEN_MONITOREO THEN
+               IF envbq_status IS NULL THEN
+        
+                INSERT INTO TKRBQ_PAGOS (
+                    ENVIO_BQ,
+                    ID,
+                    FECHA_PAGO,
+                    ID_USUARIO,
+                    ID_ESTADO_PAGO,
+                    ID_FORMA_PAGO,
+                    ID_CONCEPTO_PAGO,
+                    ID_BANCO,
+                    REFERENCIA_PAGO,
+                    VALOR_PAGO,
+                    ID_CITA,
+                    ID_ARCHIVO,
+                    FECHA_GENERACION,
+                    CODIGO_TARIFA,
+                    CODIGO_DESCUENTO,
+                    VALOR_DESCUENTO,
+                    VALOR_CONSULTA,
+                    ID_PAGO_BANCO,
+                    VALOR_PROFESIONAL,
+                    TIPO_TARIFA,
+                    CADENA_CONCATENADA,
+                    ID_LIQUIDACION,
+                    ID_DEVOLUCION,
+                    VALOR_DEVUELTO,
+                    ID_USUARIO_REGISTRA_PAGO,
+                    FECHA_REGISTRA_PAGO,
+                    COMENTARIO_PAGO,
+                    ID_DET_LIQUIDACION,
+                    ID_ESTADO_PAGO_PROFESIONAL,
+                    ID_DESEMBOLSO,
+                    ID_TARIFA_TEKER,
+                    IMPUESTOS,
+                    CONSECUTIVO_CONTABLE_PROF,
+                    CONSECUTIVO_CONTABLE_FM,
+                    NO_ENVIO_CONTABLE_FM,
+                    NO_ENVIO_CONTABLE_PROF,
+                    METODO_PAGO,
+                    NO_FACTURA_ELECTRONICA,
+                    FACTURA_ENVIADA,
+                    FECHA_CREACION,
+                    CONSECUTIVO_COPAGO,
+                    VALOR_COPAGO,
+                    PLATAFORMA_PAGO,
+                    RECIBO_CAJA,
+                    ID_ORDEN_MONITOREO
+                )
+                VALUES (
+                    2, -- ENVIO_BQ por defecto
+                    :NEW.ID,
+                    :NEW.FECHA_PAGO,
+                    :NEW.ID_USUARIO,
+                    :NEW.ID_ESTADO_PAGO,
+                    :NEW.ID_FORMA_PAGO,
+                    :NEW.ID_CONCEPTO_PAGO,
+                    :NEW.ID_BANCO,
+                    :NEW.REFERENCIA_PAGO,
+                    :NEW.VALOR_PAGO,
+                    :NEW.ID_CITA,
+                    :NEW.ID_ARCHIVO,
+                    :NEW.FECHA_GENERACION,
+                    :NEW.CODIGO_TARIFA,
+                    :NEW.CODIGO_DESCUENTO,
+                    :NEW.VALOR_DESCUENTO,
+                    :NEW.VALOR_CONSULTA,
+                    :NEW.ID_PAGO_BANCO,
+                    :NEW.VALOR_PROFESIONAL,
+                    :NEW.TIPO_TARIFA,
+                    :NEW.CADENA_CONCATENADA,
+                    :NEW.ID_LIQUIDACION,
+                    :NEW.ID_DEVOLUCION,
+                    :NEW.VALOR_DEVUELTO,
+                    :NEW.ID_USUARIO_REGISTRA_PAGO,
+                    :NEW.FECHA_REGISTRA_PAGO,
+                    :NEW.COMENTARIO_PAGO,
+                    :NEW.ID_DET_LIQUIDACION,
+                    :NEW.ID_ESTADO_PAGO_PROFESIONAL,
+                    :NEW.ID_DESEMBOLSO,
+                    :NEW.ID_TARIFA_TEKER,
+                    :NEW.IMPUESTOS,
+                    :NEW.CONSECUTIVO_CONTABLE_PROF,
+                    :NEW.CONSECUTIVO_CONTABLE_FM,
+                    :NEW.NO_ENVIO_CONTABLE_FM,
+                    :NEW.NO_ENVIO_CONTABLE_PROF,
+                    :NEW.METODO_PAGO,
+                    :NEW.NO_FACTURA_ELECTRONICA,
+                    :NEW.FACTURA_ENVIADA,
+                    :NEW.FECHA_CREACION,
+                    :NEW.CONSECUTIVO_COPAGO,
+                    :NEW.VALOR_COPAGO,
+                    :NEW.PLATAFORMA_PAGO,
+                    :NEW.RECIBO_CAJA,
+                    :NEW.ID_ORDEN_MONITOREO
+                );
+               
+               ELSE
+                    IF envbq_status = 0 THEN 
+                        valor_envbq_update := 0;
+                    ELSE
+                        valor_envbq_update := 2;
+                    END IF;
+        
+                    UPDATE TKRBQ_PAGOS
+                    SET
+                        ENVIO_BQ = valor_envbq_update,
+                        ID = :NEW.ID,
+                        FECHA_PAGO = :NEW.FECHA_PAGO,
+                        ID_USUARIO = :NEW.ID_USUARIO,
+                        ID_ESTADO_PAGO = :NEW.ID_ESTADO_PAGO,
+                        ID_FORMA_PAGO = :NEW.ID_FORMA_PAGO,
+                        ID_CONCEPTO_PAGO = :NEW.ID_CONCEPTO_PAGO,
+                        ID_BANCO = :NEW.ID_BANCO,
+                        REFERENCIA_PAGO = :NEW.REFERENCIA_PAGO,
+                        VALOR_PAGO = :NEW.VALOR_PAGO,
+                        ID_CITA = :NEW.ID_CITA,
+                        ID_ARCHIVO = :NEW.ID_ARCHIVO,
+                        FECHA_GENERACION = :NEW.FECHA_GENERACION,
+                        CODIGO_TARIFA = :NEW.CODIGO_TARIFA,
+                        CODIGO_DESCUENTO = :NEW.CODIGO_DESCUENTO,
+                        VALOR_DESCUENTO = :NEW.VALOR_DESCUENTO,
+                        VALOR_CONSULTA = :NEW.VALOR_CONSULTA,
+                        ID_PAGO_BANCO = :NEW.ID_PAGO_BANCO,
+                        VALOR_PROFESIONAL = :NEW.VALOR_PROFESIONAL,
+                        TIPO_TARIFA = :NEW.TIPO_TARIFA,
+                        CADENA_CONCATENADA = :NEW.CADENA_CONCATENADA,
+                        ID_LIQUIDACION = :NEW.ID_LIQUIDACION,
+                        ID_DEVOLUCION = :NEW.ID_DEVOLUCION,
+                        VALOR_DEVUELTO = :NEW.VALOR_DEVUELTO,
+                        ID_USUARIO_REGISTRA_PAGO = :NEW.ID_USUARIO_REGISTRA_PAGO,
+                        FECHA_REGISTRA_PAGO = :NEW.FECHA_REGISTRA_PAGO,
+                        COMENTARIO_PAGO = :NEW.COMENTARIO_PAGO,
+                        ID_DET_LIQUIDACION = :NEW.ID_DET_LIQUIDACION,
+                        ID_ESTADO_PAGO_PROFESIONAL = :NEW.ID_ESTADO_PAGO_PROFESIONAL,
+                        ID_DESEMBOLSO = :NEW.ID_DESEMBOLSO,
+                        ID_TARIFA_TEKER = :NEW.ID_TARIFA_TEKER,
+                        IMPUESTOS = :NEW.IMPUESTOS,
+                        CONSECUTIVO_CONTABLE_PROF = :NEW.CONSECUTIVO_CONTABLE_PROF,
+                        CONSECUTIVO_CONTABLE_FM = :NEW.CONSECUTIVO_CONTABLE_FM,
+                        NO_ENVIO_CONTABLE_FM = :NEW.NO_ENVIO_CONTABLE_FM,
+                        NO_ENVIO_CONTABLE_PROF = :NEW.NO_ENVIO_CONTABLE_PROF,
+                        METODO_PAGO = :NEW.METODO_PAGO,
+                        NO_FACTURA_ELECTRONICA = :NEW.NO_FACTURA_ELECTRONICA,
+                        FACTURA_ENVIADA = :NEW.FACTURA_ENVIADA,
+                        FECHA_CREACION = :NEW.FECHA_CREACION,
+                        CONSECUTIVO_COPAGO = :NEW.CONSECUTIVO_COPAGO,
+                        VALOR_COPAGO = :NEW.VALOR_COPAGO,
+                        PLATAFORMA_PAGO = :NEW.PLATAFORMA_PAGO,
+                        RECIBO_CAJA = :NEW.RECIBO_CAJA,
+                        ID_ORDEN_MONITOREO = :NEW.ID_ORDEN_MONITOREO
+                    WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+                END IF;
+        ELSE 
+                NULL;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_PAGOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_PAGOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_PAGOS (
+            ENVIO_BQ,
+            ID,
+            FECHA_PAGO,
+            ID_USUARIO,
+            ID_ESTADO_PAGO,
+            ID_FORMA_PAGO,
+            ID_CONCEPTO_PAGO,
+            ID_BANCO,
+            REFERENCIA_PAGO,
+            VALOR_PAGO,
+            ID_CITA,
+            ID_ARCHIVO,
+            FECHA_GENERACION,
+            CODIGO_TARIFA,
+            CODIGO_DESCUENTO,
+            VALOR_DESCUENTO,
+            VALOR_CONSULTA,
+            ID_PAGO_BANCO,
+            VALOR_PROFESIONAL,
+            TIPO_TARIFA,
+            CADENA_CONCATENADA,
+            ID_LIQUIDACION,
+            ID_DEVOLUCION,
+            VALOR_DEVUELTO,
+            ID_USUARIO_REGISTRA_PAGO,
+            FECHA_REGISTRA_PAGO,
+            COMENTARIO_PAGO,
+            ID_DET_LIQUIDACION,
+            ID_ESTADO_PAGO_PROFESIONAL,
+            ID_DESEMBOLSO,
+            ID_TARIFA_TEKER,
+            IMPUESTOS,
+            CONSECUTIVO_CONTABLE_PROF,
+            CONSECUTIVO_CONTABLE_FM,
+            NO_ENVIO_CONTABLE_FM,
+            NO_ENVIO_CONTABLE_PROF,
+            METODO_PAGO,
+            NO_FACTURA_ELECTRONICA,
+            FACTURA_ENVIADA,
+            FECHA_CREACION,
+            CONSECUTIVO_COPAGO,
+            VALOR_COPAGO,
+            PLATAFORMA_PAGO,
+            RECIBO_CAJA,
+            ID_ORDEN_MONITOREO
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID,
+            :OLD.FECHA_PAGO,
+            :OLD.ID_USUARIO,
+            :OLD.ID_ESTADO_PAGO,
+            :OLD.ID_FORMA_PAGO,
+            :OLD.ID_CONCEPTO_PAGO,
+            :OLD.ID_BANCO,
+            :OLD.REFERENCIA_PAGO,
+            :OLD.VALOR_PAGO,
+            :OLD.ID_CITA,
+            :OLD.ID_ARCHIVO,
+            :OLD.FECHA_GENERACION,
+            :OLD.CODIGO_TARIFA,
+            :OLD.CODIGO_DESCUENTO,
+            :OLD.VALOR_DESCUENTO,
+            :OLD.VALOR_CONSULTA,
+            :OLD.ID_PAGO_BANCO,
+            :OLD.VALOR_PROFESIONAL,
+            :OLD.TIPO_TARIFA,
+            :OLD.CADENA_CONCATENADA,
+            :OLD.ID_LIQUIDACION,
+            :OLD.ID_DEVOLUCION,
+            :OLD.VALOR_DEVUELTO,
+            :OLD.ID_USUARIO_REGISTRA_PAGO,
+            :OLD.FECHA_REGISTRA_PAGO,
+            :OLD.COMENTARIO_PAGO,
+            :OLD.ID_DET_LIQUIDACION,
+            :OLD.ID_ESTADO_PAGO_PROFESIONAL,
+            :OLD.ID_DESEMBOLSO,
+            :OLD.ID_TARIFA_TEKER,
+            :OLD.IMPUESTOS,
+            :OLD.CONSECUTIVO_CONTABLE_PROF,
+            :OLD.CONSECUTIVO_CONTABLE_FM,
+            :OLD.NO_ENVIO_CONTABLE_FM,
+            :OLD.NO_ENVIO_CONTABLE_PROF,
+            :OLD.METODO_PAGO,
+            :OLD.NO_FACTURA_ELECTRONICA,
+            :OLD.FACTURA_ENVIADA,
+            :OLD.FECHA_CREACION,
+            :OLD.CONSECUTIVO_COPAGO,
+            :OLD.VALOR_COPAGO,
+            :OLD.PLATAFORMA_PAGO,
+            :OLD.RECIBO_CAJA,
+            :OLD.ID_ORDEN_MONITOREO
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_PAGOS';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>7348A9A1-6C63-0D33-2BDA-5115C7613907</table>
+</TriggerOraclev10g>

@@ -1,0 +1,208 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_USUARIOS_COHORTE" directorySegmentName="seg_1" id="79E373AA-BCA9-2BCD-2B66-E4B61E2A9957">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_USUARIOS_COHORTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_USUARIOS_COHORTE WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_USUARIOS_COHORTE WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_USUARIOS_COHORTE (
+            ENVIO_BQ,
+            ID, 
+            ID_CARGUE_COHORTE, 
+            ID_TIPO_IDENTIFICACION, 
+            IDENTIFICACION, 
+            CORREO, 
+            ID_CIUDAD, 
+            EDAD, 
+            ID_DIAGNOSTICOS, 
+            DIAGNOSTICOS, 
+            ID_USUARIO, 
+            ID_ENTIDAD, 
+            ID_CONVENIO, 
+            FECHA_CREACION, 
+            NIVEL_RIESGO, 
+            ESTADO, 
+            ERROR, 
+            DIAGNOSTICO_INICIAL
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID, 
+            :NEW.ID_CARGUE_COHORTE, 
+            :NEW.ID_TIPO_IDENTIFICACION, 
+            :NEW.IDENTIFICACION, 
+            :NEW.CORREO, 
+            :NEW.ID_CIUDAD, 
+            :NEW.EDAD, 
+            :NEW.ID_DIAGNOSTICOS, 
+            :NEW.DIAGNOSTICOS, 
+            :NEW.ID_USUARIO, 
+            :NEW.ID_ENTIDAD, 
+            :NEW.ID_CONVENIO, 
+            :NEW.FECHA_CREACION, 
+            :NEW.NIVEL_RIESGO, 
+            :NEW.ESTADO, 
+            :NEW.ERROR, 
+            :NEW.DIAGNOSTICO_INICIAL
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_USUARIOS_COHORTE WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_USUARIOS_COHORTE (
+                ENVIO_BQ,
+                ID, 
+                ID_CARGUE_COHORTE, 
+                ID_TIPO_IDENTIFICACION, 
+                IDENTIFICACION, 
+                CORREO, 
+                ID_CIUDAD, 
+                EDAD, 
+                ID_DIAGNOSTICOS, 
+                DIAGNOSTICOS, 
+                ID_USUARIO, 
+                ID_ENTIDAD, 
+                ID_CONVENIO, 
+                FECHA_CREACION, 
+                NIVEL_RIESGO, 
+                ESTADO, 
+                ERROR, 
+                DIAGNOSTICO_INICIAL                
+            )
+            VALUES (
+                2, -- ENVIO_BQ por defecto
+                :NEW.ID, 
+                :NEW.ID_CARGUE_COHORTE, 
+                :NEW.ID_TIPO_IDENTIFICACION, 
+                :NEW.IDENTIFICACION, 
+                :NEW.CORREO, 
+                :NEW.ID_CIUDAD, 
+                :NEW.EDAD, 
+                :NEW.ID_DIAGNOSTICOS, 
+                :NEW.DIAGNOSTICOS, 
+                :NEW.ID_USUARIO, 
+                :NEW.ID_ENTIDAD, 
+                :NEW.ID_CONVENIO, 
+                :NEW.FECHA_CREACION, 
+                :NEW.NIVEL_RIESGO, 
+                :NEW.ESTADO, 
+                :NEW.ERROR, 
+                :NEW.DIAGNOSTICO_INICIAL                
+            );
+
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;
+
+            UPDATE TKRBQ_USUARIOS_COHORTE
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID, 
+                ID_CARGUE_COHORTE = :NEW.ID_CARGUE_COHORTE, 
+                ID_TIPO_IDENTIFICACION = :NEW.ID_TIPO_IDENTIFICACION, 
+                IDENTIFICACION = :NEW.IDENTIFICACION, 
+                CORREO = :NEW.CORREO, 
+                ID_CIUDAD = :NEW.ID_CIUDAD, 
+                EDAD = :NEW.EDAD, 
+                ID_DIAGNOSTICOS = :NEW.ID_DIAGNOSTICOS, 
+                DIAGNOSTICOS = :NEW.DIAGNOSTICOS, 
+                ID_USUARIO = :NEW.ID_USUARIO, 
+                ID_ENTIDAD = :NEW.ID_ENTIDAD, 
+                ID_CONVENIO = :NEW.ID_CONVENIO, 
+                FECHA_CREACION = :NEW.FECHA_CREACION, 
+                NIVEL_RIESGO = :NEW.NIVEL_RIESGO, 
+                ESTADO = :NEW.ESTADO, 
+                ERROR = :NEW.ERROR, 
+                DIAGNOSTICO_INICIAL = :NEW.DIAGNOSTICO_INICIAL
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_USUARIOS_COHORTE WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_USUARIOS_COHORTE WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;            
+
+        INSERT INTO TKRBQ_USUARIOS_COHORTE (
+            ENVIO_BQ,
+            ID, 
+            ID_CARGUE_COHORTE, 
+            ID_TIPO_IDENTIFICACION, 
+            IDENTIFICACION, 
+            CORREO, 
+            ID_CIUDAD, 
+            EDAD, 
+            ID_DIAGNOSTICOS, 
+            DIAGNOSTICOS, 
+            ID_USUARIO, 
+            ID_ENTIDAD, 
+            ID_CONVENIO, 
+            FECHA_CREACION, 
+            NIVEL_RIESGO, 
+            ESTADO, 
+            ERROR, 
+            DIAGNOSTICO_INICIAL
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID, 
+            :OLD.ID_CARGUE_COHORTE, 
+            :OLD.ID_TIPO_IDENTIFICACION, 
+            :OLD.IDENTIFICACION, 
+            :OLD.CORREO, 
+            :OLD.ID_CIUDAD, 
+            :OLD.EDAD, 
+            :OLD.ID_DIAGNOSTICOS, 
+            :OLD.DIAGNOSTICOS, 
+            :OLD.ID_USUARIO, 
+            :OLD.ID_ENTIDAD, 
+            :OLD.ID_CONVENIO, 
+            :OLD.FECHA_CREACION, 
+            :OLD.NIVEL_RIESGO, 
+            :OLD.ESTADO, 
+            :OLD.ERROR, 
+            :OLD.DIAGNOSTICO_INICIAL
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_USUARIOS_COHORTE';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>6913EA52-5AB0-CF1D-4DCC-9E4A6902E160</table>
+</TriggerOraclev10g>

@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="2625EB1B-F67E-AC70-5D95-659F6EF16D68" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_RESPUESTAS_ESCALA_HISTORIA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_RESPUESTAS_ESCALA_HISTORIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0BA64E4C-FA50-37BB-189B-788897ED7105">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RESPUESTAS_ESCALA_HISTORIA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_respuestas_escala_historia_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_RESPUESTAS_ESCALA_HISTORIA</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CONSULTA" id="9835F974-B527-4C15-1FDD-94A21217F482">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RESPUESTAS_ESCALA_HISTORIA</sourceObjSchema>
+<sourceObjName>ID_CONSULTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la consulta al que pertenece la consulta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9CFC321B-FAD4-A1BA-2376-9140350CD6A7" referredColumn="F2724152-26AE-D9E2-C894-5568A1B00E2D"/>
+</associations>
+</Column>
+<Column name="ID_PREGUNTA_ESCALA" id="DB6D361D-32B7-6FD6-F11A-28C1AF09D0D1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RESPUESTAS_ESCALA_HISTORIA</sourceObjSchema>
+<sourceObjName>ID_PREGUNTA_ESCALA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la pregunta escala]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AD3F9C64-4D1D-34F1-886F-AD3D716BCA1C" referredColumn="77384CE9-3850-CC0E-91C6-744D049A3B51"/>
+</associations>
+</Column>
+<Column name="VALOR" id="644925AF-BDD9-B277-731C-9D2ED300CDE2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RESPUESTAS_ESCALA_HISTORIA</sourceObjSchema>
+<sourceObjName>VALOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor de la respuesta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_OTRO" id="CE62B09C-CF19-3774-2EAA-80FC81C50BBA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RESPUESTAS_ESCALA_HISTORIA</sourceObjSchema>
+<sourceObjName>VALOR_OTRO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor de la respuesta cuando se escoge otro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="551755B8-8591-EBF1-F0DD-968A3129919E" name="TKR_ESCALAS_HISTORIA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESCALAS_HISTORIA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BA64E4C-FA50-37BB-189B-788897ED7105"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C876A1B-944A-0272-6754-BC9707288424" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ESCALAS_HISTORIA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESCALAS_HISTORIA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BA64E4C-FA50-37BB-189B-788897ED7105"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5838A148-0804-E91B-C094-4F9CB67C4557" name="TKR_RESP_ESCALA_HISTORIA_CONSULTAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9835F974-B527-4C15-1FDD-94A21217F482"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10B4CB67-6CE1-303D-2FD8-3E0D9A81E28A" name="TKR_RESP_ESCALA_HISTORIA_PREGUNTAS_ESCALA_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB6D361D-32B7-6FD6-F11A-28C1AF09D0D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

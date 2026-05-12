@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_VL_TKR_FECHA_UNIX_VL" directorySegmentName="seg_1" id="A4F5B2EB-6C2A-6F27-24D1-8A0A4ED5F488">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_VL_TKR_FECHA_UNIX_VL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+    IF :new.marca_tiempo_unix_vl IS NULL THEN
+        :new.marca_tiempo_unix_vl := :new.fecha_unix_local_activacion + 5 * 60 * 60 * 1000;
+
+    END IF;
+END trg_vl_tkr_fecha_unix_vl;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>1DFF6913-A606-87FE-9CC4-CE81EEB63317</table>
+</TriggerOraclev10g>

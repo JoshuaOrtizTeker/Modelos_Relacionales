@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelo_Relacional_Citas" id="4E504602-4F35-233A-6D05-6F95937B5761" version="3.5">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4E504602-4F35-233A-6D05-6F95937B5761</designId>
+</OSDM_Design>

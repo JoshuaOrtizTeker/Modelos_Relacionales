@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8CEA85B3-4F29-C730-B7EC-81D8CA76A7D5" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BITACORAS_RIESGO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITACORAS_RIESGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Bitácora para registrar las actualizaciones de calificación de riesgo de los usuarios en los grupos]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6AB7F1E3-C01C-5546-D3BC-8F29068D77CC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITACORAS_RIESGO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro de la bitácora de riesgo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_bitacoras_riesgo_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_BITACORAS_RIESGO</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO_GRUPO" id="5709C693-2073-D2C9-EF2E-C22C3B1D857D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITACORAS_RIESGO</sourceObjSchema>
+<sourceObjName>ID_USUARIO_GRUPO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID del grupo de riesgo asociado al usuario]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5675C3BC-9CED-C9BC-AE9B-E0882489DBCB" referredColumn="51266E62-EE5B-BDBD-F545-A3229DC52555"/>
+</associations>
+</Column>
+<Column name="CALIFICACION_RIESGO_ANTERIOR" id="F6FECFFA-F59C-A3DF-843D-B09420516676">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITACORAS_RIESGO</sourceObjSchema>
+<sourceObjName>CALIFICACION_RIESGO_ANTERIOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Calificación del riesgo anterior en el grupo de riesgo (1=Bajo, 2=Medio, 3=Alto)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CALIFICACION_RIESGO_NUEVO" id="1F5EED13-0DA2-F59A-E556-8CA9C54BA81E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITACORAS_RIESGO</sourceObjSchema>
+<sourceObjName>CALIFICACION_RIESGO_NUEVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Calificación del riesg nuevo en el grupo de riesgo (1=Bajo, 2=Medio, 3=Alto)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="01960D41-6538-6AC2-07CD-F66ED1F9F6E9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITACORAS_RIESGO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>CAST(systimestamp AT TIME ZONE &apos;America/Bogota&apos; AS DATE)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_ACTUALIZACION" id="AA46EFD3-C37D-28D5-F330-40C7FB5B933D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITACORAS_RIESGO</sourceObjSchema>
+<sourceObjName>FECHA_ACTUALIZACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora en que se actualizó la calificación de riesgo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D0CD9573-A405-3418-C5A5-C7879DC3887B" name="TKR_BITACORAS_RIESGO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITACORAS_RIESGO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AB7F1E3-C01C-5546-D3BC-8F29068D77CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF996AA0-6D16-A2C4-8F6A-001CFC4C8F01" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BITACORAS_RIESGO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITACORAS_RIESGO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:16 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AB7F1E3-C01C-5546-D3BC-8F29068D77CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F23CD1D6-D521-135A-DB2E-73A037284529" name="TKR_BITA_RIESGO_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5709C693-2073-D2C9-EF2E-C22C3B1D857D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="DB192598-3BBC-FD88-6353-898CE86C5AC7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FRECUENCIAS_ENTIDAD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FRECUENCIAS_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[abla que modela las frecuencias de atención anual por calificación de riesgo, perfil de doctor y entidad. Contiene las frecuencias asignadas a cada combinación de riesgo (Bajo, Medio, Alto), especialidad médica (Medicina General, Nutrición, Psicología, Especialista) y entidad.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="A748FADE-932D-5147-B7A6-6B251DF0AFA7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIAS_ENTIDAD</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único de la frecuencia de atención, clave primaria de la tabla.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_frecuencias_entidad_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_FRECUENCIAS_ENTIDAD</autoIncrementTriggerName>
+</Column>
+<Column name="CALIFICACION_RIESGO" id="12576A45-4C4E-70CF-7B78-FD8EDB3CEF74">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIAS_ENTIDAD</sourceObjSchema>
+<sourceObjName>CALIFICACION_RIESGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Calificación del riesgo asociada al usuario (1 = Bajo, 2 = Medio, 3 = Alto).]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PERFIL_DOCTOR" id="6B97A6B2-1A49-B3D9-32AE-36541BEEE17E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIAS_ENTIDAD</sourceObjSchema>
+<sourceObjName>ID_PERFIL_DOCTOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Servicio relacionado (1 = Medicina General, 2 = Nutrición, 3 = Psicología, 4 = Especialista)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A9E24D4-3B24-C093-D74F-A3E029B8AA2D" referredColumn="56D28535-8908-A00C-76F7-50010A0F903D"/>
+</associations>
+</Column>
+<Column name="FRECUENCIA_ANUAL" id="603B1B9E-742D-43CE-B40B-B33DDC452F0E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIAS_ENTIDAD</sourceObjSchema>
+<sourceObjName>FRECUENCIA_ANUAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Frecuencia de atención anual segun servicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ENTIDAD" id="071F99B7-F39A-3CC1-5C11-09DBEF0A8815">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIAS_ENTIDAD</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad asociada, clave foránea hacia la tabla TKR_ENTIDADES.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DE273C2-190A-C26C-3E5A-B124638AA9FB" referredColumn="80A3768C-44CA-C05D-A40F-BB8A626D121D"/>
+</associations>
+</Column>
+<Column name="FECHA_CREACION" id="F50B29E0-B3D7-F7CA-0B88-C32B703883A4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIAS_ENTIDAD</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>CAST(systimestamp AT TIME ZONE &apos;America/Bogota&apos; AS DATE)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E182479-DB07-806F-B59C-30294FB1681F" name="TKR_FRECUENCIAS_ENTIDAD_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FRECUENCIAS_ENTIDAD_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A748FADE-932D-5147-B7A6-6B251DF0AFA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E7C95F6-48EE-943D-1AAC-B5851787706B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FRECUENCIAS_ENTIDAD_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FRECUENCIAS_ENTIDAD_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:27 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A748FADE-932D-5147-B7A6-6B251DF0AFA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF79D007-BC7A-6007-53B9-654E2E98BDA0" name="TKR_FRECUENCIAS_ENTIDAD_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="071F99B7-F39A-3CC1-5C11-09DBEF0A8815"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C5015FD-BA8B-FC4F-4135-3A5786778C5D" name="TKR_PERFILES_DOCTOR_FREC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B97A6B2-1A49-B3D9-32AE-36541BEEE17E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,378 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="20169214-6638-118A-B20F-26A41CB351EF" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_STATS_OPS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_STATS_OPS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de estadísticas operativas diarias (OPS/GIRIS): citas, pagos, incidentes, NPS e insights.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="9126F76B-5FE6-6617-0881-EE4F53AF057A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_stats_ops_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_STATS_OPS</autoIncrementTriggerName>
+</Column>
+<Column name="FECHA_REGISTRO" id="1312EB4C-2262-EDE4-6EB0-21FF7CF7C8D3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>FECHA_REGISTRO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha del registro estadístico (un registro por día)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVOS_GIRIS" id="E68C6E8F-E796-0D53-8527-C3A7EC7BD6E3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>ACTIVOS_GIRIS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de usuarios activos en GIRIS]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITAS_PROGRAMADAS" id="010B4E95-B239-A0F2-057A-024BF7EC29C7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>CITAS_PROGRAMADAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total de citas programadas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROGRAMADAS_GIRIS" id="EBF2EC93-CB84-3158-18D1-9018E7BD5B1C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>PROGRAMADAS_GIRIS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Citas programadas gestionadas por GIRIS]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITAS_ATENDIDAS" id="35A132F1-6E48-DCE7-D317-DD68CF220B1B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>CITAS_ATENDIDAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total de citas atendidas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITAS_PAGADAS" id="2054E717-9F5B-86EC-CEAE-C2BF623B1B03">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>CITAS_PAGADAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total de citas pagadas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAGADAS_GIRIS" id="01D8E567-CD7C-7CF8-1FA9-F34EF83F16C8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>PAGADAS_GIRIS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Citas pagadas gestionadas por GIRIS]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PENDIENTES_PAGO" id="C380A5C4-C8B7-0680-2C2B-BFB4FC7261D9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>PENDIENTES_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total de citas pendientes de pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PEND_PAGO_GIRIS" id="52B9F5A9-BD3A-B921-1A67-BDB931CC2521">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>PEND_PAGO_GIRIS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pendientes de pago gestionados por GIRIS]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATENDIDAS_SEGUIMIENTO" id="CE8EF7CD-1FD4-2FBD-0C79-711F30D64B05">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>ATENDIDAS_SEGUIMIENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Citas atendidas que requieren seguimiento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOY_PENDIENTES" id="354A224F-FA01-86FB-C2B6-92351292216C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>HOY_PENDIENTES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pendientes de pago del día]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOY_PAGADAS" id="3F8FB467-21CD-05DF-F7B0-72723E09B710">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>HOY_PAGADAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pagos realizados en el día]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOY_SINPAGO" id="81DA7878-7E76-2ED9-2A6F-C792877E0649">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>HOY_SINPAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Citas atendidas hoy sin pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INCIDENTE_DTEC" id="82F337E1-C406-D612-204E-6DCEE1CFFEAC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>INCIDENTE_DTEC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número de incidentes técnicos (DTEC)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INCIDENTES_DOPS" id="0DBEF078-75CB-C081-6E20-1BB943F1C26B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>INCIDENTES_DOPS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número de incidentes operativos (DOPS)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NPS_SEMANA" id="A81280BD-1CCC-A54B-26D2-A8D0DB2E70AE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>NPS_SEMANA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Net Promoter Score semanal (-100 a 100)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENCUESTAS" id="9E3DB00E-F672-B7EB-4383-E48273C309E0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>ENCUESTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Listado de calificaciones de encuestas separado por coma]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSIGHT_CLINICO" id="6E283F01-37CB-5539-A55D-806BDF227CB7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>INSIGHT_CLINICO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insight clínico consolidado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INSIGHT_COMERCIAL" id="C5963F4E-4EBD-703C-1923-85EE3C489012">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_STATS_OPS</sourceObjSchema>
+<sourceObjName>INSIGHT_COMERCIAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insight comercial consolidado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="877B3FCA-D013-12C1-F154-38E3451FECC2" name="TKR_STATS_OPS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_STATS_OPS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9126F76B-5FE6-6617-0881-EE4F53AF057A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F04CA61-EB3B-A000-BF5E-69676FB82179" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_STATS_OPS_FECHA_IDX_1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_STATS_OPS_FECHA_IDX_1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1312EB4C-2262-EDE4-6EB0-21FF7CF7C8D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5B4D9E6-39AA-C9A3-02D8-25AFFAAC465B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_STATS_OPS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_STATS_OPS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9126F76B-5FE6-6617-0881-EE4F53AF057A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

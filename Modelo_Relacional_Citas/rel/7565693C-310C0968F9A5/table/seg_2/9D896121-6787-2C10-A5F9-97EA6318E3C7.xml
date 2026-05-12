@@ -1,0 +1,219 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="9D896121-6787-2C10-A5F9-97EA6318E3C7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDICAMENTOS_TEMP">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_TEMP</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="07585CB2-653F-6645-62B6-9249E95F8544">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>TKR_MEDICAMENTOS_TEMP_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_MEDICAMENTOS_TEMP</autoIncrementTriggerName>
+</Column>
+<Column name="CODIGO_CUM" id="75023AD3-3418-79E7-9121-3866419DDB3A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>CODIGO_CUM</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_MEDICAMENTO" id="C2AFAEE5-EB0B-B91D-CAE3-87B052E00A53">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>NOMBRE_MEDICAMENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTROSANITARIO" id="2C8EF07E-F29F-9A57-346E-D79E597841A5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>REGISTROSANITARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_ATC" id="9E0C5A93-7DDB-DB42-63FD-DB5BFF816D87">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>CODIGO_ATC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IND_POS" id="F95DA0DC-457E-3B63-137B-5EB98C583E84">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>IND_POS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_GRUPO_MEDICAMENTOS" id="362D79EF-8E94-DF28-A913-497B65B819A5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>ID_GRUPO_MEDICAMENTOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SUBGRUPO_MEDICAMENTOS" id="2BDEE661-9509-8AAB-5D24-95E0763B5E4C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>ID_SUBGRUPO_MEDICAMENTOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_VIA_ADMINISTRACION" id="06533B00-2DF4-6153-8493-B7B7E9603EC2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>ID_VIA_ADMINISTRACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PRESENTACION" id="583A541F-A40E-24EE-5C6C-DE1C1741B44B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>ID_PRESENTACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRINCIPIO_ACTIVO" id="4BB66A42-70B3-54BC-A95C-A02F553AD733">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>PRINCIPIO_ACTIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COD_MEDICAMENTO" id="5213D310-2CAB-205A-B219-4D4F6B2DC135">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_TEMP</sourceObjSchema>
+<sourceObjName>COD_MEDICAMENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F0380C5-47F9-6165-E636-C550056B8B45" name="TKR_MEDICAMENTOS_TEMP_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_TEMP_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07585CB2-653F-6645-62B6-9249E95F8544"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6975505A-F5CA-F61D-8647-3C416CF88D74" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDICAMENTOS_TEMP_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_TEMP_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:31 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07585CB2-653F-6645-62B6-9249E95F8544"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

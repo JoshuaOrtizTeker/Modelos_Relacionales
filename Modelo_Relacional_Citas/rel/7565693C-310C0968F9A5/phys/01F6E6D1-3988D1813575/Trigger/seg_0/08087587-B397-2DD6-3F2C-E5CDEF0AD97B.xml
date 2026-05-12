@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_ESPECIALIDADES" directorySegmentName="seg_0" id="08087587-B397-2DD6-3F2C-E5CDEF0AD97B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_ESPECIALIDADES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- Caso INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_ESPECIALIDADES WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_ESPECIALIDADES WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_ESPECIALIDADES (
+            ENVIO_BQ, ID, NOMBRE_ESPECIALIDAD, DURACION_MINUTOS_CITA,
+            IMAGEN, FECHA_CREACION, TIPO_ESPECIALIDAD, PROFESION_MEDICA, SUBTIPO, IND_QUIRURGICO, ID_ESPECIALIDAD_TQ
+        )
+        VALUES (
+            0, -- ENVIO_BQ para INSERT
+            :NEW.ID, :NEW.NOMBRE_ESPECIALIDAD, :NEW.DURACION_MINUTOS_CITA,
+            :NEW.IMAGEN, :NEW.FECHA_CREACION, :NEW.TIPO_ESPECIALIDAD, :NEW.PROFESION_MEDICA, :NEW.SUBTIPO, :NEW.IND_QUIRURGICO, :NEW.ID_ESPECIALIDAD_TQ
+        );
+    END IF;
+
+    -- Caso UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_ESPECIALIDADES WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_ESPECIALIDADES (
+                ENVIO_BQ, ID, NOMBRE_ESPECIALIDAD, DURACION_MINUTOS_CITA,
+                IMAGEN, FECHA_CREACION, TIPO_ESPECIALIDAD, PROFESION_MEDICA, SUBTIPO, IND_QUIRURGICO, ID_ESPECIALIDAD_TQ
+            )
+            VALUES (
+                2, -- ENVIO_BQ para INSERT
+                :NEW.ID, :NEW.NOMBRE_ESPECIALIDAD, :NEW.DURACION_MINUTOS_CITA,
+                :NEW.IMAGEN, :NEW.FECHA_CREACION, :NEW.TIPO_ESPECIALIDAD, :NEW.PROFESION_MEDICA, :NEW.SUBTIPO, :NEW.IND_QUIRURGICO, :NEW.ID_ESPECIALIDAD_TQ
+            );       
+       
+       ELSE
+
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;    
+
+            UPDATE TKRBQ_ESPECIALIDADES
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                NOMBRE_ESPECIALIDAD = :NEW.NOMBRE_ESPECIALIDAD,
+                DURACION_MINUTOS_CITA = :NEW.DURACION_MINUTOS_CITA,
+                IMAGEN = :NEW.IMAGEN,
+                FECHA_CREACION = :NEW.FECHA_CREACION, 
+                TIPO_ESPECIALIDAD = :NEW.TIPO_ESPECIALIDAD, 
+                PROFESION_MEDICA = :NEW.PROFESION_MEDICA, 
+                SUBTIPO = :NEW.SUBTIPO,
+                IND_QUIRURGICO = :NEW.IND_QUIRURGICO, 
+                ID_ESPECIALIDAD_TQ = :NEW.ID_ESPECIALIDAD_TQ
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+    -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_ESPECIALIDADES WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_ESPECIALIDADES WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_ESPECIALIDADES (
+            ENVIO_BQ, ID, NOMBRE_ESPECIALIDAD, DURACION_MINUTOS_CITA,
+            IMAGEN, FECHA_CREACION, TIPO_ESPECIALIDAD, PROFESION_MEDICA, SUBTIPO, IND_QUIRURGICO, ID_ESPECIALIDAD_TQ
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID, :OLD.NOMBRE_ESPECIALIDAD, :OLD.DURACION_MINUTOS_CITA,
+            :OLD.IMAGEN, :OLD.FECHA_CREACION, :OLD.TIPO_ESPECIALIDAD, :OLD.PROFESION_MEDICA, :OLD.SUBTIPO, :OLD.IND_QUIRURGICO, :OLD.ID_ESPECIALIDAD_TQ
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_ESPECIALIDADES';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>949093E2-6238-5159-7AE5-E941934489C4</table>
+</TriggerOraclev10g>

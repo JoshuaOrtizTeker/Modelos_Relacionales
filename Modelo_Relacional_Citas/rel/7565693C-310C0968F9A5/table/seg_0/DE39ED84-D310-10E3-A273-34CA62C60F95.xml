@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DE39ED84-D310-10E3-A273-34CA62C60F95" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BITMAP_DIA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITMAP_DIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que almacena la disponibilidad diaria de un profesional en formato bitmap (cadena de bits). Cada posicion representa un intervalo de tiempo del dia.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="A091E216-504B-8FDF-6572-6304F0DC83F5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PROFESIONAL" id="E5AEBFC2-E69F-DA98-46BF-0845A62AA49E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>ID_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del profesional (relacionado con TKR_USUARIOS.ID)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="B7CCA890-4CEE-0BF4-81BD-C0032DE8FB0A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha correspondiente a la disponibilidad del profesional]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BITMAP" id="BDC2C9CC-5528-05EF-5CC6-40512C3FECFB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>BITMAP</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cadena de bits donde cada posicion representa un slot de tiempo. 1 = disponible, 0 = ocupado o no disponible.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>288 BYTE</dataTypeSize>
+<ownDataTypeParameters>288 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL_SLOTS" id="72D3C6E6-A22C-AD39-D6B1-B342670DE3EE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>TOTAL_SLOTS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad total de slots generados para el dia]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SLOTS_OCUPADOS" id="2E024FE2-F670-DAF4-8036-06E48D5CC6BC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>SLOTS_OCUPADOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de slots ocupados]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SLOTS_LIBRES" id="691CC14B-CE49-36E3-BDF7-302EF6ED38DA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BITMAP_DIA</sourceObjSchema>
+<sourceObjName>SLOTS_LIBRES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de slots disponibles]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C945032A-47DE-EB3C-08CC-3FCC20283B81" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BITMAP_DIA_IDX1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITMAP_DIA_IDX1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:16 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5AEBFC2-E69F-DA98-46BF-0845A62AA49E"/>
+<colUsage columnID="B7CCA890-4CEE-0BF4-81BD-C0032DE8FB0A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2BE5B63E-2DB8-F2B6-3FC0-C69C45CE7671" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BITMAP_DIA_IDX2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BITMAP_DIA_IDX2</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:16 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="691CC14B-CE49-36E3-BDF7-302EF6ED38DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

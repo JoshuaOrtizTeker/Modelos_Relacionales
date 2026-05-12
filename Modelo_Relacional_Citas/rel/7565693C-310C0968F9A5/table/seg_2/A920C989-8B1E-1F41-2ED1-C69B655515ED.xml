@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="A920C989-8B1E-1F41-2ED1-C69B655515ED" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_PREGUNTAS_ESCALA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PREGUNTAS_ESCALA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="77384CE9-3850-CC0E-91C6-744D049A3B51">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PREGUNTAS_ESCALA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_preguntas_escala_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_PREGUNTAS_ESCALA</autoIncrementTriggerName>
+</Column>
+<Column name="PREGUNTA" id="98C77CDC-0FFE-7F58-78D2-F9535E84CAF8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PREGUNTAS_ESCALA</sourceObjSchema>
+<sourceObjName>PREGUNTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Pregunta de la escala]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESCALA" id="681EFD5F-4192-9A27-0734-90EE0992307A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PREGUNTAS_ESCALA</sourceObjSchema>
+<sourceObjName>ID_ESCALA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la escala que le pertenece la pregunta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B421647E-67F6-4DD9-F324-182FFE9BAE66" referredColumn="48A9CFC5-9DC7-05FF-00D7-6CD9AEC37BD1"/>
+</associations>
+</Column>
+<Column name="ORDEN" id="D4778FCA-D3D4-4F09-D59D-96E6AC849D27">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PREGUNTAS_ESCALA</sourceObjSchema>
+<sourceObjName>ORDEN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Orden en que se debe mostrar la pregunta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E5EF3BEA-2C6C-7E88-AAA9-88D3A2D79D6E" name="TKR_PREGUNTAS_ESCALA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PREGUNTAS_ESCALA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77384CE9-3850-CC0E-91C6-744D049A3B51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="893DC91B-5552-74F9-07D6-D2D49BA32BCD" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_PREGUNTAS_ESCALA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PREGUNTAS_ESCALA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:35 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77384CE9-3850-CC0E-91C6-744D049A3B51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CCDC9720-3F1C-0B84-2F1F-BDAC657FFC2F" name="TKR_PREGUNTAS_ESCALA_ESCALAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="681EFD5F-4192-9A27-0734-90EE0992307A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

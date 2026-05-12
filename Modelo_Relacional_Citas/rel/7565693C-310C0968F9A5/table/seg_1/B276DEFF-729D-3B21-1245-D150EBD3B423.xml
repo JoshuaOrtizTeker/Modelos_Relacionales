@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="B276DEFF-729D-3B21-1245-D150EBD3B423" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FECHAS_SOLICITUD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FECHAS_SOLICITUD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C019DE34-0E44-375F-1050-8264E4E56BAD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FECHAS_SOLICITUD</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_fechas_solicitud_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_FECHAS_SOLICITUD</autoIncrementTriggerName>
+</Column>
+<Column name="ID_SOLICITUD_ATENCION" id="259D73AA-91C5-3275-B092-B6470EDE1D40">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FECHAS_SOLICITUD</sourceObjSchema>
+<sourceObjName>ID_SOLICITUD_ATENCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del servicio domiciliario que pertenece]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D2754AB-523E-E1F3-E550-224847755DE8" referredColumn="02D1A6F6-4A2C-E895-F953-B524A223B005"/>
+</associations>
+</Column>
+<Column name="ID_USUARIO" id="6382568A-F130-EF6A-C1D9-8D9AE87DF8A3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FECHAS_SOLICITUD</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que realiza la actualizacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="654E3EBA-8061-4E7C-9D37-54291B104E9E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FECHAS_SOLICITUD</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que se realiza la actualizacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTADO_ATENCION" id="A6B60F13-888F-090D-2686-E5965CC49F3A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FECHAS_SOLICITUD</sourceObjSchema>
+<sourceObjName>ID_ESTADO_ATENCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del estado de la atencion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49495106-A305-02A2-89B5-D72E1CAEA2DE" referredColumn="2975CDB3-E221-4093-1992-3DFABB61C93D"/>
+</associations>
+</Column>
+<Column name="FECHA_CREACION" id="4C296E94-3AE4-E7EE-DD60-F425D42E0C06">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FECHAS_SOLICITUD</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="59CF1A18-7B8F-3F5E-0DF0-EB2CB6B29F0D" name="TKR_FECHAS_SOLICITUD_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FECHAS_SOLICITUD_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C019DE34-0E44-375F-1050-8264E4E56BAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9BCBD4A-AC7A-63DB-89B9-DC8713DEC38C" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FECHAS_SOLICITUD_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FECHAS_SOLICITUD_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:27 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C019DE34-0E44-375F-1050-8264E4E56BAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E483897-81FE-5BE4-E154-12E2DB30B27D" name="TKR_FECHAS_SOLICITUD_TKR_ESTADOS_ATENCION_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6B60F13-888F-090D-2686-E5965CC49F3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15B9057C-D82D-A9B9-4D2B-7D276F9A3730" name="TKR_FECHAS_SOLICITUD_TKR_SOLICITUD_ATENCION_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="259D73AA-91C5-3275-B092-B6470EDE1D40"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

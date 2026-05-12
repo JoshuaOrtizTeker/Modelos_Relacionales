@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="00207AC1-FF5C-FF9D-F8C7-D0B7E8978984" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DETALLE_MEMBRESIAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DETALLE_MEMBRESIAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="31F62988-C4F5-8F58-0224-0F60BA1488D3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_detalle_membresias_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_DETALLE_MEMBRESIAS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_MEMBRESIA" id="C70CA1DA-2FFA-B806-8CFB-3E7F5F3E635D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>ID_MEMBRESIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la membresia]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SERVICIO_ENTIDAD" id="FF382625-6A89-F316-1B5A-A3FAE4BE28C2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>ID_SERVICIO_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identifcador de la categoria]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C712A434-C1A4-7039-961D-DDC8565B75DC" referredColumn="543F6795-361A-9BF5-727F-D411BFFD6932"/>
+</associations>
+</Column>
+<Column name="CANTIDAD_SOLICITADA" id="A2F3E13D-B2CC-75A8-2B75-7E64BDFCF975">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>CANTIDAD_SOLICITADA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de la membresia]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOLICITA_INTERCONSULTA" id="53047485-0079-1BED-7AA9-385648EA0E71">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>SOLICITA_INTERCONSULTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Solicita Interconsulta (S)i (N)o]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANTIDAD_USADA" id="D69236DD-F68A-6CBC-98E4-7D3BB8DFA8F8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>CANTIDAD_USADA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad usada en la membresia]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_SERVICIO_SOLICITADO" id="D42F0740-3AC3-D9DB-6E42-46A683A2EFCA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>VALOR_SERVICIO_SOLICITADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor del servicio cuando se presupuesta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_SERVICIO_LIQUIDADO" id="C4A17CB3-CD94-11B7-C2E5-BA8494FFC8A7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>VALOR_SERVICIO_LIQUIDADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor del servicio cuando se realiza la liquidacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="7327E5C6-2A4C-98BC-0099-0426F83386AB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DETALLE_MEMBRESIAS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14CE44C3-63A6-13EE-4442-4D3C94AC4192" name="TKR_DETALLE_MEMBRESIAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DETALLE_MEMBRESIAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31F62988-C4F5-8F58-0224-0F60BA1488D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFB82672-AF47-D517-6FFC-0DF02DB37E4E" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DETALLE_MEMBRESIAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DETALLE_MEMBRESIAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:22 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31F62988-C4F5-8F58-0224-0F60BA1488D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4AB459F8-84F7-5BE4-A277-064853F4AF11" name="TKR_MEMB_SERV_ENTIDAD_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF382625-6A89-F316-1B5A-A3FAE4BE28C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

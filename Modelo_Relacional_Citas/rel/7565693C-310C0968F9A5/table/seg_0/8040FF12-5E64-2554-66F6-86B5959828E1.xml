@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8040FF12-5E64-2554-66F6-86B5959828E1" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CIE10">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CIE10</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de codigos de cuatro caracteres de la Clasificacion Internacional de Enfermedades CIE-10 (Decima Revision). Contiene los codigos diagnosticos a nivel de subcategoria de cuatro caracteres con su descripcion oficial.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="7BCFDBDD-5463-C322-CC9A-8384A303C92B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CIE10</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico secuencial de la tabla.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>TKR_CIE10_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_CIE10</autoIncrementTriggerName>
+</Column>
+<Column name="CODIGO_CIE" id="69928B9E-95E2-30B3-EE34-32A0DBC25005">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CIE10</sourceObjSchema>
+<sourceObjName>CODIGO_CIE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo diagnostico de cuatro caracteres segun CIE-10. Formato alfanumerico: una letra, dos digitos, punto y un digito (ej. A00.0, B15.9, Z99.9).]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_CIE" id="CEBF6F4B-2B7A-8C20-8C3B-992A7F0697F1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CIE10</sourceObjSchema>
+<sourceObjName>DESCRIPCION_CIE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion oficial del codigo diagnostico de cuatro caracteres segun la CIE-10 decima revision.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 BYTE</dataTypeSize>
+<ownDataTypeParameters>300 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CAPITULO" id="A56D6530-0949-840C-C003-B2C2D7B5AEED">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CIE10</sourceObjSchema>
+<sourceObjName>ID_CAPITULO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Referencia al capitulo de la CIE-10 al que pertenece el codigo. Relacionado con la tabla de capitulos.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CIE3" id="36FDB9EE-EA2F-CDC0-9F98-5BA8A7453C86">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CIE10</sourceObjSchema>
+<sourceObjName>ID_CIE3</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo de tres caracteres al que pertenece esta subcategoria. Referencia a la tabla TKR_CIE3 campo CODIGO3.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PATOLOGIA" id="16742689-8E30-EDDB-4256-F54BBF180B26">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CIE10</sourceObjSchema>
+<sourceObjName>ID_PATOLOGIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Referencia a la tabla de patologias o grupos de enfermedades asociados al codigo.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="98852D2E-6650-CF6B-41B2-9559FF11F284" name="PK_TKR_CIE10">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>PK_TKR_CIE10</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BCFDBDD-5463-C322-CC9A-8384A303C92B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7006FBE4-D3E8-7D7D-1DE8-214D8E2B31DF" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="IDX_TKR_CIE10_CODIGO_CIE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>IDX_TKR_CIE10_CODIGO_CIE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:17 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69928B9E-95E2-30B3-EE34-32A0DBC25005"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="820D6261-CAE6-D63A-6362-76380BB75FF0" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="PK_TKR_CIE10">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>PK_TKR_CIE10</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:17 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BCFDBDD-5463-C322-CC9A-8384A303C92B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

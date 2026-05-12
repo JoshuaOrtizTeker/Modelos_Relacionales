@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="5C7BC38A-B33A-37F1-1721-84CDBF71D3B3" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ROL_ACCESO_ENTIDADES">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ROL_ACCESO_ENTIDADES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="909A4D83-ED36-F4AB-B927-36B11083D634">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROL_ACCESO_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_rol_acceso_entidades_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ROL_ACCESO_ENTIDADES</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ROL_ACCESO" id="4EE4DB9E-1ED4-404F-97F8-7EC20BFCD04D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROL_ACCESO_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_ROL_ACCESO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F90AD00-ADE1-87F3-1D5C-2B6B4666AC5F" referredColumn="57FE34B7-5D60-8719-6F9F-491713B62DE6"/>
+</associations>
+</Column>
+<Column name="ID_ENTIDAD" id="8E51B304-6026-DD67-C659-AC217E733567">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROL_ACCESO_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02965E1D-9C57-B794-575D-683DCADD7F0F" referredColumn="80A3768C-44CA-C05D-A40F-BB8A626D121D"/>
+</associations>
+</Column>
+<Column name="FECHA_CREACION" id="2D2F62EA-9CC6-5A1C-3FD7-0CB1BA17782A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ROL_ACCESO_ENTIDADES</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3AEB9044-0DD9-09D5-3D4F-9B2171ECA78F" name="TKR_SOCIEDADES_ROL_ACCESO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SOCIEDADES_ROL_ACCESO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="909A4D83-ED36-F4AB-B927-36B11083D634"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B42AA0E7-C533-60FA-72BC-6EDC1BD98FA7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SOCIEDADES_ROL_ACCESO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SOCIEDADES_ROL_ACCESO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:39 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="909A4D83-ED36-F4AB-B927-36B11083D634"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C6AACC3-A5C4-0877-4609-C77909945D9E" name="TKR_ROL_ACCESO_ENTI_ENTIDADES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E51B304-6026-DD67-C659-AC217E733567"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="949E3103-D96C-276B-C984-861A1ABB8555" name="TKR_ROL_ACCESO_ENTI_ROLES_ACCESOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EE4DB9E-1ED4-404F-97F8-7EC20BFCD04D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

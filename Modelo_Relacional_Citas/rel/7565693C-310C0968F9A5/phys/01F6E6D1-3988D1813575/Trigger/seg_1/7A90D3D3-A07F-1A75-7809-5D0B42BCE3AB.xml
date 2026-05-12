@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_SOLICITUD_DOCTOR" directorySegmentName="seg_1" id="7A90D3D3-A07F-1A75-7809-5D0B42BCE3AB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_SOLICITUD_DOCTOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_SOLICITUD_DOCTOR WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_SOLICITUD_DOCTOR WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;    
+
+        INSERT INTO TKRBQ_SOLICITUD_DOCTOR (
+            ENVIO_BQ,
+            ID,
+            ID_USUARIO,
+            FECHA,
+            TIEMPO_EXPERIENCIA,
+            TIEMPO_EXP_SALUD_VIRTUAL,
+            FECHA_CREACION,
+            ID_PAIS
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID,
+            :NEW.ID_USUARIO,
+            :NEW.FECHA,
+            :NEW.TIEMPO_EXPERIENCIA,
+            :NEW.TIEMPO_EXP_SALUD_VIRTUAL,
+            :NEW.FECHA_CREACION,
+            :NEW.ID_PAIS
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_SOLICITUD_DOCTOR WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_SOLICITUD_DOCTOR (
+                ENVIO_BQ,
+                ID,
+                ID_USUARIO,
+                FECHA,
+                TIEMPO_EXPERIENCIA,
+                TIEMPO_EXP_SALUD_VIRTUAL,
+                FECHA_CREACION,
+                ID_PAIS
+            )
+            VALUES (
+                2, -- ENVIO_BQ por defecto
+                :NEW.ID,
+                :NEW.ID_USUARIO,
+                :NEW.FECHA,
+                :NEW.TIEMPO_EXPERIENCIA,
+                :NEW.TIEMPO_EXP_SALUD_VIRTUAL,
+                :NEW.FECHA_CREACION,
+                :NEW.ID_PAIS
+            );
+
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;
+
+            UPDATE TKRBQ_SOLICITUD_DOCTOR
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                ID_USUARIO = :NEW.ID_USUARIO,
+                FECHA = :NEW.FECHA,
+                TIEMPO_EXPERIENCIA = :NEW.TIEMPO_EXPERIENCIA,
+                TIEMPO_EXP_SALUD_VIRTUAL = :NEW.TIEMPO_EXP_SALUD_VIRTUAL,
+                FECHA_CREACION = :NEW.FECHA_CREACION,
+                ID_PAIS = :NEW.ID_PAIS
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_SOLICITUD_DOCTOR WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_SOLICITUD_DOCTOR WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;    
+
+        INSERT INTO TKRBQ_SOLICITUD_DOCTOR (
+            ENVIO_BQ,
+            ID,
+            ID_USUARIO,
+            FECHA,
+            TIEMPO_EXPERIENCIA,
+            TIEMPO_EXP_SALUD_VIRTUAL,
+            FECHA_CREACION,
+            ID_PAIS
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID,
+            :OLD.ID_USUARIO,
+            :OLD.FECHA,
+            :OLD.TIEMPO_EXPERIENCIA,
+            :OLD.TIEMPO_EXP_SALUD_VIRTUAL,
+            :OLD.FECHA_CREACION,
+            :OLD.ID_PAIS
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TKR_SOLICITUD_DOCTOR';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>43D20CF1-EBAB-CB88-D126-E34E789FFB43</table>
+</TriggerOraclev10g>

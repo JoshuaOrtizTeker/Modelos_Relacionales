@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="CE79C572-7D1C-CEC3-044C-B22A9435BE1B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OBSERVACIONES_CLINICAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OBSERVACIONES_CLINICAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C466057C-0B2C-F598-8049-16BE24EC7A6B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_CLINICAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_observaciones_clinicas_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_OBSERVACIONES_CLINI</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO_COHORTE" id="C3D39717-9623-5449-8F9D-E24658656647">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_CLINICAS</sourceObjSchema>
+<sourceObjName>ID_USUARIO_COHORTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario de la cohorte]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D855E30-F7C9-E566-45F1-3F1D90C61645" referredColumn="A1C6FBC3-5656-6063-0028-D176BB7DE08D"/>
+</associations>
+</Column>
+<Column name="OBSERVACION" id="FF8E53C8-58F9-95E2-091A-E6111C91F8DA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_CLINICAS</sourceObjSchema>
+<sourceObjName>OBSERVACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Observacion clinica del usuario de la cohorte]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO_ACCION" id="D0716883-EC71-7FE5-214B-A141AA5BD35E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_CLINICAS</sourceObjSchema>
+<sourceObjName>ID_USUARIO_ACCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que graba la observacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ACCA079A-8BEC-84E0-DD48-3E6A4A50E224" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="FECHA_REGISTRO" id="566154F1-A004-A2E4-0DD4-FDA33D8BF5E4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_CLINICAS</sourceObjSchema>
+<sourceObjName>FECHA_REGISTRO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de grabacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9B087FD-E11D-693C-FE67-436E7EA49014" name="TKR_OBSERVACIONES_CLINICAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OBSERVACIONES_CLINICAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C466057C-0B2C-F598-8049-16BE24EC7A6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FD6B7AD-073A-54B0-601C-EA0E80965D26" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OBSERVACIONES_CLINICAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OBSERVACIONES_CLINICAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:33 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C466057C-0B2C-F598-8049-16BE24EC7A6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3ADD826F-9770-2319-22BB-F6C368034D42" name="TKR_OBSERV_CLINICAS_USU_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0716883-EC71-7FE5-214B-A141AA5BD35E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02A344F2-AAC8-7A84-9FD2-1E68527E0B5E" name="TKR_OBS_CLINICAS_USU_COH_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3D39717-9623-5449-8F9D-E24658656647"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_SERVICIOS_SOLICITADOS" directorySegmentName="seg_1" id="99FD4AEB-DF7E-F839-DE36-803F9034BDC2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_SERVICIOS_SOLICITADOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- Caso INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_SERVICIOS_SOLICITADOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_SERVICIOS_SOLICITADOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;        
+    
+        INSERT INTO TKRBQ_SERVICIOS_SOLICITADOS (
+            ENVIO_BQ, ID, ID_SERVICIO, ID_USUARIO_SERVICIO, ID_ENTIDAD,
+            ID_USUARIO_ATIENDE, ID_CONSULTA, FECHA_INICIAL, FECHA_FINAL,
+            ID_ESTADO_SERVICIO, ID_MEMBRESIA, TARIFA_BASE, DESCUENTO,
+            VALOR_NETO, ID_SERVICIO_SOLICITADO, AUTORIZACION_ENTIDAD,
+            ID_USUARIO_AUTORIZA, FECHA_AUTORIZACION, FECHA_CREACION,
+            ID_CITA,VALOR_COBRO,
+            VALOR_COPAGO,
+            ORIGEN_SOLICITUD,
+            OBSERVACION,
+            ID_ESPECIALIDAD,
+            ID_HEXADECIMAL,
+            ENTIDAD_SOLICITA_PACIENTE,
+            ID_ENTIDAD_ASEGURADORA            
+        )
+        VALUES (
+            0, -- ENVIO_BQ para INSERT
+            :NEW.ID, :NEW.ID_SERVICIO, :NEW.ID_USUARIO_SERVICIO, :NEW.ID_ENTIDAD,
+            :NEW.ID_USUARIO_ATIENDE, :NEW.ID_CONSULTA, :NEW.FECHA_INICIAL, :NEW.FECHA_FINAL,
+            :NEW.ID_ESTADO_SERVICIO, :NEW.ID_MEMBRESIA, :NEW.TARIFA_BASE, :NEW.DESCUENTO,
+            :NEW.VALOR_NETO, :NEW.ID_SERVICIO_SOLICITADO, :NEW.AUTORIZACION_ENTIDAD,
+            :NEW.ID_USUARIO_AUTORIZA, :NEW.FECHA_AUTORIZACION, :NEW.FECHA_CREACION,
+            :NEW.ID_CITA,:NEW.VALOR_COBRO,
+            :NEW.VALOR_COPAGO,
+            :NEW.ORIGEN_SOLICITUD,
+            :NEW.OBSERVACION,
+            :NEW.ID_ESPECIALIDAD,
+            :NEW.ID_HEXADECIMAL,
+            :NEW.ENTIDAD_SOLICITA_PACIENTE,
+            :NEW.ID_ENTIDAD_ASEGURADORA            
+        );
+    END IF;
+
+    -- Caso UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_SERVICIOS_SOLICITADOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_SERVICIOS_SOLICITADOS (
+                ENVIO_BQ, ID, ID_SERVICIO, ID_USUARIO_SERVICIO, ID_ENTIDAD,
+                ID_USUARIO_ATIENDE, ID_CONSULTA, FECHA_INICIAL, FECHA_FINAL,
+                ID_ESTADO_SERVICIO, ID_MEMBRESIA, TARIFA_BASE, DESCUENTO,
+                VALOR_NETO, ID_SERVICIO_SOLICITADO, AUTORIZACION_ENTIDAD,
+                ID_USUARIO_AUTORIZA, FECHA_AUTORIZACION, FECHA_CREACION,
+                ID_CITA,VALOR_COBRO,
+                VALOR_COPAGO,
+                ORIGEN_SOLICITUD,
+                OBSERVACION,
+                ID_ESPECIALIDAD,
+                ID_HEXADECIMAL,
+                ENTIDAD_SOLICITA_PACIENTE,
+                ID_ENTIDAD_ASEGURADORA                
+            )
+            VALUES (
+                2, -- ENVIO_BQ para INSERT
+                :NEW.ID, :NEW.ID_SERVICIO, :NEW.ID_USUARIO_SERVICIO, :NEW.ID_ENTIDAD,
+                :NEW.ID_USUARIO_ATIENDE, :NEW.ID_CONSULTA, :NEW.FECHA_INICIAL, :NEW.FECHA_FINAL,
+                :NEW.ID_ESTADO_SERVICIO, :NEW.ID_MEMBRESIA, :NEW.TARIFA_BASE, :NEW.DESCUENTO,
+                :NEW.VALOR_NETO, :NEW.ID_SERVICIO_SOLICITADO, :NEW.AUTORIZACION_ENTIDAD,
+                :NEW.ID_USUARIO_AUTORIZA, :NEW.FECHA_AUTORIZACION, :NEW.FECHA_CREACION,
+                :NEW.ID_CITA,:NEW.VALOR_COBRO,
+                :NEW.VALOR_COPAGO,
+                :NEW.ORIGEN_SOLICITUD,
+                :NEW.OBSERVACION,
+                :NEW.ID_ESPECIALIDAD,
+                :NEW.ID_HEXADECIMAL,
+                :NEW.ENTIDAD_SOLICITA_PACIENTE,
+                :NEW.ID_ENTIDAD_ASEGURADORA                
+            );    
+    
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;    
+
+            UPDATE TKRBQ_SERVICIOS_SOLICITADOS
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                ID_SERVICIO = :NEW.ID_SERVICIO,
+                ID_USUARIO_SERVICIO = :NEW.ID_USUARIO_SERVICIO,
+                ID_ENTIDAD = :NEW.ID_ENTIDAD,
+                ID_USUARIO_ATIENDE = :NEW.ID_USUARIO_ATIENDE,
+                ID_CONSULTA = :NEW.ID_CONSULTA,
+                FECHA_INICIAL = :NEW.FECHA_INICIAL,
+                FECHA_FINAL = :NEW.FECHA_FINAL,
+                ID_ESTADO_SERVICIO = :NEW.ID_ESTADO_SERVICIO,
+                ID_MEMBRESIA = :NEW.ID_MEMBRESIA,
+                TARIFA_BASE = :NEW.TARIFA_BASE,
+                DESCUENTO = :NEW.DESCUENTO,
+                VALOR_NETO = :NEW.VALOR_NETO,
+                ID_SERVICIO_SOLICITADO = :NEW.ID_SERVICIO_SOLICITADO,
+                AUTORIZACION_ENTIDAD = :NEW.AUTORIZACION_ENTIDAD,
+                ID_USUARIO_AUTORIZA = :NEW.ID_USUARIO_AUTORIZA,
+                FECHA_AUTORIZACION = :NEW.FECHA_AUTORIZACION,
+                FECHA_CREACION = :NEW.FECHA_CREACION,
+                ID_CITA = :NEW.ID_CITA,
+                VALOR_COBRO = :NEW.VALOR_COBRO,
+                VALOR_COPAGO = :NEW.VALOR_COPAGO,
+                ORIGEN_SOLICITUD = :NEW.ORIGEN_SOLICITUD,
+                OBSERVACION = :NEW.OBSERVACION,
+                ID_ESPECIALIDAD = :NEW.ID_ESPECIALIDAD,
+                ID_HEXADECIMAL = :NEW.ID_HEXADECIMAL,
+                ENTIDAD_SOLICITA_PACIENTE = :NEW.ENTIDAD_SOLICITA_PACIENTE,
+                ID_ENTIDAD_ASEGURADORA = :NEW.ID_ENTIDAD_ASEGURADORA                
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;            
+    END IF;
+
+    -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_SERVICIOS_SOLICITADOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_SERVICIOS_SOLICITADOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_SERVICIOS_SOLICITADOS (
+            ENVIO_BQ, ID, ID_SERVICIO, ID_USUARIO_SERVICIO, ID_ENTIDAD,
+            ID_USUARIO_ATIENDE, ID_CONSULTA, FECHA_INICIAL, FECHA_FINAL,
+            ID_ESTADO_SERVICIO, ID_MEMBRESIA, TARIFA_BASE, DESCUENTO,
+            VALOR_NETO, ID_SERVICIO_SOLICITADO, AUTORIZACION_ENTIDAD,
+            ID_USUARIO_AUTORIZA, FECHA_AUTORIZACION, FECHA_CREACION,
+            ID_CITA, VALOR_COBRO,
+            VALOR_COPAGO,
+            ORIGEN_SOLICITUD,
+            OBSERVACION,
+            ID_ESPECIALIDAD,
+            ID_HEXADECIMAL,
+            ENTIDAD_SOLICITA_PACIENTE,
+            ID_ENTIDAD_ASEGURADORA            
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID, :OLD.ID_SERVICIO, :OLD.ID_USUARIO_SERVICIO, :OLD.ID_ENTIDAD,
+            :OLD.ID_USUARIO_ATIENDE, :OLD.ID_CONSULTA, :OLD.FECHA_INICIAL, :OLD.FECHA_FINAL,
+            :OLD.ID_ESTADO_SERVICIO, :OLD.ID_MEMBRESIA, :OLD.TARIFA_BASE, :OLD.DESCUENTO,
+            :OLD.VALOR_NETO, :OLD.ID_SERVICIO_SOLICITADO, :OLD.AUTORIZACION_ENTIDAD,
+            :OLD.ID_USUARIO_AUTORIZA, :OLD.FECHA_AUTORIZACION, :OLD.FECHA_CREACION, 
+            :OLD.ID_CITA, :OLD.VALOR_COBRO,
+            :OLD.VALOR_COPAGO,
+            :OLD.ORIGEN_SOLICITUD,
+            :OLD.OBSERVACION,
+            :OLD.ID_ESPECIALIDAD,
+            :OLD.ID_HEXADECIMAL,
+            :OLD.ENTIDAD_SOLICITA_PACIENTE,
+            :OLD.ID_ENTIDAD_ASEGURADORA            
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_SERVICIOS_SOLICITADOS';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>152A24B8-432F-B700-9666-00E293787C2A</table>
+</TriggerOraclev10g>

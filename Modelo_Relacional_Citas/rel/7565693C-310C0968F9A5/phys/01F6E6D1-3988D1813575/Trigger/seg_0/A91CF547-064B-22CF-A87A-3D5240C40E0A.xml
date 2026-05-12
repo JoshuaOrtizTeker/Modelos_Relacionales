@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_ENCUESTA_ALIADO" directorySegmentName="seg_0" id="A91CF547-064B-22CF-A87A-3D5240C40E0A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_ENCUESTA_ALIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- Caso INSERT
+    IF INSERTING THEN
+    
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_ENCUESTA_ALIADO WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_ENCUESTA_ALIADO WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_ENCUESTA_ALIADO (
+            ENVIO_BQ, ID, ID_SERVICIO_SOLICITADO, ID_USUARIO,
+            RECOMIENDA_SERVICIO, DURACION_SERVICIO, SATISFACCION_PRODUCTO,
+            COMENTARIOS, FECHA_ENCUESTA, FECHA_CREACION, ID_CITA
+        )
+        VALUES (
+            0, -- ENVIO_BQ para INSERT
+            :NEW.ID, :NEW.ID_SERVICIO_SOLICITADO, :NEW.ID_USUARIO,
+            :NEW.RECOMIENDA_SERVICIO, :NEW.DURACION_SERVICIO, :NEW.SATISFACCION_PRODUCTO,
+            :NEW.COMENTARIOS, :NEW.FECHA_ENCUESTA, :NEW.FECHA_CREACION, :NEW.ID_CITA
+        );
+    END IF;
+
+    -- Caso UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_ENCUESTA_ALIADO WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_ENCUESTA_ALIADO (
+                ENVIO_BQ, ID, ID_SERVICIO_SOLICITADO, ID_USUARIO,
+                RECOMIENDA_SERVICIO, DURACION_SERVICIO, SATISFACCION_PRODUCTO,
+                COMENTARIOS, FECHA_ENCUESTA, FECHA_CREACION, ID_CITA
+            )
+            VALUES (
+                2, -- ENVIO_BQ para INSERT
+                :NEW.ID, :NEW.ID_SERVICIO_SOLICITADO, :NEW.ID_USUARIO,
+                :NEW.RECOMIENDA_SERVICIO, :NEW.DURACION_SERVICIO, :NEW.SATISFACCION_PRODUCTO,
+                :NEW.COMENTARIOS, :NEW.FECHA_ENCUESTA, :NEW.FECHA_CREACION, :NEW.ID_CITA
+            );       
+       
+       ELSE
+
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;    
+
+            UPDATE TKRBQ_ENCUESTA_ALIADO
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                ID_SERVICIO_SOLICITADO = :NEW.ID_SERVICIO_SOLICITADO,
+                ID_USUARIO = :NEW.ID_USUARIO,
+                RECOMIENDA_SERVICIO = :NEW.RECOMIENDA_SERVICIO,
+                DURACION_SERVICIO = :NEW.DURACION_SERVICIO,
+                SATISFACCION_PRODUCTO = :NEW.SATISFACCION_PRODUCTO,
+                COMENTARIOS = :NEW.COMENTARIOS,
+                FECHA_ENCUESTA = :NEW.FECHA_ENCUESTA,
+                FECHA_CREACION = :NEW.FECHA_CREACION,
+                ID_CITA = :NEW.ID_CITA
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+    -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_ENCUESTA_ALIADO WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_ENCUESTA_ALIADO WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_ENCUESTA_ALIADO (
+            ENVIO_BQ, ID, ID_SERVICIO_SOLICITADO, ID_USUARIO,
+            RECOMIENDA_SERVICIO, DURACION_SERVICIO, SATISFACCION_PRODUCTO,
+            COMENTARIOS, FECHA_ENCUESTA, FECHA_CREACION, ID_CITA
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID, :OLD.ID_SERVICIO_SOLICITADO, :OLD.ID_USUARIO,
+            :OLD.RECOMIENDA_SERVICIO, :OLD.DURACION_SERVICIO, :OLD.SATISFACCION_PRODUCTO,
+            :OLD.COMENTARIOS, :OLD.FECHA_ENCUESTA, :OLD.FECHA_CREACION, :OLD.ID_CITA
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_ENCUESTA_ALIADO';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>FC8A7036-EF5F-9B5B-3815-6BBBD05414C5</table>
+</TriggerOraclev10g>

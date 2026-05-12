@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TRG_SYNC_TKR_INVITADOS" directorySegmentName="seg_0" id="E0C494A3-4F4D-38F1-A107-69FA03FDCA18">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TRG_SYNC_TKR_INVITADOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:57 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional_Citas</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[DECLARE 
+envbq_status number;
+valor_envbq_update number;
+vro_error  tkr_errores%ROWTYPE;
+BEGIN
+    -- En el caso de INSERT
+    IF INSERTING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_INVITADOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_INVITADOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_INVITADOS (
+            ENVIO_BQ,
+            ID,
+            ID_CITA,
+            NOMBRE_INVITADO,
+            CORREO_ELECTRONICO,
+            FECHA_CREACION,
+            TELEFONO
+        )
+        VALUES (
+            0, -- ENVIO_BQ por defecto
+            :NEW.ID,
+            :NEW.ID_CITA,
+            :NEW.NOMBRE_INVITADO,
+            :NEW.CORREO_ELECTRONICO,
+            :NEW.FECHA_CREACION,
+            :NEW.TELEFONO
+        );
+    END IF;
+
+    -- En el caso de UPDATE
+    IF UPDATING THEN
+        SELECT (SELECT ENVIO_BQ FROM TKRBQ_INVITADOS WHERE ID = :NEW.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+
+       IF envbq_status IS NULL THEN
+
+            INSERT INTO TKRBQ_INVITADOS (
+                ENVIO_BQ,
+                ID,
+                ID_CITA,
+                NOMBRE_INVITADO,
+                CORREO_ELECTRONICO,
+                FECHA_CREACION,
+                TELEFONO
+            )
+            VALUES (
+                2, -- ENVIO_BQ por defecto
+                :NEW.ID,
+                :NEW.ID_CITA,
+                :NEW.NOMBRE_INVITADO,
+                :NEW.CORREO_ELECTRONICO,
+                :NEW.FECHA_CREACION,
+                :NEW.TELEFONO
+            );
+
+       ELSE
+            IF envbq_status = 0 THEN 
+                valor_envbq_update := 0;
+            ELSE
+                valor_envbq_update := 2;
+            END IF;
+
+            UPDATE TKRBQ_INVITADOS
+            SET
+                ENVIO_BQ = valor_envbq_update,
+                ID = :NEW.ID,
+                ID_CITA = :NEW.ID_CITA,
+                NOMBRE_INVITADO = :NEW.NOMBRE_INVITADO,
+                CORREO_ELECTRONICO = :NEW.CORREO_ELECTRONICO,
+                FECHA_CREACION = :NEW.FECHA_CREACION,
+                TELEFONO = :NEW.TELEFONO
+            WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+        END IF;
+    END IF;
+
+        -- Caso DELETE
+    IF DELETING THEN
+
+       SELECT (SELECT ENVIO_BQ FROM TKRBQ_INVITADOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1 AND ROWNUM <= 1) INTO envbq_status FROM DUAL;
+        
+       IF envbq_status IS NOT NULL THEN
+        DELETE TKRBQ_INVITADOS WHERE ID = :OLD.ID AND ENVIO_BQ != 1;
+       END IF;        
+
+        INSERT INTO TKRBQ_INVITADOS (
+            ENVIO_BQ,
+            ID,
+            ID_CITA,
+            NOMBRE_INVITADO,
+            CORREO_ELECTRONICO,
+            FECHA_CREACION,
+            TELEFONO
+        )
+        VALUES (
+            -1, -- ENVIO_BQ para DELETE
+            :OLD.ID,
+            :OLD.ID_CITA,
+            :OLD.NOMBRE_INVITADO,
+            :OLD.CORREO_ELECTRONICO,
+            :OLD.FECHA_CREACION,
+            :OLD.TELEFONO
+        );
+    END IF;
+
+    EXCEPTION
+        WHEN OTHERS
+        THEN
+            vro_error.nombre_programa := 'TRG_SYNC_TKR_INVITADOS';
+            vro_error.nombre_metodo := 'TRIGGER_SYNC_BQ';
+            vro_error.parametros := 'id de consultas: '||:old.id;
+            uti_ge_excepciones_pkg.p_grabar_log (vro_error);
+
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>9671F7B6-5953-4D0B-A05A-87DF9EEACF6B</owner>
+<table>31EE03F9-8AC1-CE65-0C20-2B8E3366AB2E</table>
+</TriggerOraclev10g>

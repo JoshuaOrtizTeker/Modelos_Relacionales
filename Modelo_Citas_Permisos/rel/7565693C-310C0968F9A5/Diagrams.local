@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="6E3437F3-D9F0-D862-1C9C-4F6AECAB85DD" name="Relational_1" visible="false"/>
+   <object objectType="sub_view" objectID="27DA0E9D-BD8A-9CF3-9DB1-F7D9C32DC68C" name="TKR_Modelo_Citas_Consultas_Usuarios" visible="false"/>
+   <object objectType="sub_view" objectID="7B4D8AB5-D033-DF98-FED2-A5AFBFEFC03A" name="TKR_Modelo_Usuario_Accesos_Entidades" visible="false"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

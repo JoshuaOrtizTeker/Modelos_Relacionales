@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="8D4ECCF7-1481-C075-3A00-D561E6D47EF4" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_GRUPOS_FAMILIAR">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_GRUPOS_FAMILIAR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="F5BC8DDA-C146-7255-5AA8-98F03FBA6CC3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_GRUPOS_FAMILIAR</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_GRUPO" id="FFF29EE7-2BEF-BA8E-CC01-BE76E65C0BC7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_GRUPOS_FAMILIAR</sourceObjSchema>
+<sourceObjName>DESCRIPCION_GRUPO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripción del grupo familiar]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="56D5D82D-89DF-3C3A-7048-7E7295E4ED13">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_GRUPOS_FAMILIAR</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D85D6A27-5518-DA42-0DAD-3560769D33B8" name="TKR_GRUPOS_FAMILIAR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_GRUPOS_FAMILIAR_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5BC8DDA-C146-7255-5AA8-98F03FBA6CC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24E5ECD1-9C4D-EB3B-7944-F8CBFDD1FD07" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_GRUPOS_FAMILIAR_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_GRUPOS_FAMILIAR_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:28 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5BC8DDA-C146-7255-5AA8-98F03FBA6CC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

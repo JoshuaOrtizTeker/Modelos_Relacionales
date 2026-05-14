@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="3227DD7A-04C5-B102-8CAE-B7BF05454B9F" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DET_GRUPO_ESPECIALISTAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DET_GRUPO_ESPECIALISTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8C9CA01D-85AA-E34D-4671-616A8A70C499">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_GRUPO_ESPECIALISTAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_det_grupo_especialistas_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_DET_GRUPO_ESPECIALISTAS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_GRUPO_ESPECIALISTA" id="EBD57295-3778-2153-4DEA-979A1EFA0A5F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_GRUPO_ESPECIALISTAS</sourceObjSchema>
+<sourceObjName>ID_GRUPO_ESPECIALISTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del grupo de especialista]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F2176D5-3562-6DFF-8D6E-E333640BCC9A" referredColumn="0BEA84F0-E221-531F-FAF4-D193AB277262"/>
+</associations>
+</Column>
+<Column name="ID_ESPECIALIDAD" id="E6770062-439F-ABE2-ED7D-E07466325F72">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_GRUPO_ESPECIALISTAS</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identficador del grupo de la especialidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CAA83FF-00B5-C01D-7B51-8BD6B40E3190" referredColumn="D068EE01-5379-A5BB-EB4A-6619B263FF82"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="04FC1763-812B-5BC7-5862-1511072E859A" name="TKR_DET_GRUPO_ESPECIALISTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DET_GRUPO_ESPECIALISTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C9CA01D-85AA-E34D-4671-616A8A70C499"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ABB9E755-49BB-4F8F-9473-38703F6BEF26" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DET_GRUPO_ESPECIALISTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DET_GRUPO_ESPECIALISTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:22 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C9CA01D-85AA-E34D-4671-616A8A70C499"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FDDBF6E0-1D02-B44C-760B-9D6F4656D6F4" name="TKR_DET_GRUPO_ESPECIALISTAS_ESPEC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6770062-439F-ABE2-ED7D-E07466325F72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A2D89DA8-5BD0-0BFD-437E-BEC34658C54F" name="TKR_DET_GRUPO_ESPECIALISTAS_GRUPO_ESPEC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBD57295-3778-2153-4DEA-979A1EFA0A5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

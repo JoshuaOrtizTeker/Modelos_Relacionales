@@ -1,0 +1,298 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="E4210953-E42D-23AD-8BA0-B6F51CFBE181" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ENVIOS_DISPOSITIVOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENVIOS_DISPOSITIVOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="D0D33B22-C659-9902-FD90-11E970AC9AA8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_envios_dispositivos_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ENVIOS_DISPOSITIVOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_DISPOSITIVO" id="5F341344-86C1-92A8-D8AC-7CB1FC0C92E0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_DISPOSITIVO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del dispositivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BC5355E8-29F9-13EE-B4C1-69A3451EC91C" referredColumn="F381F5D0-767A-5677-3FC6-C0DF2A0870C5"/>
+</associations>
+</Column>
+<Column name="FECHA_SOLICITUD" id="441FE49C-E8F3-6ECE-3171-E92D5528956B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>FECHA_SOLICITUD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que se realiza el envio o recibo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CODIGO_TRANSPORTADORA" id="46FAA7D4-06DA-85EC-8628-3468872D77F8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_CODIGO_TRANSPORTADORA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del codigo de la transportadora]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C26A06C3-9E71-95D9-DA76-37B9094136AE" referredColumn="680F7E66-B5E1-8645-F9F0-2B2A9ADCC153"/>
+</associations>
+</Column>
+<Column name="NUMERO_GUIA" id="EFA30368-E1EE-5DF7-C972-09DBE452ED88">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>NUMERO_GUIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Numero de guia de envio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO" id="52463E84-45B9-46FC-2AD8-3603F64F8147">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que envia/recibe el dispositivo de Teker]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTADO_ENVIO" id="CFB8BCD1-F043-A4E5-A2BC-793B80FDB934">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_ESTADO_ENVIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del estado del envio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B7561779-5313-F25C-074B-42B293E9EE66" referredColumn="1072A478-AB07-F753-9588-7CA367815122"/>
+</associations>
+</Column>
+<Column name="ID_ORDEN_MONITOREO" id="E2FE2E1C-0194-50C6-8173-A3861A6EAC39">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_ORDEN_MONITOREO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la orden de monitoreo del  paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_ENVIO" id="F1FF0150-84A2-B89F-ED58-50AD25A39EB4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>TIPO_ENVIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[(E)nviado al paciente (R)ecoleccion del paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<constraintName>SYS_C0021396</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;E&apos;" description=""/>
+<valueDef value="&apos;R&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_RECIBO" id="149A61DB-E91E-4180-6FA0-C13015490B60">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>FECHA_RECIBO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_PERSONA" id="B154E1F6-2568-37E7-22A1-4429D893E8E2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>NOMBRE_PERSONA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la persona que recibe]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COSTO" id="72A13477-C69F-0ABD-AA33-E06A8B6622B8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>COSTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Costo de envio/recibo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIRECCION" id="D2F5E8B9-4D1D-9F58-9B41-A27D0BCBF202">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>DIRECCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Direccion de envio/recibo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CIUDAD" id="EA1B118F-E3EB-AFDD-884E-C02DE0108040">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENVIOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID_CIUDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la ciudad de envio/recibo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8287A4BC-78AD-EAE1-1C54-8899E003F9BF" referredColumn="D13C69D7-053A-B4FC-31AD-9BB420101A49"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E99D26F-D0A5-65DA-395D-A43CA279E50E" name="TKR_ENVIOS_DISPOSITIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENVIOS_DISPOSITIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0D33B22-C659-9902-FD90-11E970AC9AA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7D72BA2-B545-CAF6-03CF-A89A91509703" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ENVIOS_DISPOSITIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENVIOS_DISPOSITIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:24 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0D33B22-C659-9902-FD90-11E970AC9AA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37BA50C1-7F48-C16F-4FB2-0BA0FA0F037E" name="TKR_ENVIOS_DISP_CIUDADES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA1B118F-E3EB-AFDD-884E-C02DE0108040"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4548DF9E-310B-EBC4-12B7-09C55E17A9CC" name="TKR_ENVIOS_DISP_ESTADOS_ENVIO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFB8BCD1-F043-A4E5-A2BC-793B80FDB934"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="552CF254-DC82-F235-62ED-DC54A740CC75" name="TKR_ENVIOS_DISP_TKR_TRANSP_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46FAA7D4-06DA-85EC-8628-3468872D77F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C20C48CF-1718-BD70-E557-CC575D4F3FA3" name="TKR_ENVIOS_DISP_TKR_VL_DISP_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F341344-86C1-92A8-D8AC-7CB1FC0C92E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,194 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="77C265B0-56B1-8589-3024-F4972C589807" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_LOG_ALERTAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_LOG_ALERTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla de registro de ejecuciones e incidentes de alertas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="528C7F62-F758-F05A-6AD2-421AB60F300C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_log_alertas_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_LOG_ALERTAS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ALERTA" id="B68B111D-5EB1-49EC-6A14-B11140ACF13D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>ID_ALERTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la alerta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7100D3C-6270-61C3-0AA6-34B79717EB85" referredColumn="67423638-6D92-C0AC-CB20-BC77E92DDE4D"/>
+</associations>
+</Column>
+<Column name="LOG" id="DC794309-C573-260F-0C22-52ED68249F16">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>LOG</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[LOG reportado al correr el proceso de la alerta u output del error]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="99D5D5EA-0AF3-D8E7-E7DE-3FEAB3E036DA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de la ejecucion de la alerta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="82DD88DA-22EC-4987-EBF4-C9CC43F8EDFF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>ESTADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado del log/incidente (P)endiente (S)olucionado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<constraintName>SYS_C0034050</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;P&apos;" description=""/>
+<valueDef value="&apos;S&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ASIGNADO" id="AD20D614-4F45-F290-13D3-1E3AAD748259">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>ASIGNADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la persona asignada a resolver la alerta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOLUCIONADO" id="A0EDA38D-63A7-C889-1EDB-5B6A8F18E8D4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>SOLUCIONADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Persona que soluciona la alerta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_SOLUCION" id="980AD416-06CE-E85E-8FCD-046F3E0BDEB0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>FECHA_SOLUCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que se cerro/soluciono la alerta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMENTARIOS_SOLUCION" id="7677F354-0C59-6F58-27A4-68B266B1DB3B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_LOG_ALERTAS</sourceObjSchema>
+<sourceObjName>COMENTARIOS_SOLUCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Comentarios detallando como se resolvio el incidente]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6D921DCD-C0F8-FB7F-0651-0E026DC7C9D1" name="TKR_LOG_ALERTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_LOG_ALERTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="528C7F62-F758-F05A-6AD2-421AB60F300C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CB7E80C-8079-B897-8B58-71059F92A2DA" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_LOG_ALERTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_LOG_ALERTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:31 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="528C7F62-F758-F05A-6AD2-421AB60F300C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5798A64-6A34-E93D-4E7C-40BDF142895E" name="TKR_LOG_ALERTAS_TKR_ALERTAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B68B111D-5EB1-49EC-6A14-B11140ACF13D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

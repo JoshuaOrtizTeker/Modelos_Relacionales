@@ -1,0 +1,497 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="3A374815-D5C3-02E7-AC43-3BE4DC5E2556" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DET_LIQUIDACION">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DET_LIQUIDACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5AF9E995-9E69-B25B-BC92-C5A673D66170">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_det_liquidacion_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_DET_LIQUIDACION</autoIncrementTriggerName>
+</Column>
+<Column name="ID_LIQUIDACION" id="CE592727-BD21-BA71-76E0-47A38B6AF003">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_LIQUIDACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de liquidación que pertenece.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05CD3A82-1333-BE97-1403-F55CBA53641C" referredColumn="404A417A-35AA-1CE6-6234-5B36F724F894"/>
+</associations>
+</Column>
+<Column name="ID_PROFESIONAL" id="F1210B37-48BA-8B10-64D0-09D43EECDBB7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del profesional al que relacion la liquidación]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="634250BD-AB03-517A-3AC8-9297E3383163" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="VALOR_LIQUIDADO" id="9E490A18-2C19-A08A-4DB3-900B11681967">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>VALOR_LIQUIDADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor neto liquidado al profesional]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="B5277A88-E383-B24E-0F2B-A25ED2A10072">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ESTADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado del registro: 
+(G) Generado
+(A) Anulado
+(P) Pagado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<constraintName>SYS_C0021263</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;A&apos;" description=""/>
+<valueDef value="&apos;G&apos;" description=""/>
+<valueDef value="&apos;P&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_MODIFICA" id="06857733-1B35-0C04-92F3-394A57999705">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>FECHA_MODIFICA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que se realiza modificacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO_MODIFICA" id="70FAEE03-52CF-4FF3-E7DF-15D06FAA05E9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_USUARIO_MODIFICA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que registra la mosificación]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F972D4FC-CC88-3961-C656-85F2DEC54FC6" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ID_CLASE_CITA" id="7F32768F-0504-2FF4-2D7B-32CAFCD1F718">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_CLASE_CITA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la clase de cita que se liquida]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E57E4D5B-15B3-5F59-6409-B550963CCFEE" referredColumn="6EACD59E-79F3-6560-94DE-C321A04CE91C"/>
+</associations>
+</Column>
+<Column name="SUMA_VALOR_CONSULTAS" id="8D0D1272-632D-236B-5889-DE5801B2BD82">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_CONSULTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_DESCUENTOS" id="4F3EB508-4EBB-3C17-6FE7-D638EE3D80F8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_DESCUENTOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Suma de valor de descuentos]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANTIDAD_CONSULTAS" id="AFFC66A1-54D3-6EB1-B83F-BFD32034493B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>CANTIDAD_CONSULTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de citas por parte del profesional]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_PROFESIONAL" id="B3676B2B-86E1-EADC-2B50-14F5BA7113FB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Suma de pagos correspondientes al profesional sin tener en cuenta los descuentos]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_DESCONTAR" id="CBBC32B0-7DC8-AE79-8A5F-6B15832EFE72">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_DESCONTAR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[SUma del valor a descontar al profesional]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_PAGADO" id="A05337C2-1997-1548-BD26-197E5A2C64E2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_PAGADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Suma del valor pagado por los pacientes]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_MIN_PAGO" id="BB6777F0-AE55-2C08-668D-C73B8363FB1A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>FECHA_MIN_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_NOTAS" id="89216575-7165-7E0E-557B-41B5A2980523">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_NOTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Suma valor de las notas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_IMPUESTOS" id="2BAA3C4E-B976-02A3-30E4-E5F668452F87">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_IMPUESTOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Suma de impuestos]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="6F16B608-2BBE-6728-CFBD-9A711665D43C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_DISPONIBILIDAD" id="5DF604DB-A4FA-63D1-CA09-8DF3CBD703E4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>VALOR_DISPONIBILIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor a pagar por disponibilidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ENTIDAD" id="70370316-E3D5-D50C-C07D-4F13E291A729">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11D05CD4-AD0A-601B-B90D-DAAE06529833" referredColumn="80A3768C-44CA-C05D-A40F-BB8A626D121D"/>
+</associations>
+</Column>
+<Column name="ID_CONVENIO" id="824474A1-F453-57CD-53E3-15F4D719D041">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_CONVENIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del convenio que se liquida]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4088CABA-32A3-4ABE-A486-0576E6A7C02D" referredColumn="73863858-C496-2B3C-302B-97F84EFCEE46"/>
+</associations>
+</Column>
+<Column name="ID_SERVICIO" id="A0CD07CF-DCC1-A2E9-3424-D617046B6694">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_SERVICIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del servicio que se liquida]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9F189EC-D172-7356-FB72-EF94A8E4975B" referredColumn="575051ED-587D-610B-4771-0BCB897D0206"/>
+</associations>
+</Column>
+<Column name="ID_ESPECIALIDAD" id="709F9906-5347-9FF5-29F9-DD0055AAE227">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la especialidad que se liquida]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANTIDAD_SERVICIOS" id="E2507D5C-7FA2-93DE-666A-F9D0A4CAC457">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>CANTIDAD_SERVICIOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de servicios que se liquida]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUMA_VALOR_ALIADO" id="6AF2D654-D1B2-A9C7-3E7D-F9DBA342E9CD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_DET_LIQUIDACION</sourceObjSchema>
+<sourceObjName>SUMA_VALOR_ALIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Suma del valor que hay que cobrar a la entidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57593919-5553-62FB-7152-F45103C746EA" name="TKR_DET_LIQUIDACION_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DET_LIQUIDACION_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AF9E995-9E69-B25B-BC92-C5A673D66170"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3292653-EB8A-E7A9-85B4-6C34C77D00E5" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_DET_LIQUIDACION_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_DET_LIQUIDACION_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:23 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AF9E995-9E69-B25B-BC92-C5A673D66170"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9C432C5-3CEC-E4DF-501B-ED56B6E9987F" name="TKR_DET_LIQUIDACION_USU_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1210B37-48BA-8B10-64D0-09D43EECDBB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="930A849C-4994-7B6B-2310-865E7219F85F" name="TKR_DET_LIQUIDA_CONVENIO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="824474A1-F453-57CD-53E3-15F4D719D041"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09E6E1AC-7A42-725B-FB22-5B991F743243" name="TKR_DET_LIQUIDA_SERVICIO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0CD07CF-DCC1-A2E9-3424-D617046B6694"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62B86EFC-2EDB-3E82-0246-B3399FF93250" name="TKR_DET_LIQUID_ENTIDAD_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70370316-E3D5-D50C-C07D-4F13E291A729"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4910390C-CC2A-3022-AC37-9B406AFF7AF2" name="TKR_DET_LIQ_CLASE_CITA_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F32768F-0504-2FF4-2D7B-32CAFCD1F718"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8196393C-3C4C-83D2-BBB2-17D29040C844" name="TKR_DET_LIQ_LIQUIDACION_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE592727-BD21-BA71-76E0-47A38B6AF003"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FFDB7962-9F0A-A9E1-3D99-A11DCE6475DC" name="TKR_DET_LIQ_USU1_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70FAEE03-52CF-4FF3-E7DF-15D06FAA05E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

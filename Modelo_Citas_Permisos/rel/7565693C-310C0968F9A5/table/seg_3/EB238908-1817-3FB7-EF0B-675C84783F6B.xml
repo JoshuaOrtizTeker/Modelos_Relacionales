@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="EB238908-1817-3FB7-EF0B-675C84783F6B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TARIFAS_ESPECIALIDADES">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TARIFAS_ESPECIALIDADES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0BBAB778-68D6-A26D-3F37-6FBDAF812D6A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TARIFAS_ESPECIALIDADES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_tarifas_especialidades_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_TARIFAS_ESPECIALIDADES</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ENTIDAD" id="06668A7E-97AE-F98E-D59A-95C654904EBD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TARIFAS_ESPECIALIDADES</sourceObjSchema>
+<sourceObjName>ID_ENTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la entidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="698328EB-FDE4-6C2D-E2BF-DDD616DADA13" referredColumn="80A3768C-44CA-C05D-A40F-BB8A626D121D"/>
+</associations>
+</Column>
+<Column name="ID_ESPECIALIDAD" id="0E47599E-A4F9-4A21-3DD4-F0034D4D60C7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TARIFAS_ESPECIALIDADES</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la especialidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8C7ED62B-B07C-44AF-05FD-E0B6867B6D50" referredColumn="D068EE01-5379-A5BB-EB4A-6619B263FF82"/>
+</associations>
+</Column>
+<Column name="ID_CODIGO_TARIFA" id="B9D0D848-3AA2-3ADE-A5F5-9A09AE0CF01A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TARIFAS_ESPECIALIDADES</sourceObjSchema>
+<sourceObjName>ID_CODIGO_TARIFA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del codigo de la tarifa]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SERVICIO" id="9C3A6559-684C-7BEC-F56A-0F04EC8EA711">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TARIFAS_ESPECIALIDADES</sourceObjSchema>
+<sourceObjName>ID_SERVICIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del servicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2618561-7542-3852-FB5D-C677FBA279B8" referredColumn="575051ED-587D-610B-4771-0BCB897D0206"/>
+</associations>
+</Column>
+<Column name="DURACION_CITA" id="D6477282-AA85-FF79-0681-7A4D7AFA0A6C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TARIFAS_ESPECIALIDADES</sourceObjSchema>
+<sourceObjName>DURACION_CITA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Duracion de la cita]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2FD999B0-9AB3-0C23-3B8B-626844F19527" name="TKR_TARIFAS_ESPECIALIDADES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TARIFAS_ESPECIALIDADES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BBAB778-68D6-A26D-3F37-6FBDAF812D6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9184EA21-E212-116A-0EC0-09D43C383DAD" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TARIFAS_ESPECIALIDADES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TARIFAS_ESPECIALIDADES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:42 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BBAB778-68D6-A26D-3F37-6FBDAF812D6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C86BF43-3D8D-7302-C266-95741A22D00F" name="TKR_TARIFAS_ESPECIALIDADES_ENTIDADES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06668A7E-97AE-F98E-D59A-95C654904EBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B99322F7-E026-C60A-2AE7-EAE4FAD7E030" name="TKR_TARIFAS_ESPEC_ESPEC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E47599E-A4F9-4A21-3DD4-F0034D4D60C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8DB6008F-39CF-0310-E19C-0226F00262F6" name="TKR_TARIFAS_ESPEC_SERVICIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C3A6559-684C-7BEC-F56A-0F04EC8EA711"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

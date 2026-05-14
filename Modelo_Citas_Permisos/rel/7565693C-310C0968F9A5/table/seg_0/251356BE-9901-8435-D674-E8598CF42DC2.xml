@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="251356BE-9901-8435-D674-E8598CF42DC2" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_COORDINADOR_MEDICOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_COORDINADOR_MEDICOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4EA00E04-6AF7-B8B4-DA8C-19D3812E7D04">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COORDINADOR_MEDICOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_coordinador_medicos_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_COORDINADOR_MEDICOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_COORDINADOR" id="01616C14-6347-437F-9318-68D7011AD91F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COORDINADOR_MEDICOS</sourceObjSchema>
+<sourceObjName>ID_COORDINADOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario del coordinador]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D3EB69B0-E728-F73B-F332-3016FCE9C885" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ID_PROFESIONAL" id="CDCD33C3-3ABD-76E1-EAA9-DD012130EE7A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COORDINADOR_MEDICOS</sourceObjSchema>
+<sourceObjName>ID_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del profesional asociado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88883875-A814-76FF-A616-299AC412CAD4" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5FC49A37-6F47-ED8B-3B30-745A24D6937E" name="TKR_COORDINADOR_MEDICOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_COORDINADOR_MEDICOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EA00E04-6AF7-B8B4-DA8C-19D3812E7D04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78C293B5-A2A4-F4A7-BFA2-F23952E7E9EC" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_COORDINADOR_MEDICOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_COORDINADOR_MEDICOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:21 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EA00E04-6AF7-B8B4-DA8C-19D3812E7D04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0000AD10-D6C8-9272-A95E-A332024D1EEB" name="TKR_COORDINADOR_MEDI_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01616C14-6347-437F-9318-68D7011AD91F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4FA5D8FC-B747-F12A-5F2E-7D661F5F13D0" name="TKR_COORDINADOR_MED_PROF_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDCD33C3-3ABD-76E1-EAA9-DD012130EE7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,294 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6AA0AC7F-7E81-E77A-89D6-50F53328EFA0" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CUENTAS_ZOOM">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CUENTAS_ZOOM</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="EB36FB8B-FCFE-F4F6-E885-7B238E696F3B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único de la cuenta de zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_cuentas_zoom_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_CUENTAS_ZOOM</autoIncrementTriggerName>
+</Column>
+<Column name="DESCRIPCION" id="939D3D36-38B4-1514-DFB6-F0533B0709A6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>DESCRIPCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripción de la cuenta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO" id="E0568AEF-A0BC-C5C2-6A13-9AF4976C505B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>CORREO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cuenta de correo asociada a la cuenta de zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLAVE" id="F696304F-1289-F351-F743-65FABD7D71E6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>CLAVE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Clave de la cuenta asociada]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_TOKEN" id="57FC5AA8-5F17-1D17-2019-9C6B81A68875">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>FECHA_TOKEN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de vencimiento del token]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JWT" id="6ECB1892-DE7E-31D3-533B-630EDBC67E42">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>JWT</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[JWT Asociada a la cuenta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PERFIL" id="6FBB3E9E-5880-260F-2622-77CDC5F44AAE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>ID_PERFIL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Perfil del profesional para el cual es exclusiva esta cuenta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="908FB216-EABB-412F-5243-717D22100FBA" referredColumn="56D28535-8908-A00C-76F7-50010A0F903D"/>
+</associations>
+</Column>
+<Column name="ID_CUENTA" id="F3779C42-E00D-1B19-889D-C630884CCB56">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>ID_CUENTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID de la cuenta de zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CLIENTE" id="A5B656F3-C9FB-A652-E2BD-5168D6000C51">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>ID_CLIENTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[ID del cliente de zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SECRETA" id="DAE3FA23-35D6-3BC9-6B9E-1ED28DC4B143">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>ID_SECRETA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Llave secreta de zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACTIVA" id="2C2CFB50-D5E8-A951-F0DE-B65A5FFBD529">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>ACTIVA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cuenta Activa (S)i (N)o]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LINEA" id="1949F9F8-D33D-B5AA-2B09-9EEA94A4CF29">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>LINEA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Linea de Utilizacion (I)citas inmediatas (P)citas programadas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SDK_CLIENT_ID" id="878A46A4-4F0A-3056-98DA-F6641DD37817">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>SDK_CLIENT_ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del SDK de Zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SDK_CLIENT_SECRET" id="855BA07F-8B05-D9B4-F0AC-36F83D07EA0A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>SDK_CLIENT_SECRET</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Clave del SDK de Zoom]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="31B3E937-628A-4AD5-FA00-E9531841688A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HABILITADO_BOT" id="3DF71FD5-BB4D-DB64-5C8F-669B9935FD35">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_CUENTAS_ZOOM</sourceObjSchema>
+<sourceObjName>HABILITADO_BOT</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Habilitado para bot]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BD409EC-48B1-E6D7-73D5-FEF07007EA75" name="TKR_CUENTAS_ZOOM_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CUENTAS_ZOOM_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB36FB8B-FCFE-F4F6-E885-7B238E696F3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC4CBAB1-F5CA-C990-3023-DC948D0E2E00" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_CUENTAS_ZOOM_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_CUENTAS_ZOOM_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:21 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB36FB8B-FCFE-F4F6-E885-7B238E696F3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E4BA356-4E50-FAA9-2DAD-21328792FA05" name="TKR_CTAS_ZOOM_PERF_DOCTOR_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6FBB3E9E-5880-260F-2622-77CDC5F44AAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

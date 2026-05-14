@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="8170C45D-D209-0AD5-E22E-CB5A73430ECE" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_REGIMEN_ASEGURAMIENTO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_REGIMEN_ASEGURAMIENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6014862D-A0D9-2969-A96C-7A5086B835CC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REGIMEN_ASEGURAMIENTO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_regimen_aseguramiento_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_REGIMEN_ASEGURAMIENTO</autoIncrementTriggerName>
+</Column>
+<Column name="DESCRIPCION" id="32850FE0-DCEA-1D7A-484C-5F8613DEF91C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REGIMEN_ASEGURAMIENTO</sourceObjSchema>
+<sourceObjName>DESCRIPCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripción del regimen de aseguramiento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="7C97BB2B-2299-C045-8BCE-AF0AB1BAA8A6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REGIMEN_ASEGURAMIENTO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AD35CBDF-DEBB-38ED-07C5-6C207A39DF52" name="REGIMEN_ASEGURAMIENTO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>REGIMEN_ASEGURAMIENTO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6014862D-A0D9-2969-A96C-7A5086B835CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F16AB0B-10A9-4E57-4906-D4826EBBA933" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="REGIMEN_ASEGURAMIENTO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>REGIMEN_ASEGURAMIENTO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6014862D-A0D9-2969-A96C-7A5086B835CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

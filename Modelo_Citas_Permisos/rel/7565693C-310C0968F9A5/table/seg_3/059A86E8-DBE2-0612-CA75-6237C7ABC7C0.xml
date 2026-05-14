@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="059A86E8-DBE2-0612-CA75-6237C7ABC7C0" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_REFERENCIAS_PAGO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_REFERENCIAS_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="48C4E38C-796A-F832-0EAA-D76AC3C4B6E1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_referencias_pago_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_REFERENCIAS_PAGO</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CITA" id="B0F9069E-7511-2AF2-F5DB-367282696A03">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>ID_CITA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la cita a la que corresponde las referencias]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84DBCD2E-3EBA-F999-AF5E-B87A9B5135DD" referredColumn="DA654235-53DD-C799-EEB1-3B1C60E718DC"/>
+</associations>
+</Column>
+<Column name="REFERENCIA_PAGO" id="54708F0F-A3D5-534B-1026-F1A98E5A44DB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>REFERENCIA_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[REFERENCIA_PAGO]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_GENERACION" id="C463DA46-CF90-5E90-EA80-8DBF43FAB3E8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>FECHA_GENERACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de generación de la rferencia]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JSON_RESPUESTA" id="B4A1521B-B4AB-FA29-42CE-E832EF32714F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>JSON_RESPUESTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Json de respuesta del banco]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="D34B8F34-D6B8-72BB-8350-703FED741F1B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ORDEN_MONITOREO" id="4818A195-56BE-DD8F-5F53-811361877A0E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_REFERENCIAS_PAGO</sourceObjSchema>
+<sourceObjName>ID_ORDEN_MONITOREO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la orden de monitoreo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="021E5845-88FB-330F-EBD4-9F3093FF7CB0" name="TKR_REFERENCIAS_PAGO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_REFERENCIAS_PAGO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48C4E38C-796A-F832-0EAA-D76AC3C4B6E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9958477-7732-6A81-BABB-F7D0E92E5B40" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_REFERENCIAS_PAGO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_REFERENCIAS_PAGO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48C4E38C-796A-F832-0EAA-D76AC3C4B6E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD7C7FA4-5726-3B06-A0B6-605B2914B5C5" name="TKR_REF_PAGO_CITAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0F9069E-7511-2AF2-F5DB-367282696A03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

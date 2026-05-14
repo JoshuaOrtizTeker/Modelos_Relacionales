@@ -1,0 +1,187 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="E52189C7-B99C-B3FC-DA94-1B88F5F452DD" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MONITOREO_PACIENTES">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MONITOREO_PACIENTES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="FD5E582D-3EFA-8E5F-2428-F019F7ACB578">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_monitoreo_pacientes_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_MONITOREO_PACIENTES</autoIncrementTriggerName>
+</Column>
+<Column name="ID_PACIENTE" id="0D776203-61A5-7F47-71B7-B6DB17E828D3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>ID_PACIENTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del paciente al que se le va a realizar el monitoreo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="020FB516-9740-0A87-5134-466F8F1CBE01" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="ID_PROFESIONAL" id="4783F092-FF1B-E77E-5366-FD0FB98E079B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>ID_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del profesional que solicita la monitorizacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CITA" id="2EE68057-70CE-5974-AF34-2142514D7693">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>ID_CITA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la cita que genera el servicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="63677F53-AE1E-EC27-736C-30E581D3A742" referredColumn="DA654235-53DD-C799-EEB1-3B1C60E718DC"/>
+</associations>
+</Column>
+<Column name="FECHA_SOLICITUD" id="D451C192-661A-A78A-9A09-ADBAACA85253">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>FECHA_SOLICITUD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha en que se realiza la solicitud]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INICIAL" id="26A413A3-F758-DC44-1EAF-F3FA446DD219">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>FECHA_INICIAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha inicial del monitoreo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_FINAL" id="DB693E00-8980-889F-3518-455282C0DBB5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>FECHA_FINAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha final del monitoreo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="F714330B-8E62-B537-7363-174C2AFEE0E4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MONITOREO_PACIENTES</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="366B1171-7072-7F93-653D-2C936F611C84" name="TKR_MONITOREO_PACIENTES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MONITOREO_PACIENTES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD5E582D-3EFA-8E5F-2428-F019F7ACB578"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C16C24AD-96B2-5613-0DD1-623CA194C5B7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MONITOREO_PACIENTES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MONITOREO_PACIENTES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:32 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD5E582D-3EFA-8E5F-2428-F019F7ACB578"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F96495B8-0961-B9CF-CA9C-960587B92000" name="TKR_MONITOREO_PACIENTES_CITAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2EE68057-70CE-5974-AF34-2142514D7693"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="252ED67B-6B2B-67EC-FEA9-CD05AF51BCC8" name="TKR_MONITOREO_PACIENTES_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D776203-61A5-7F47-71B7-B6DB17E828D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

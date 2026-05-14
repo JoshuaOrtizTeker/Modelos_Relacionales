@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="35848877-249A-D42E-F176-D3B4E4014708" containerWithKeyObject="06F0C25D-9FD1-BECA-1064-BCCAE87505A8" localFKIndex="14E37204-2A98-1A21-3638-4CE39672679E" name="SYS_C0037669">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>SYS_C0037669</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_USUARIOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F4E992D8-37F9-8447-7D3F-286DD855B6E9</referredTableID>
+<keyObject>A7A97188-1357-50E0-CC52-8210FC6421A0</keyObject>
+<referredKeyID>A7A97188-1357-50E0-CC52-8210FC6421A0</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

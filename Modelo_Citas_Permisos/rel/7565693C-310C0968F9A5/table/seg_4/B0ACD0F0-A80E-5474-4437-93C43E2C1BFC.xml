@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="B0ACD0F0-A80E-5474-4437-93C43E2C1BFC" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="XLIB_JASPERREPORTS_CONF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_JASPERREPORTS_CONF</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CONF_ID" id="30F99EED-CBFC-F771-FFA6-09759376F42B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Currently, we only expect a single row here ]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<defaultValue>&apos;MAIN&apos;</defaultValue>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_PROTOCOL" id="CCC173C6-301A-0C2C-3B0B-2B9ABC7393E6">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_PROTOCOL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Protocol, either http or https]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<constraintName>XLIB_JASPERREPORTS_CONF_CHK1</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="LOWER (conf_protocol) IN (&apos;http&apos;, &apos;https&apos;)"/>
+<implementationDef dbType="Oracle Database 21c" definition="LOWER (conf_protocol) IN (&apos;http&apos;, &apos;https&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_SERVER" id="9FD8494E-2A3F-0D5F-008B-CDBD57A23C1D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_SERVER</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Servername, e.g. localhost, www.server.com or ip address, e.g. 127.0.0.1]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_PORT" id="F20929CC-614C-7AC1-5134-DFB4823FB9DB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_PORT</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port, e.g. 80, 8080, 443]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_CONTEXT_PATH" id="99AAECDB-5481-B011-BF31-60919B852550">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_CONTEXT_PATH</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Context path for the web application, typically the name of the war file, e.g. jri]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_WALLET_PATH" id="2A1FDFB6-370B-BCC2-6BF6-C633A287E77C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_WALLET_PATH</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Path to the wallet directory, if used]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_WALLET_PWD" id="DF670766-E8BA-E549-79CC-91AE01267530">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_WALLET_PWD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Password for the wallet]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONF_HTTP_TRANSFER_TIMEOUT" id="A608AC38-0147-37A3-5650-83616555BA60">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_JASPERREPORTS_CONF</sourceObjSchema>
+<sourceObjName>CONF_HTTP_TRANSFER_TIMEOUT</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Timeout in seconds, the default is typically 60 seconds]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<defaultValue>60</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6ABA9AA6-8299-709A-2CC9-CB799C5EDE33" name="XLIB_JASPERREPORTS_CONF_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_JASPERREPORTS_CONF_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30F99EED-CBFC-F771-FFA6-09759376F42B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7AB833E5-2329-F1ED-4007-B024A80B3EC0" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="XLIB_JASPERREPORTS_CONF_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_JASPERREPORTS_CONF_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:47 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30F99EED-CBFC-F771-FFA6-09759376F42B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

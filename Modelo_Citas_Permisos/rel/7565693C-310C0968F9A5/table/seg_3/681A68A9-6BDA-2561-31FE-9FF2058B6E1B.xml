@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="681A68A9-6BDA-2561-31FE-9FF2058B6E1B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_TIPOS_ALIADO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_TIPOS_ALIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5821FA34-921C-FABB-C772-2ECC5C857954">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TIPOS_ALIADO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_tipos_aliado_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_TIPOS_ALIADO</autoIncrementTriggerName>
+</Column>
+<Column name="TIPO_ALIADO" id="5DA5A3CA-F665-AB04-1D85-E4F79D33247A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_TIPOS_ALIADO</sourceObjSchema>
+<sourceObjName>TIPO_ALIADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de Aliado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3246CF59-0704-2E7C-3D15-D3853279AFA0" name="ID_TIPO_ALIADO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>ID_TIPO_ALIADO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5821FA34-921C-FABB-C772-2ECC5C857954"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89AC1801-2657-3B4D-92B7-81AFC90D9147" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="ID_TIPO_ALIADO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>ID_TIPO_ALIADO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:42 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5821FA34-921C-FABB-C772-2ECC5C857954"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

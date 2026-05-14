@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="7E310C24-D7C5-3551-944F-0681F1971C8B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ESPECIALIDADES_ACTA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESPECIALIDADES_ACTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4EE3BDC4-39E5-9A6C-55D2-4BFC654D0072">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESPECIALIDADES_ACTA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_especialidades_acta_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ESPECIALIDADES_ACTA</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ACTA_MEDICA" id="491C68FE-051B-5D56-127D-8090F8D971D0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESPECIALIDADES_ACTA</sourceObjSchema>
+<sourceObjName>ID_ACTA_MEDICA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del acta medica]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0D1FC14-F328-DE69-4768-3129F5E84A88" referredColumn="C59C74BE-6E7F-916E-3AA8-639E5F859D7A"/>
+</associations>
+</Column>
+<Column name="ID_ESPECIALIDAD" id="DCD06341-E19B-A305-C7E9-89C9AB2B6779">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESPECIALIDADES_ACTA</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la especialidas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA9FB505-AAB0-829E-75D9-32D850A6AA51" referredColumn="D068EE01-5379-A5BB-EB4A-6619B263FF82"/>
+</associations>
+</Column>
+<Column name="DIAS" id="BAD79D33-7B1C-3DE0-3C94-592BC4E68DAF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESPECIALIDADES_ACTA</sourceObjSchema>
+<sourceObjName>DIAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de días para visita por parte del profesional]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PROFESIONAL" id="2BAF2003-C085-000C-34A5-9E359F63B923">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESPECIALIDADES_ACTA</sourceObjSchema>
+<sourceObjName>ID_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del profesional asignado para la visita]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="434C6AC6-91D9-8A77-60AE-DE96B0EDAB5F" name="TKR_ESPECIALIDADES_ACTA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESPECIALIDADES_ACTA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EE3BDC4-39E5-9A6C-55D2-4BFC654D0072"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62E65837-9CFD-F55E-5179-47483036BA58" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ESPECIALIDADES_ACTA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESPECIALIDADES_ACTA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:25 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EE3BDC4-39E5-9A6C-55D2-4BFC654D0072"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="852A3FD3-B21D-90DF-793A-A82746C63099" name="TKR_ESPECIALIDADES_ACTA_ESPEC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DCD06341-E19B-A305-C7E9-89C9AB2B6779"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8992CD8-8A0A-932C-B2EB-45D186F36833" name="TKR_ESPECIALIDAD_ACTA_ACTAS_MEDICAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="491C68FE-051B-5D56-127D-8090F8D971D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

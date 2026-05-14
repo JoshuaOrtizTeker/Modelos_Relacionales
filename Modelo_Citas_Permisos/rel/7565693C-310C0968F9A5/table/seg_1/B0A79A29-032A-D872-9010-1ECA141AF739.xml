@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="B0A79A29-032A-D872-9010-1ECA141AF739" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ENCUESTAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENCUESTAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="76E1D5D9-15B3-A525-2BBB-3B75BC3DC0B1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENCUESTAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_encuestas_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ENCUESTAS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_USUARIO" id="EC4A5354-6F7F-00C6-10CD-C493129FC285">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENCUESTAS</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del usuario que presenta la encuesta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9ED2202E-E55D-E627-E73E-F0CA62B0FA46" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="FECHA" id="A71A129B-F902-E6C2-BB7F-BE94F3732123">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENCUESTAS</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de la encuesta]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TEMA_ENCUESTA" id="B2E0A0D1-A160-D3E0-B81C-840C00A9FF70">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENCUESTAS</sourceObjSchema>
+<sourceObjName>ID_TEMA_ENCUESTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la encuesta que se llena]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57631002-85A0-6134-F6D4-C7901BC08807" referredColumn="048A472D-E413-1FF3-5A70-7688FBAB6CA4"/>
+</associations>
+</Column>
+<Column name="FECHA_CREACION" id="602EA01F-6F72-3D71-8C4C-F69F92664937">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ENCUESTAS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="807D9022-244C-713B-C569-9F499DD527F2" name="TKR_ENCUESTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENCUESTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76E1D5D9-15B3-A525-2BBB-3B75BC3DC0B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4D5E080-A8C9-F7C6-0F43-4F1AF8C56275" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ENCUESTAS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ENCUESTAS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:23 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76E1D5D9-15B3-A525-2BBB-3B75BC3DC0B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="554151F9-A9D9-0DDD-6077-641C7A709481" name="TKR_ENCUESTAS_TEMA_ENCUESTA_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2E0A0D1-A160-D3E0-B81C-840C00A9FF70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C6DBEDA-09B8-CDEE-BF4C-EE659738B68D" name="TKR_ENCUESTAS_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC4A5354-6F7F-00C6-10CD-C493129FC285"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

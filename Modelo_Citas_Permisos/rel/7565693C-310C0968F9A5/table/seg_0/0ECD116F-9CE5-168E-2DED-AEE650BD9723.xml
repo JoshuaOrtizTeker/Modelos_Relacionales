@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0ECD116F-9CE5-168E-2DED-AEE650BD9723" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BARRIOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BARRIOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="FFA77ABE-A9D8-9DD5-6EB5-009F24500F7E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BARRIOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_barrios_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_BARRIOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CIUDAD" id="ED946F13-F0E5-9495-CECB-42C9ADBC8479">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BARRIOS</sourceObjSchema>
+<sourceObjName>ID_CIUDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la ciudad que pertenece el barrio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87C0EFB6-7492-E6EE-4FB9-B3DD82232191" referredColumn="D13C69D7-053A-B4FC-31AD-9BB420101A49"/>
+</associations>
+</Column>
+<Column name="NOMBRE_BARRIO" id="37A18BB0-400C-3235-F98D-CBA60D47E5E5">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BARRIOS</sourceObjSchema>
+<sourceObjName>NOMBRE_BARRIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre del Barrio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMERO_COMUNA" id="6AD80E25-58A7-CD9F-7B4B-651D7509FEDA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BARRIOS</sourceObjSchema>
+<sourceObjName>NUMERO_COMUNA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Número de la comuna que pertenece el barrio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_COMUNA" id="201CB257-72BA-E303-EADE-96E931CF7FFB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BARRIOS</sourceObjSchema>
+<sourceObjName>NOMBRE_COMUNA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la comuna]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="FF3242AF-E724-B5B3-DBD1-3E3961CDCE45">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_BARRIOS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CA216C06-9879-5D18-AE8E-529D68B290CA" name="TKR_BARRIOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BARRIOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFA77ABE-A9D8-9DD5-6EB5-009F24500F7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CDDDC3D6-3F4A-C525-5E37-CD800D36C5F7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_BARRIOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_BARRIOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:16 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFA77ABE-A9D8-9DD5-6EB5-009F24500F7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="403EAD26-4B35-61AC-995F-5767B39824BF" name="TKR_BARRIO_CIUDAD_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED946F13-F0E5-9495-CECB-42C9ADBC8479"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

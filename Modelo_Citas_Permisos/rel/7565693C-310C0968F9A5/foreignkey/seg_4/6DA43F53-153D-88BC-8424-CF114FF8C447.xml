@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_4" id="6DA43F53-153D-88BC-8424-CF114FF8C447" containerWithKeyObject="653EF53E-9044-313B-DF2E-0C86CC7638CA" localFKIndex="F6B118BB-6358-403F-74F5-F905567EC0BC" name="TKR_SERVICIOS_FECHA_CONTRATO_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SERVICIOS_FECHA_CONTRATO_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_FECHAS_CONTRATO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B34B0C68-7115-C8C8-EBDD-FA5421C8F3F8</referredTableID>
+<keyObject>B695814C-364E-088E-E17C-7FFA1FB44432</keyObject>
+<referredKeyID>B695814C-364E-088E-E17C-7FFA1FB44432</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

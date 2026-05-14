@@ -1,0 +1,171 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="F4D315CF-5CC4-6DD4-61C7-BC577E0EEF8E" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_PROCEDIMIENTOS_ACTA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PROCEDIMIENTOS_ACTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8ED1F7F8-2FEB-A450-E0FD-A03132580A67">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PROCEDIMIENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_procedimientos_acta_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_PROCEDIMIENTOS_ACTA</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ACTA_MEDICA" id="CBD93DF0-A480-A76E-7022-72DB65F61413">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PROCEDIMIENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID_ACTA_MEDICA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del acta medica asociado]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B99752D7-05A5-CEA4-D3DA-67DCC573FB19" referredColumn="C59C74BE-6E7F-916E-3AA8-639E5F859D7A"/>
+</associations>
+</Column>
+<Column name="ID_PROCEDIMIENTO" id="19238E06-5307-C680-BC9A-25FB569113E9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PROCEDIMIENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID_PROCEDIMIENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del procedimiento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="00A7D198-31D9-E3EF-8812-A19A34C44F4F" referredColumn="49192BE8-9E9D-1C51-5AE7-B31522C38218"/>
+</associations>
+</Column>
+<Column name="CANTIDAD" id="2F9A1AC4-A471-B558-9ACA-B1441BA3F59D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PROCEDIMIENTOS_ACTA</sourceObjSchema>
+<sourceObjName>CANTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de procedimientos ordenados]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBSERVACIONES" id="6FA35D34-5E92-5FB2-E220-2561956ABDCB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PROCEDIMIENTOS_ACTA</sourceObjSchema>
+<sourceObjName>OBSERVACIONES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Observaciones para el procedimiento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="D7C2DF18-0217-F970-458E-D47C0812382F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_PROCEDIMIENTOS_ACTA</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7E489FBC-604F-7278-0FA1-A2AA7AAAE042" name="TKR_PROCEDIMIENTOS_ACTA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PROCEDIMIENTOS_ACTA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8ED1F7F8-2FEB-A450-E0FD-A03132580A67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93CFD08F-C4F3-7617-74FC-E304A2692126" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_PROCEDIMIENTOS_ACTA_IDX1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PROCEDIMIENTOS_ACTA_IDX1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:36 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBD93DF0-A480-A76E-7022-72DB65F61413"/>
+<colUsage columnID="19238E06-5307-C680-BC9A-25FB569113E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3327D4FF-BDD4-AE22-73F7-E0A450F82F4C" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_PROCEDIMIENTOS_ACTA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PROCEDIMIENTOS_ACTA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:36 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8ED1F7F8-2FEB-A450-E0FD-A03132580A67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40E5B362-B95D-845C-7154-37CB76BD126A" name="TKR_PROCEDIMIENTOS_ACTA_ACTAS_MEDICAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CBD93DF0-A480-A76E-7022-72DB65F61413"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09664F80-B3F4-21D9-4C64-5ED6FF14E24D" name="TKR_PROCEDIMIENTOS_ACTA_PROC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19238E06-5307-C680-BC9A-25FB569113E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

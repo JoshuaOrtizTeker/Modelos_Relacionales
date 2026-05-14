@@ -1,0 +1,186 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="547F9817-4ECA-D058-24A1-05D88EB22E69" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_COPAGOS_ENTIDADES">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_COPAGOS_ENTIDADES</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C6A51D62-E7F3-B1A3-CC35-647BCA4F4C00">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_copagos_entidades_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_COPAGOS_ENTIDADES</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CONVENIO" id="36CDFA74-A163-3B08-F726-80F6B2EE36E3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_CONVENIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del convenio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D204DDFD-C8FA-2246-F5DB-9EBDA162971A" referredColumn="73863858-C496-2B3C-302B-97F84EFCEE46"/>
+</associations>
+</Column>
+<Column name="ID_CLASE_CITA" id="6D2CCB6A-8B09-5174-B1E0-9B597D8ADC07">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_CLASE_CITA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la clase de cita]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SERVICIO" id="E4CFE608-04E4-04DD-9D57-42BEF0DAF68A">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_SERVICIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del servicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLASE_INTERCONSULTA" id="E0BF34BA-DA87-87C2-0B9D-5FDEB212C8DD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>CLASE_INTERCONSULTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Clase de Interconsulta (A)sincronica (S)incronica]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CODIGO_TARIFA_COPAGO" id="B7DE1812-3116-6A41-1E66-F5DC41ACD86D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_CODIGO_TARIFA_COPAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del codigo de tarifa del copago]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMIENZA_COBRO" id="B39E93F0-6B61-2074-F505-1F660BF6806D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>COMIENZA_COBRO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad de servicios cuando comienza el cobro, si es nulo se cobra siempre]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESPECIALIDAD" id="CAA8B217-5FC8-F4B1-5B61-9C44C91AD1B8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la especialiadad que aplica el copago.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="9EFA6347-6D3B-ECAC-92AE-2C5B1F398CC0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_COPAGOS_ENTIDADES</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6D4FD08-3F86-DA64-BAE2-C157BA8EB5A0" name="TKR_COPAGOS_ENTIDADES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_COPAGOS_ENTIDADES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6A51D62-E7F3-B1A3-CC35-647BCA4F4C00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D93876E-002B-6C23-24D1-EFC1309EA407" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_COPAGOS_ENTIDADES_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_COPAGOS_ENTIDADES_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:21 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6A51D62-E7F3-B1A3-CC35-647BCA4F4C00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5AA6B5E3-116E-9AA0-9B89-B0DE49CA7CBD" name="TKR_COPAGOS_ENTIDADES_CONVENIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36CDFA74-A163-3B08-F726-80F6B2EE36E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

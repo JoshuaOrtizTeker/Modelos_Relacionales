@@ -1,0 +1,250 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="E86E3DFC-2EAE-01CF-2E25-3B727A1C3BE9" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_WHATSAPP_CONTACT_AC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_WHATSAPP_CONTACT_AC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se registran los contactos registrados en active campaign]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CONTACT" id="C3FD0B29-C248-F364-F829-278DFC79DE6C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>ID_CONTACT</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="53EB0690-B950-3987-6F09-F5A972B04C7D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE" id="0B35920C-8C0E-04AB-7C61-C9CC01E76900">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>NOMBRE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="APELLIDO" id="923CAA5D-58A3-F73F-748D-644E8904A2FB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>APELLIDO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NRO_TELEF_AC" id="B74B7B51-A6A8-2DB5-90AC-5EAC68C40880">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>NRO_TELEF_AC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>300 BYTE</dataTypeSize>
+<ownDataTypeParameters>300 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="08388566-0BA9-C2AB-E68F-20EBEE72767C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_UPDATE" id="53ABB946-BA0A-6ACF-D014-7FCFAB8FA626">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>FECHA_UPDATE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CUENTA" id="10B9FDA1-042A-0D5E-2123-83D579708CFF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>ID_CUENTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CARGO" id="A90B7829-A762-19A8-E562-0B2EF10EB607">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>CARGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ETIQUETAS" id="696305AF-3177-3695-EB41-9B6BDF650968">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>ETIQUETAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JSON_DATA" id="18F4A3BC-DABE-2B14-8DC8-187C6654165B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>JSON_DATA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MARCA_UPDATE" id="1D12F18B-1876-243B-7C18-3100B015ABE2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>MARCA_UPDATE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_LOCAL" id="B3D34A98-2500-A72A-B059-B8194CFE33E3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>FECHA_LOCAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NRO_WA" id="F462C763-B92C-044B-ADAC-78F01CB98772">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>NRO_WA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LISTAS_AC" id="0E77290C-061D-2B0C-0BF7-613D8B01CD46">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_CONTACT_AC</sourceObjSchema>
+<sourceObjName>LISTAS_AC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>500 BYTE</dataTypeSize>
+<ownDataTypeParameters>500 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="38F63730-C5D8-A91F-A3E5-71ADA3D20237" name="UQ_WA_CONTACT_AC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>UQ_WA_CONTACT_AC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3FD0B29-C248-F364-F829-278DFC79DE6C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA018617-01C9-CECE-D73A-4066BDE9F934" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="UQ_WA_CONTACT_AC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>UQ_WA_CONTACT_AC</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:45 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3FD0B29-C248-F364-F829-278DFC79DE6C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

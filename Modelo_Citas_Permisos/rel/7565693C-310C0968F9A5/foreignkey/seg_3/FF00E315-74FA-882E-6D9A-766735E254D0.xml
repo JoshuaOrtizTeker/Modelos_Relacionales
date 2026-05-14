@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_3" id="FF00E315-74FA-882E-6D9A-766735E254D0" containerWithKeyObject="7348A9A1-6C63-0D33-2BDA-5115C7613907" localFKIndex="2C05E23A-B9D5-85AE-EFFC-D42E40E9F2CA" name="TKR_PAGOS_BANCOS_FK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_PAGOS_BANCOS_FK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<referredTableLongName>TEKER_PROD.TKR_BANCOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>79BFEF25-50C0-A6D7-A390-727B201DA105</referredTableID>
+<keyObject>F1E8849F-7D20-DCFB-DF87-AD633FE53253</keyObject>
+<referredKeyID>F1E8849F-7D20-DCFB-DF87-AD633FE53253</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

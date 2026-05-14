@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="9EC96CAF-C2DF-3938-7376-026154EC995F" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FRECUENCIA_MONITOREO">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FRECUENCIA_MONITOREO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0E3B84DF-BA00-0849-1AFC-15A8CFCE72C7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIA_MONITOREO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_frecuencia_monitoreo_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_FRECUENCIA_MONITOREO</autoIncrementTriggerName>
+</Column>
+<Column name="DESCRIPCION_FRECUENCIA" id="30E8F0F9-1875-20AA-7952-8E305DFC3F31">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIA_MONITOREO</sourceObjSchema>
+<sourceObjName>DESCRIPCION_FRECUENCIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion de la frecuencia]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RANGO" id="F78066A1-0DDB-DCD9-3748-8422FA2C5554">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIA_MONITOREO</sourceObjSchema>
+<sourceObjName>RANGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Rango en que se maneja la frecuencia (D)iaria (H)oras m(I)inutos (S)emana (M)ensual]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="C3E93E2D-731A-CE3F-D750-7C61E88DD420">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_FRECUENCIA_MONITOREO</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72D95201-F8D1-4D99-F0D0-6B0F8217B969" name="TKR_FRECUENCIA_MONITOREO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FRECUENCIA_MONITOREO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E3B84DF-BA00-0849-1AFC-15A8CFCE72C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA06B56C-C0EB-292C-D934-F9BD9CDAF639" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_FRECUENCIA_MONITOREO_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_FRECUENCIA_MONITOREO_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:28 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E3B84DF-BA00-0849-1AFC-15A8CFCE72C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

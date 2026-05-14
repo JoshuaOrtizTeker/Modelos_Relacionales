@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="E29868C3-8257-9039-51D8-04D4BD979758" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OBSERVACIONES_COHORTE">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OBSERVACIONES_COHORTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="9B63C74A-328F-A5E7-AAC1-8C83222E4C4C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_COHORTE</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO_COHORTE" id="44EE27C3-35B4-02EF-7E4F-BDE049943AF4">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_COHORTE</sourceObjSchema>
+<sourceObjName>ID_USUARIO_COHORTE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ientificador del usuario de la cohorte]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9FE84B11-6450-636F-3BC5-154BBDE1D6C5" referredColumn="A1C6FBC3-5656-6063-0028-D176BB7DE08D"/>
+</associations>
+</Column>
+<Column name="OBSERVACION" id="A656632B-1FA6-8FA3-5D9E-FD77461E1713">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_COHORTE</sourceObjSchema>
+<sourceObjName>OBSERVACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Observación que se adjunta al usuario de la cohorte, corresponde a observaciones operativas]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_OBSERVACION" id="CD7D4DB6-89DA-B8A8-88C4-1573059D4615">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_COHORTE</sourceObjSchema>
+<sourceObjName>FECHA_OBSERVACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de la observación de la cohorte]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_USUARIO_REGISTRA" id="4EB1E172-2D1B-DFC1-F522-C04667E20208">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_OBSERVACIONES_COHORTE</sourceObjSchema>
+<sourceObjName>ID_USUARIO_REGISTRA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la persona que registra la observación]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B57D193-ED1F-E2C0-D253-FFBDB0FBF6CA" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8572355E-2FD1-F600-8FC6-6632B221E7C6" name="TKR_OBSERVACIONES_COHORTE_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OBSERVACIONES_COHORTE_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B63C74A-328F-A5E7-AAC1-8C83222E4C4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="802BE0F0-20AE-7264-02F6-D11991E19634" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_OBSERVACIONES_COHORTE_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_OBSERVACIONES_COHORTE_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:33 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B63C74A-328F-A5E7-AAC1-8C83222E4C4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F3B0528F-947E-F88C-08B2-518932C4D4DC" name="TKR_OBSERVACIONES_COHORTE_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EB1E172-2D1B-DFC1-F522-C04667E20208"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B0C0337-81E6-78C8-96C4-60E7EB0E9D9B" name="TKR_OBSERVACIONES_COHORTE_USU_COHORTE_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44EE27C3-35B4-02EF-7E4F-BDE049943AF4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

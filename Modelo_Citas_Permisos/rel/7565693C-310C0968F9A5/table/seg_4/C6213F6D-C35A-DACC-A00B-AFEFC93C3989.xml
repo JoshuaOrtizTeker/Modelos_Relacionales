@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="C6213F6D-C35A-DACC-A00B-AFEFC93C3989" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_WHATSAPP_MSG_PLANTILLAS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4C6914EC-25F4-2AAF-6665-0042AD58CF55">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CUENTA_WHATSAPP" id="E1ED068D-F034-2DAA-2430-A46A5E724780">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjSchema>
+<sourceObjName>ID_CUENTA_WHATSAPP</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_MSG" id="410F9948-3D7F-FE9C-4462-F78F3549D2EC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjSchema>
+<sourceObjName>NOMBRE_MSG</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLANTILLA_BASE" id="6C56597D-5CD0-C7F9-55C9-2D937120D2BB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjSchema>
+<sourceObjName>PLANTILLA_BASE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LENGUAJE_CODE" id="E1C1DB3C-1144-FA03-07FE-CF034FBAD85B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjSchema>
+<sourceObjName>LENGUAJE_CODE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_MSG" id="1FD987EC-FDF4-9A6C-5CA2-A79364A71728">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_MSG_PLANTILLAS</sourceObjSchema>
+<sourceObjName>ESTADO_MSG</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

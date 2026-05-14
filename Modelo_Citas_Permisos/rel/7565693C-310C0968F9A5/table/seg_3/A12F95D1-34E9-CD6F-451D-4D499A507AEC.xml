@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="A12F95D1-34E9-CD6F-451D-4D499A507AEC" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SUBESPECIALIDAD_USU">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SUBESPECIALIDAD_USU</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:38 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5B465C23-0342-D045-38BC-DC30476CB4EA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_subespecialidad_usu_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_SUBESPECIALIDAD_USU</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ESPECIALIDAD_USUARIO" id="06C09A40-75EA-0B42-9804-1CA24582CDC3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDAD_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la especialidad que esta amarrada a un usuario]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0607EEFD-8DCD-E382-E42B-5B4169623999" referredColumn="DE51BE83-221B-AB1B-CCBE-E244D9CACADC"/>
+</associations>
+</Column>
+<Column name="SUBESPECIALIDAD" id="47F384DE-2C02-BA7C-0232-026D4D3F8408">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>SUBESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Subespecialidad]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROGRAMA_ENTRENAMIENTO" id="769BDFEE-DC73-D535-083C-03DA8EC93146">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>PROGRAMA_ENTRENAMIENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANHO_FINALIZACION" id="0D935815-3776-D222-D12F-82062E79672F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>ANHO_FINALIZACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="386540C5-CF42-FAD1-AD19-E1B240014410">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_SUBESPECIALIDAD" id="E6554FA8-817A-C564-CC08-F3B002E317F7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SUBESPECIALIDAD_USU</sourceObjSchema>
+<sourceObjName>ID_SUBESPECIALIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la subespecialidad relacionada]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2E96681-7C20-0CE5-3C88-CF1C7BCED2E5" referredColumn="C74E82E9-BEB1-C6BB-CDFB-57F800B2B7A9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70B61F85-7B70-1409-4EE9-2A83EBC54032" name="TKR_SUBESPECIALIDAD_USU_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SUBESPECIALIDAD_USU_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B465C23-0342-D045-38BC-DC30476CB4EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88159C41-A815-5366-9367-3410C3D8A32F" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SUBESPECIALIDAD_USU_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SUBESPECIALIDAD_USU_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:41 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B465C23-0342-D045-38BC-DC30476CB4EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F18D71C-B460-B676-08F2-E3FC6A9A8B70" name="TKR_SUBESPEC_USU_ESPEC_USU_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06C09A40-75EA-0B42-9804-1CA24582CDC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BBB7440F-5F1B-53C6-CE79-2A8606288F07" name="TKR_SUBESPEC_USU_SUB_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6554FA8-817A-C564-CC08-F3B002E317F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

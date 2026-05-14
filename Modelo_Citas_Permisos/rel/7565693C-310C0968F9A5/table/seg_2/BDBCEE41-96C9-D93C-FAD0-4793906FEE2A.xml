@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="BDBCEE41-96C9-D93C-FAD0-4793906FEE2A" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDICAMENTOS_ACTA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_ACTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla para almacenar los medicamentos relacionados en un acta medica]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C1F5BF85-B1D8-D26D-CC34-C5C2C0E4E007">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_medicamentos_acta_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_MEDICAMENTOS_ACTA</autoIncrementTriggerName>
+</Column>
+<Column name="ID_ACTA_MEDICA" id="4DF8EBEA-9C83-6DDF-A30C-1E004AA7A5FB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID_ACTA_MEDICA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del acta medica]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED3AE26A-8C97-EBF1-2A9E-36FCF3F52AC1" referredColumn="C59C74BE-6E7F-916E-3AA8-639E5F859D7A"/>
+</associations>
+</Column>
+<Column name="ID_MEDICAMENTO" id="9608C198-05BC-A1AD-F9D8-A6ABE1B54940">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID_MEDICAMENTO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del registro del medicamento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78620548-C1C9-008D-074F-C0AA7517D806" referredColumn="635AAA37-B431-BFB1-697B-30413ADC6434"/>
+</associations>
+</Column>
+<Column name="ID_PRESENTACION" id="501063AA-6939-2644-A1BD-2309A023F9A9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>ID_PRESENTACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la presentación del medicamento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANTIDAD" id="3DEA07D3-C576-2AF7-94D5-7313E84241E1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>CANTIDAD</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cantidad del Medicamento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POSOLOGIA" id="6D10BD34-6E62-3625-509A-64B01891DE9C">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>POSOLOGIA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Posologia del medicamento]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="AE68C053-6CD3-9831-7792-CB6FA827CE97">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MEDICAMENTOS_ACTA</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>( systimestamp AT TIME ZONE &apos;America/Bogota&apos; )</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2BA65BA6-58B9-7A22-AA52-CE6ABBBAF9AE" name="TKR_MEDICAMENTOS_ACTA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_ACTA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1F5BF85-B1D8-D26D-CC34-C5C2C0E4E007"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="227B0559-6749-310E-6921-051FF537AD5E" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDICAMENTOS_ACTA_IDX1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_ACTA_IDX1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:31 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DF8EBEA-9C83-6DDF-A30C-1E004AA7A5FB"/>
+<colUsage columnID="9608C198-05BC-A1AD-F9D8-A6ABE1B54940"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4BDC786D-4355-ACD6-DEB4-44E16E92670F" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MEDICAMENTOS_ACTA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MEDICAMENTOS_ACTA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:31 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1F5BF85-B1D8-D26D-CC34-C5C2C0E4E007"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04B3B27D-BB2F-8C71-E6A7-CB97D3655A61" name="TKR_MEDICAMENTOS_ACTA_ACTAS_MEDICAS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DF8EBEA-9C83-6DDF-A30C-1E004AA7A5FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="77543806-06D9-8D8D-2BEB-A23B9EDC17C5" name="TKR_MEDICAMENTOS_ACTA_TKR_MEDIC_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9608C198-05BC-A1AD-F9D8-A6ABE1B54940"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

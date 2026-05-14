@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="20B2D986-411F-A327-4E43-D11A11BCAF24" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MENUS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MENUS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="EA21B423-06CD-2219-B9AD-86121B8DBF1D">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_menus_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_MENUS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_APLICACION" id="35A8D210-3D08-6DEA-91AE-FA329126A543">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>ID_APLICACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la aplicacion a la que pertenece el menu]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35B8BBA9-C215-BE97-BE6A-B1F6A15542B2" referredColumn="9FE9E5C9-3560-4F6E-CB16-1D6F2B10B12C"/>
+</associations>
+</Column>
+<Column name="OPCION" id="14DFB274-6635-AF8C-1EE2-E7DAD09F68F3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>OPCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Opcion del menu]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RUTA" id="2BE57818-42FF-DEE4-FB16-293CED5F975F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>RUTA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ruta de la opcion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IMAGEN" id="5CF86108-9CDA-2273-D71F-5283B38CC2C8">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>IMAGEN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Imagen a Utilizar en la opcion]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PADRE" id="C610EF90-6C80-8644-B78F-80CA21B9B350">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>ID_PADRE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Id del menu padre]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5240E25-B935-03E8-4E75-1C2BE7946B3F" referredColumn="EA21B423-06CD-2219-B9AD-86121B8DBF1D"/>
+</associations>
+</Column>
+<Column name="ORDEN" id="6AD1C3F9-31C7-6BA1-5515-6E33CF941660">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>ORDEN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="A25B3660-B697-ABE2-D2B0-A1FA22972EFC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_MENUS</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFBC4F03-C8BD-1DE5-1AB7-64E69009C2D3" name="TKR_MENUS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MENUS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA21B423-06CD-2219-B9AD-86121B8DBF1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7D6CB838-731D-6B39-9EAB-CD8BD41AF589" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_MENUS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_MENUS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:32 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA21B423-06CD-2219-B9AD-86121B8DBF1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72B2BF03-5ED5-6668-7227-AE881138DDE8" name="TKR_MENUS_TKR_APLICACIONES_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35A8D210-3D08-6DEA-91AE-FA329126A543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F275F1A-FA41-1CB6-38CB-866F30F4FC3D" name="TKR_MENUS_TKR_MENUS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C610EF90-6C80-8644-B78F-80CA21B9B350"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

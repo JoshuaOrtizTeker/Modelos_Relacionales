@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="87CAD556-2E68-AEB3-B6B6-C2662817CB8D" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SLOTS_AGENDA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SLOTS_AGENDA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tabla que almacena los slots de agenda generados para los profesionales de salud. Cada registro representa un intervalo de tiempo disponible, ocupado o bloqueado.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="893ACBFA-D049-78D9-AE18-9D62333DDF0E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SLOTS_AGENDA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único del slot. Se genera mediante secuencia.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PROFESIONAL" id="1C0F0753-BFB5-3EB7-B2EB-B5BB6D4840EB">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SLOTS_AGENDA</sourceObjSchema>
+<sourceObjName>ID_PROFESIONAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del profesional de salud al que pertenece el slot. Relacionado con TKR_USUARIOS.ID.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_SLOT" id="06914B88-C8B8-0363-7411-1CB71D1BDB63">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SLOTS_AGENDA</sourceObjSchema>
+<sourceObjName>FECHA_SLOT</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha del slot (sin componente de hora). Permite agrupación diaria y generación de bitmap.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA_INICIO" id="8FEC20C1-0BA0-7F42-E290-559599517BBA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SLOTS_AGENDA</sourceObjSchema>
+<sourceObjName>HORA_INICIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora exacta de inicio del slot.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HORA_FIN" id="824DFC05-FC16-A691-6646-44586B3479E2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SLOTS_AGENDA</sourceObjSchema>
+<sourceObjName>HORA_FIN</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora exacta de finalización del slot.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO" id="6DBB66B8-2421-DC4A-9547-4EB747E42A82">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_SLOTS_AGENDA</sourceObjSchema>
+<sourceObjName>ESTADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado del slot:
+  0 = Disponible
+  1 = Ocupado (tiene cita)
+  2 = Bloqueado (ausencia, festivo u otra restricción)]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5AC47257-1B54-5AD8-1DAB-8DCC21B0B579" name="TKR_SLOTS_AGENDA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SLOTS_AGENDA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="893ACBFA-D049-78D9-AE18-9D62333DDF0E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="249B9604-858C-F51C-CFE1-31323B4CF029" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SLOTS_AGENDA_IDX1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SLOTS_AGENDA_IDX1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C0F0753-BFB5-3EB7-B2EB-B5BB6D4840EB"/>
+<colUsage columnID="06914B88-C8B8-0363-7411-1CB71D1BDB63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F133357-F370-4CF8-ADEC-2548CBB98BD2" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SLOTS_AGENDA_IDX2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SLOTS_AGENDA_IDX2</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C0F0753-BFB5-3EB7-B2EB-B5BB6D4840EB"/>
+<colUsage columnID="8FEC20C1-0BA0-7F42-E290-559599517BBA"/>
+<colUsage columnID="824DFC05-FC16-A691-6646-44586B3479E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="786DB79E-FE20-E19D-D5FA-0A87E19B6E28" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SLOTS_AGENDA_IDX3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SLOTS_AGENDA_IDX3</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DBB66B8-2421-DC4A-9547-4EB747E42A82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DEACE256-D425-85EC-F0D8-50B3DA3F1ED1" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_SLOTS_AGENDA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_SLOTS_AGENDA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="893ACBFA-D049-78D9-AE18-9D62333DDF0E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

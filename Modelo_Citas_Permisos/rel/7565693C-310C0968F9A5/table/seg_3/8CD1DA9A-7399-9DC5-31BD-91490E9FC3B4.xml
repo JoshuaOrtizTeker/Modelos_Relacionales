@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_3" id="8CD1DA9A-7399-9DC5-31BD-91490E9FC3B4" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_RECIBOS_CAJA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_RECIBOS_CAJA</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="17D6EC14-46DC-EDA3-3A68-CEE322D69EFF">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador único dl registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_recibos_caja_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_RECIBOS_CAJA</autoIncrementTriggerName>
+</Column>
+<Column name="FECHA_RECIBO" id="C6A5F7F8-E193-E349-8855-17D04614A3E3">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>FECHA_RECIBO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha del recibo de caja]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR" id="3897AB83-0087-73BF-A30E-F0A858C0190E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>VALOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor del reibo de caja]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO" id="621C8B68-2B98-77E7-918E-9608C60186DD">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>TIPO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de Recibo de Caja (1) Bonos (2) Suscripciones]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<constraintName>SYS_C0021437</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;1&apos;" description=""/>
+<valueDef value="&apos;2&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REFERENCIA_PAGO" id="4A5B1AF4-BBC8-AC96-D7B8-A73CAD859CB9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>REFERENCIA_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Referencia de Pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO" id="BECFD1B1-18ED-E02E-51A8-293994305BBC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>ID_TIPO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del tipo ya sea bono o suscripcion.]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_CREACION" id="FE89CE23-1A69-4C94-9531-20AC100BA4B0">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_RECIBOS_CAJA</sourceObjSchema>
+<sourceObjName>FECHA_CREACION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creacion del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>(SYSTIMESTAMP AT TIME ZONE &apos;America/Bogota&apos;)</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="569C66FE-1E2D-7556-22F0-3E5A0E26AFE6" name="TKR_RECIBOS_CAJA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_RECIBOS_CAJA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17D6EC14-46DC-EDA3-3A68-CEE322D69EFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E1C152D-0AF1-444E-D929-60306B9437C4" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_RECIBOS_CAJA_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_RECIBOS_CAJA_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17D6EC14-46DC-EDA3-3A68-CEE322D69EFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="A3DB2546-061D-0693-B2EB-666B2C88CBC8" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_WHATSAPP_ERROR">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_WHATSAPP_ERROR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se registran los casos que no se pudieron procesar por cambios en la api o casos no contemplados]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="949E6184-3731-6C82-3243-54A19ECB65F9">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_ERROR</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CUENTA_WHATSAPP" id="B1A1A278-F539-CE24-2C53-1FDCBE41023F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_ERROR</sourceObjSchema>
+<sourceObjName>ID_CUENTA_WHATSAPP</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MENSAJE_META" id="7D2F854C-2E05-1FDF-B201-AC2A55DD350F">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_ERROR</sourceObjSchema>
+<sourceObjName>ID_MENSAJE_META</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JSON_REQUEST" id="B4F6C5CC-1A2B-C1A2-7189-6DB3E1607749">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_ERROR</sourceObjSchema>
+<sourceObjName>JSON_REQUEST</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_INTERACCION" id="7F12B3BD-3A5F-E9CD-4757-5A2DF95D8923">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_ERROR</sourceObjSchema>
+<sourceObjName>TIPO_INTERACCION</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOTA_ERROR" id="9D5C347B-1F38-72CB-8FBD-2F4AAB2396B7">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_WHATSAPP_ERROR</sourceObjSchema>
+<sourceObjName>NOTA_ERROR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:39 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

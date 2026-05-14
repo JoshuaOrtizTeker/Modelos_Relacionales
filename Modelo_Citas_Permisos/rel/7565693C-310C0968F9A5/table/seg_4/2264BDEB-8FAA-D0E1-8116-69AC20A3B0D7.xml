@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_4" id="2264BDEB-8FAA-D0E1-8116-69AC20A3B0D7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="XLIB_LOGS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_LOGS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOG_ID" id="9FE5E1F7-74F3-0F19-8339-3F3E9C0D408B">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>XLIB_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>XLIB_LOGS_BI_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="LOG_MODULE" id="ADFDEB91-548C-C1E8-B443-97A1D83CB957">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_MODULE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOG_MSG" id="F0D27298-4C43-2E00-27D7-48E051321B9E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_MSG</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>4000 CHAR</dataTypeSize>
+<ownDataTypeParameters>4000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOG_TYPE" id="B3586B33-5A8C-9FFC-053E-3DA8BA4BCC91">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_TYPE</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<defaultValue>&apos;DEBUG&apos;</defaultValue>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOG_LEVEL" id="66794152-3B29-7674-060F-E36F25CAE41E">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_LEVEL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<defaultValue>15</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOG_CREATED_ON" id="2D091838-5CFF-62C4-2890-43ED40D4B651">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_CREATED_ON</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOG_CREATED_BY" id="B9021111-EBC8-CC60-F0FF-B8395139BA27">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>XLIB_LOGS</sourceObjSchema>
+<sourceObjName>LOG_CREATED_BY</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41A365E2-0A2A-6FF2-F792-64D1C980E860" name="XLIB_LOGS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_LOGS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:51 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FE5E1F7-74F3-0F19-8339-3F3E9C0D408B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3CA8F05-5976-0817-B136-7F50A5BE7442" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="XLIB_LOGS_IDX1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_LOGS_IDX1</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:47 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3586B33-5A8C-9FFC-053E-3DA8BA4BCC91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD29A94A-19E7-A022-2CF8-7ADE98FAF04D" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="XLIB_LOGS_IDX2">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_LOGS_IDX2</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:47 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADFDEB91-548C-C1E8-B443-97A1D83CB957"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BEF43EC4-2CE1-8543-9F2A-A1291C697425" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="XLIB_LOGS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>XLIB_LOGS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:47 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FE5E1F7-74F3-0F19-8339-3F3E9C0D408B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

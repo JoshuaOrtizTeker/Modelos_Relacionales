@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="5DE647D0-03FC-7E6D-0AA8-78551F4EE5F7" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_INCENTIVOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_INCENTIVOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="0C7AE159-0420-6D67-00EC-C63DB5681968">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_INCENTIVOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_incentivos_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_INCENTIVOS</autoIncrementTriggerName>
+</Column>
+<Column name="ID_CONCEPTO_PAGO" id="C98EADB4-07D7-141C-E168-86B6CEE64CEC">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_INCENTIVOS</sourceObjSchema>
+<sourceObjName>ID_CONCEPTO_PAGO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador del concepto de pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20CAB6A4-9B66-356A-8F35-C26715509B66" referredColumn="449FF033-18BF-8FC5-D78C-4A4E2CC4EFFF"/>
+</associations>
+</Column>
+<Column name="ID_USUARIO" id="A68DDD1C-FAAB-C3C4-770D-FB08F0EDAD52">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_INCENTIVOS</sourceObjSchema>
+<sourceObjName>ID_USUARIO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador de la persona que recibe el incentivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A132B328-88CE-E964-3969-E2A5B5E21D15" referredColumn="3FE7E40B-72D4-27D6-3980-390CD3DD0ADA"/>
+</associations>
+</Column>
+<Column name="FECHA_INICIAL" id="874C6750-DEAA-08D9-D6B5-6F34C58752D1">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_INCENTIVOS</sourceObjSchema>
+<sourceObjName>FECHA_INICIAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha inicial del rango del incentivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_FINAL" id="29E43C1C-1A8F-5015-D4E5-141A0921B594">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_INCENTIVOS</sourceObjSchema>
+<sourceObjName>FECHA_FINAL</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR" id="173DE687-BA6B-AB55-919C-6259F89CA038">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_INCENTIVOS</sourceObjSchema>
+<sourceObjName>VALOR</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Valor del incentivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="09DF824A-3530-E5C3-9E10-CA8EFAA11D5E" name="TKR_INCENTIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_INCENTIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C7AE159-0420-6D67-00EC-C63DB5681968"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="503FCE5A-BBA1-D71C-61A7-86470DB16C9B" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_INCENTIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_INCENTIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:29 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C7AE159-0420-6D67-00EC-C63DB5681968"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAF2FD39-6F09-0C6D-5AA4-041A9BBB9535" name="TKR_INCENTIVOS_CONCEPTOS_PAGO_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C98EADB4-07D7-141C-E168-86B6CEE64CEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4CE639D3-85CB-1C68-4676-8E9929A5E73D" name="TKR_INC_USUARIOS_FK">
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:58 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A68DDD1C-FAAB-C3C4-770D-FB08F0EDAD52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="3D43E228-BD28-57DE-A263-F8DD641F51CA" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ESTADOS_DISPOSITIVOS">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESTADOS_DISPOSITIVOS</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:37 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1F06C623-9C5D-3B8D-2429-488E70DD0940">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESTADOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identificador unico del registro]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>tkr_estados_dispositivos_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>TRG_BI_TKR_ESTADOS_DISPOSITIVOS</autoIncrementTriggerName>
+</Column>
+<Column name="DESCRIPCION_ESTADO" id="957841B8-6228-8D7D-8EC1-10CDC5F64ABA">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TKR_ESTADOS_DISPOSITIVOS</sourceObjSchema>
+<sourceObjName>DESCRIPCION_ESTADO</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion del estado del dispositivo]]></commentInRDBMS>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DEEB7B9E-485D-82B5-4991-0B4FA544FAC3" name="TKR_ESTADOS_DISPOSITIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESTADOS_DISPOSITIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:50 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F06C623-9C5D-3B8D-2429-488E70DD0940"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36EA0734-FCD1-B181-F7D3-0FC4E2BA5677" schemaObject="3B9DDBE7-7168-00F7-4034-389205A3D5CD" name="TKR_ESTADOS_DISPOSITIVOS_PK">
+<sourceConnName>TEKER_PROD</sourceConnName>
+<sourceObjSchema>TEKER_PROD</sourceObjSchema>
+<sourceObjName>TKR_ESTADOS_DISPOSITIVOS_PK</sourceObjName>
+<createdBy>JoshuaOrtizG</createdBy>
+<createdTime>2026-05-12 20:11:26 UTC</createdTime>
+<ownerDesignName>Modelo_Citas_Permisos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F06C623-9C5D-3B8D-2429-488E70DD0940"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
